@@ -1,0 +1,24 @@
+{
+  "ignoreFiles": [
+    "*.min.css"
+  ],
+  "defaultSeverity": "error",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order",
+    "stylelint-config-recommended"
+  ],
+  "rules": {
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "mixin",
+          "extend",
+          "content"
+        ]
+      }
+    ]
+  }
+}
