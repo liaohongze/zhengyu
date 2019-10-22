@@ -1,3 +1,8 @@
-require(['jquery'],function(juqery){
-  console.log(1231313)
+require(['jquery','swiper'],function(juqery,swiper){
+   var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop:true,
+        autoplay:3000
+    });
 })
