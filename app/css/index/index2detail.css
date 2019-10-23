@@ -1,0 +1,89 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.layui-m-layermain,
+.layui-m-layershade {
+  top: -9vw;
+}
+.title-top {
+  width: 100%;
+  height: 12vw;
+  background: #e43017;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 3vw;
+  box-sizing: border-box;
+}
+.title-top div {
+  width: calc(100% / 3);
+  line-height: 12vw;
+  text-align: center;
+}
+.title-top div p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 4vw;
+  display: inline-block;
+}
+.title-top div img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 22%;
+}
+.title-top div:nth-of-type(1) {
+  text-align: left;
+}
+.title-top div:nth-of-type(2) img {
+  width: 20%;
+}
+.title-top div:nth-of-type(3) {
+  text-align: right;
+}
+.tc1 {
+  width: 100%;
+  background: #fff;
+  margin: 0 auto;
+  padding-bottom: 3vw;
+  padding-top: 1vw;
+}
+.tc1 .commontitle {
+  margin: 0;
+  color: #666666;
+  font-size: 3.5vw;
+  padding-left: 3vw;
+}
+.tc1 .commoncontent,
+.tc1 .dantuocontent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 0 2vw;
+  box-sizing: border-box;
+  margin-top: 2vw;
+}
+.tc1 .commoncontent div,
+.tc1 .dantuocontent div {
+  width: 31%;
+  height: 11vw;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  text-align: center;
+  margin: 0 1vw 2vw;
+  line-height: 11vw;
+  border-radius: 5px;
+  color: #333;
+  box-sizing: border-box;
+}
+.tc1 .commoncontent div span,
+.tc1 .dantuocontent div span {
+  font-size: 3.5vw;
+}
+.tc1 .commoncontent div.select,
+.tc1 .dantuocontent div.select {
+  background: #e62f17;
+  color: #fff;
+}

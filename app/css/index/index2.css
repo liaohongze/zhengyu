@@ -126,6 +126,8 @@ a {
 .body1 .body2content .body1container div img,
 .body2 .body2content .body1container div img {
   width: 16vw;
+  height: 16vw;
+  border-radius: 50%;
   text-align: center;
 }
 .body1 .body1content .body1container div .cricle,

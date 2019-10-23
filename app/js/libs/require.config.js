@@ -12,10 +12,10 @@ require.config({
            "deps":[]
         },
         "layer":{
-            "deps":['jquery','css!../widgets/layer/need/layer.css']
+            // "deps":['jquery','css!../widgets/layer/need/layer.css']
         },
           "swiper":{
-            "deps":['css!../widgets/swiper/swiper-3.4.2.min.css']
+            // "deps":['css!../widgets/swiper/swiper-3.4.2.min.css']
         },
         // "until":{
         //     "deps":[]
