@@ -6,6 +6,7 @@ require.config({
         "jquery": "../vendor/jquery-3.2.1.min",
         "swiper":"../widgets/swiper/swiper-3.4.2.min",
         "layer":"../widgets/layer/layer",
+        "until":'../widgets/until',
     },
     shim: {
         "jquery": {
@@ -17,9 +18,9 @@ require.config({
           "swiper":{
             // "deps":['css!../widgets/swiper/swiper-3.4.2.min.css']
         },
-        // "until":{
-        //     "deps":[]
-        // },
+          "until":{
+            "deps":['jquery','layer']
+          },
     }
 });
 
