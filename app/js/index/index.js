@@ -8,7 +8,12 @@ require(['until','swiper'], function (until, Swiper) {
 
   // 福建11选5
   $(document).on('click', '.xialachoose', function () {
-    until.tc(1)
+    until.tc1()
+  })
+
+  //快3
+   $(document).on('click', '.kuai3xialachoose', function () {
+    until.tc2()
   })
 
   $(document).on('click', '.Toback', function () {
@@ -21,15 +26,22 @@ require(['until','swiper'], function (until, Swiper) {
     } else {
       $(this).addClass('select');
       var poptitle =  $(this).find('span').text();
-      $('.xialachoose p').text('普通'+ poptitle);
-      console.log(poptitle)
-      // if(poptitle === '前二组选'){
-      //   $('.diyizhongwanfa').addClass('isnone');
-      //   $('.dierzhongwanfa').removeClass('isnone');
-      // }else{
-      //    $('.dierzhongwanfa').addClass('isnone');
-      //   $('.diyizhongwanfa').removeClass('isnone');
-      // }
+      $('.xialachoose p').text('普通'+ poptitle); //11选5标题
+      $('.kuai3xialachoose p').text(poptitle); //快3标题
+      // 第一种玩法只有一组单选数据  将dierzhongwanfa 这个类名再加上一个 isnone 这个类名 隐藏即可
+      // 如果是第二种玩法,有胆拖和选号的, 将diyizhongwanfa这个类名再加上 isnone 这个类名隐藏即可
+
+      if(poptitle === '前二组选'){ //11选5 两组显示数据
+        $('.diyizhongwanfa').addClass('isnone');
+        $('.dierzhongwanfa').removeClass('isnone');
+      }else{
+         $('.dierzhongwanfa').addClass('isnone');
+        $('.diyizhongwanfa').removeClass('isnone');
+      }
+
+      if(poptitle == '三不同号'){
+
+      }
       layer.closeAll();
     }
   })
@@ -42,6 +54,7 @@ require(['until','swiper'], function (until, Swiper) {
       $(this).addClass('select');
       var poptitle =  $(this).find('span').text();
       $('.xialachoose p').text('胆拖'+ poptitle);
+      $('.kuai3xialachoose p').text(poptitle); //快3标题
        layer.closeAll();
     }
   })

@@ -1,7 +1,8 @@
 define(['layer','jquery'], function() {
 
 // 封装弹窗
-  function tc(number) {
+// 11选5
+  function tc1() {
     layer.open({
       type: 1,
       skin: 'myskin', //样式类名
@@ -41,6 +42,29 @@ define(['layer','jquery'], function() {
       '<div><span>前三直选</span></div>'
     });
   }
+  // 快3
+    function tc2() {
+    layer.open({
+      type: 1,
+      skin: 'myskin', //样式类名
+      closeBtn: 0, //不显示关闭按钮
+      anim: 2,
+      shadeClose: true, //开启遮罩关闭
+      content: '<div class="tc1">\n' +
+      ' <p class="commontitle">普通:</p>\n' +
+      ' <div class="commoncontent">\n' +
+      ' <div class="select"><span>三不同号</span></div>\n' +
+      '<div><span>二不同号</span></div>\n' +
+      '<div><span>和值</span></div>\n' +
+      '<div><span>猜对子</span></div>\n' +
+        '<div><span>猜顺子</span></div>\n' +
+      '<div><span>猜豹子</span></div></div>\n' +
+      ' <p class="commontitle">胆拖:</p>\n' +
+      ' <div class="dantuocontent">\n' +
+      ' <div><span>三不同号</span></div>\n' +
+      '<div><span>二不同号</span></div>'
+    });
+  }
 //倒计时
     function timer(intDiff){
       window.setInterval(function(){
@@ -53,8 +77,7 @@ define(['layer','jquery'], function() {
         hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
         minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
         second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
-      }else{//当时间耗尽，刷新页面
-        window.location.reload();
+      }else{
       }
       if (minute <= 9) minute = '0' + minute;
       if (second <= 9) second = '0' + second;
@@ -63,7 +86,8 @@ define(['layer','jquery'], function() {
       }, 1000);
     }
   return{
-    tc:tc,
+    tc1:tc1,
+     tc2:tc2,
     timer:timer
   }
 })
