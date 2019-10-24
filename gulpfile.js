@@ -38,7 +38,7 @@ gulp.task('default', ['sass', 'jshint'], function() {
   gulp.watch('app/scss/*.scss', ['sass']);
   gulp.watch('app/js/**/*.js', ['jshint']);
   gulp.watch('app/*.html').on('change', reload);
-  gulp.watch('app/page/*.html').on('change', reload);
+  gulp.watch('app/pages/*.html').on('change', reload);
   gulp.watch('app/images/*.*').on('change', reload);
 });
 
@@ -60,8 +60,8 @@ gulp.task('build', function() {
   gulp.src('app/js/**/*')
     .pipe(gulp.dest('./dist/js'));
 
-  gulp.src('app/page/**/*')
-    .pipe(gulp.dest('./dist/page'));
+  gulp.src('app/pages/**/*')
+    .pipe(gulp.dest('./dist/pages'));
 
   gulp.src(['app/*.html', 'app/favicon.ico', 'app/icon.png'])
     .pipe(gulp.dest('./dist'));
