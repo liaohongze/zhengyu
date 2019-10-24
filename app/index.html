@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>gulp-dev-server</title>
+  <title>登录</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -14,7 +14,6 @@
   <link rel="shortcut icon" href="favicon.ico" >
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/styles.css">
-  <!-- <script src="js/vendor/flexible.js"></script> -->
 </head>
 
 <body>
@@ -23,11 +22,31 @@
         <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="home">
-    <div class="image">
-      <img src="./images/timg.png" alt="">
-    </div>
-    <button>点111击</button>
+  <div class="login_page">
+    <header>
+      <a href="">
+        <img src="./images/index/left-icon.png" alt="left_arrow">
+      </a>
+
+      <h2>登录</h2>
+    </header>
+
+    <form action="">
+      <div class="form_item name_item">
+        <img src="./images/count.png" alt="">
+        <input type="text" placeholder="请输入用户名">
+      </div>
+      <div class="form_item psd_item">
+        <img src="./images/passwordbg.png" alt="">
+        <input type="password" placeholder="请输入密码">
+      </div>
+
+      <button>确定</button>
+    </form>
+
+    <p class="forget_password">
+      <a href="">忘记密码</a>
+    </p>
   </div>
 
   <script src="js/vendor/require.js" defer async='true' data-main='js/main.js'></script>

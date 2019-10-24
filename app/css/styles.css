@@ -35,3 +35,77 @@ a {
   .home button {
     padding: 5px 10px 20px 30px;
     color: blue; }
+
+.login_page,
+.forget_page {
+  height: 100%;
+  background-color: #f6f6f6; }
+  .login_page header,
+  .forget_page header {
+    height: 12vw;
+    padding: 0 3vw;
+    line-height: 12vw;
+    text-align: center;
+    background: #e43017; }
+    .login_page header a,
+    .forget_page header a {
+      float: left;
+      height: 6vw;
+      margin-top: 3vw; }
+      .login_page header a img[alt="left_arrow"],
+      .forget_page header a img[alt="left_arrow"] {
+        display: block;
+        width: 6vw; }
+    .login_page header h2,
+    .forget_page header h2 {
+      font-size: 4vw;
+      font-weight: normal;
+      color: #fff; }
+  .login_page form,
+  .forget_page form {
+    margin-top: 3.8vw; }
+    .login_page form .form_item,
+    .forget_page form .form_item {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 14vw;
+      padding-left: 2.8%;
+      background-color: #fff; }
+      .login_page form .form_item img,
+      .forget_page form .form_item img {
+        width: 6vw; }
+      .login_page form .form_item input,
+      .forget_page form .form_item input {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        height: 100%;
+        margin-left: 4vw; }
+    .login_page form button,
+    .forget_page form button {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      display: block;
+      width: 91.6%;
+      height: 10vw;
+      margin: 7vw auto 0;
+      color: #fff;
+      background-color: #e72e20;
+      border-radius: 1vw; }
+  .login_page .forget_password,
+  .forget_page .forget_password {
+    padding-right: 4.2%;
+    margin-top: 6.4vw;
+    font-size: 3vw;
+    text-align: right; }
+    .login_page .forget_password a,
+    .forget_page .forget_password a {
+      color: #626262; }
