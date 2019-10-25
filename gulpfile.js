@@ -10,7 +10,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('sass', function() {
-  gulp.src(['app/scss/main.scss', 'app/scss/*.scss'])
+  gulp.src(['app/scss/main.scss', 'app/scss/utilities.scss', 'app/scss/*.scss'])
     .pipe(concat('styles.scss'))
     .pipe(sass())
     .pipe(autoprefixer({
