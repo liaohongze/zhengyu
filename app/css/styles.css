@@ -452,7 +452,8 @@ a {
 html,
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #fff; }
 
 .layui-m-layermain,
 .layui-m-layershade {
@@ -737,7 +738,8 @@ body {
 html,
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #fff; }
 
 .layui-m-layermain,
 .layui-m-layershade {
@@ -913,7 +915,8 @@ body {
         line-height: 31.5vw;
         text-align: center;
         border: 1px solid #e3e3e3;
-        margin: 1vw .5vw; }
+        margin: 1vw .5vw;
+        border-radius: 0; }
         .sanbutonghao .container .choosenumber .number div span {
           color: #666;
           font-size: 5vw; }
@@ -1077,7 +1080,8 @@ body {
         line-height: 25vw;
         text-align: center;
         border: 1px solid #e3e3e3;
-        margin: 1vw .5vw; }
+        margin: 1vw .5vw;
+        border-radius: 0; }
         .caiduizi .container .choosenumber .number div span {
           color: #666;
           font-size: 3.5vw;
@@ -1150,7 +1154,8 @@ body {
         line-height: 25vw;
         text-align: center;
         border: 1px solid #e3e3e3;
-        margin: 1vw .5vw; }
+        margin: 1vw .5vw;
+        border-radius: 0; }
         .caibaozi .container .choosenumber .number div span {
           color: #666;
           font-size: 3.5vw;
@@ -1224,7 +1229,8 @@ body {
         line-height: 5vw;
         text-align: center;
         border: 1px solid #e3e3e3;
-        margin: 1vw .5vw; }
+        margin: 1vw .5vw;
+        border-radius: 0; }
         .butonghao .container .choosenumber .number div span {
           color: #e43015;
           font-size: 3.5vw; }
