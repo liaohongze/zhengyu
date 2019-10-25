@@ -998,7 +998,8 @@ body {
         line-height: 23.5vw;
         text-align: center;
         border: 1px solid #e3e3e3;
-        margin: 1vw .5vw; }
+        margin: 1vw .5vw;
+        border-radius: 0; }
         .hezhi .container .choosenumber .number div span {
           color: #666;
           font-size: 3.5vw;
