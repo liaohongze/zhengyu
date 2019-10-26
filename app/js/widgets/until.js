@@ -65,6 +65,82 @@ define(['layer','jquery'], function() {
       '<div><span>二不同号</span></div>'
     });
   }
+
+  //足球
+   function tc3() {
+    layer.open({
+      type: 1,
+      skin: 'myskin', //样式类名
+      closeBtn: 0, //不显示关闭按钮
+      anim: 2,
+      shadeClose: true, //开启遮罩关闭
+      content: '<div class="tc1 tc3">\n'+
+      '<div class="tabtc">\n'+
+        '<div class="lf selected">\n'+
+          '<p>过关玩法</p>\n'+
+        '</div>\n'+
+       ' <div class="rt">\n'+
+          '<p>单关玩法</p>\n'+
+        '</div>\n'+
+        '<div class="clear"></div></div>\n'+
+      '<div class="topcontainer">\n'+
+        '<div class="playrules">\n'+
+            '<div class="select"><span>胜平负</span></div>\n'+
+            '<div><span>让分胜负</span></div>\n'+
+            '<div><span>混合投注</span></div>\n'+
+            '<div><span>比分</span></div>\n'+
+            '<div><span>半全场</span></div>\n'+
+            '<div><span>总进球</span></div>\n'+
+          '</div>\n'+
+          '<div class="playrules isnone">\n'+
+            '<div class="select"><span>胜平负</span></div>\n'+
+            '<div><span>让球胜平负</span></div>\n'+
+            '<div><span>比分</span></div>\n'+
+            '<div><span>半全场</span></div>\n'+
+            '<div><span>总进球</span></div>\n'+
+          '</div>\n'+
+      '</div>\n'+
+    '</div>\n'
+    });
+  }
+  //  足球更多选项弹窗
+  function tc4() {
+    layer.open({
+      type: 1,
+      skin: 'myskin', //样式类名
+      closeBtn: 0, //不显示关闭按钮
+      anim: 2,
+      shadeClose: true, //开启遮罩关闭
+      content: '<div class="tc1 tc3">\n'+
+      '<div class="tabtc">\n'+
+        '<div class="lf selected">\n'+
+          '<p>过关玩法</p>\n'+
+        '</div>\n'+
+       ' <div class="rt">\n'+
+          '<p>单关玩法</p>\n'+
+        '</div>\n'+
+        '<div class="clear"></div></div>\n'+
+      '<div class="topcontainer">\n'+
+        '<div class="playrules">\n'+
+            '<div class="select"><span>胜平负</span></div>\n'+
+            '<div><span>让分胜负</span></div>\n'+
+            '<div><span>混合投注</span></div>\n'+
+            '<div><span>比分</span></div>\n'+
+            '<div><span>半全场</span></div>\n'+
+            '<div><span>总进球</span></div>\n'+
+          '</div>\n'+
+          '<div class="playrules isnone">\n'+
+            '<div class="select"><span>胜平负</span></div>\n'+
+            '<div><span>让球胜平负</span></div>\n'+
+            '<div><span>比分</span></div>\n'+
+            '<div><span>半全场</span></div>\n'+
+            '<div><span>总进球</span></div>\n'+
+          '</div>\n'+
+      '</div>\n'+
+    '</div>\n'
+    });
+  }
+
 //倒计时
     function timer(intDiff){
       window.setInterval(function(){
@@ -88,6 +164,8 @@ define(['layer','jquery'], function() {
   return{
     tc1:tc1,
      tc2:tc2,
+     tc3:tc3,
+     tc4:tc4,
     timer:timer
   }
 })
