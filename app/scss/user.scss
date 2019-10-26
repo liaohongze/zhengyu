@@ -1,0 +1,127 @@
+.user_page {
+  header {
+    height: 12vw;
+    padding: 0 3vw;
+    line-height: 12vw;
+    text-align: center;
+    background: #e43017;
+
+    a {
+      float: left;
+      height: 6vw;
+      margin-top: 3vw;
+
+      img {
+        display: block;
+        width: 6vw;
+      }
+
+      &:last-of-type {
+        float: right;
+        margin-top: -9vw;
+      }
+    }
+
+    h2 {
+      font-size: 4vw;
+      font-weight: normal;
+      color: #fff;
+    }
+  }
+
+  .user_info {
+    display: flex;
+    align-items: center;
+    padding: 3vw 3%;
+
+    .avatar {
+      width: 14vw;
+      height: 14vw;
+      margin-right: 4.7vw;
+    }
+
+    .info_wrap {
+      flex: 1;
+      font-size: 14px;
+    }
+
+    .top_side {
+      .msg_wrap {
+        position: relative;
+        display: inline-block;
+        width: 5vw;
+        margin-left: 3vw;
+        vertical-align: middle;
+
+        img {
+          width: 5vw;
+        }
+
+        i {
+          position: absolute;
+          right: 0;
+          width: 4.2vw;
+          height: 4.2vw;
+          line-height: 4.2vw;
+          color: #fff;
+          text-align: center;
+          background-color: #ec5331;
+          border-radius: 50%;
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+
+    .bottom_side {
+      margin-top: 1vw;
+
+      img {
+        width: 4vw;
+        vertical-align: middle;
+      }
+
+      .balance {
+        i {
+          font-weight: bold;
+          color: #ce373c;
+        }
+      }
+    }
+  }
+
+  h3 {
+    height: 8.2vw;
+    padding-left: 3vw;
+    line-height: 8.2vw;
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #eef0ef;
+
+    a {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      height: 25vw;
+      font-size: 3.5vw;
+      color: #333;
+      background-color: #f8f8f8;
+      border-right: 1px solid #eef0ef;
+      border-bottom: 1px solid #eef0ef;
+
+      &:nth-of-type(4n) {
+        border: none;
+      }
+
+      img {
+        width: 7vw;
+        margin-bottom: 2vw;
+      }
+    }
+  }
+}

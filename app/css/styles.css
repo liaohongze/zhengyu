@@ -12,6 +12,9 @@ a {
 .clear {
   clear: both; }
 
+.margin_footer_menu {
+  height: 15.5vw; }
+
 .font-1 {
   font-size: 1px !important; }
 
@@ -3708,3 +3711,121 @@ body {
     .login_page .forget_password a,
     .forget_page .forget_password a {
       color: #626262; }
+
+.user_page header {
+  height: 12vw;
+  padding: 0 3vw;
+  line-height: 12vw;
+  text-align: center;
+  background: #e43017; }
+  .user_page header a {
+    float: left;
+    height: 6vw;
+    margin-top: 3vw; }
+    .user_page header a img {
+      display: block;
+      width: 6vw; }
+    .user_page header a:last-of-type {
+      float: right;
+      margin-top: -9vw; }
+  .user_page header h2 {
+    font-size: 4vw;
+    font-weight: normal;
+    color: #fff; }
+
+.user_page .user_info {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 3vw 3%; }
+  .user_page .user_info .avatar {
+    width: 14vw;
+    height: 14vw;
+    margin-right: 4.7vw; }
+  .user_page .user_info .info_wrap {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 14px; }
+  .user_page .user_info .top_side .msg_wrap {
+    position: relative;
+    display: inline-block;
+    width: 5vw;
+    margin-left: 3vw;
+    vertical-align: middle; }
+    .user_page .user_info .top_side .msg_wrap img {
+      width: 5vw; }
+    .user_page .user_info .top_side .msg_wrap i {
+      position: absolute;
+      right: 0;
+      width: 4.2vw;
+      height: 4.2vw;
+      line-height: 4.2vw;
+      color: #fff;
+      text-align: center;
+      background-color: #ec5331;
+      border-radius: 50%;
+      -webkit-transform: translate(50%, -50%);
+      transform: translate(50%, -50%); }
+  .user_page .user_info .bottom_side {
+    margin-top: 1vw; }
+    .user_page .user_info .bottom_side img {
+      width: 4vw;
+      vertical-align: middle; }
+    .user_page .user_info .bottom_side .balance i {
+      font-weight: bold;
+      color: #ce373c; }
+
+.user_page h3 {
+  height: 8.2vw;
+  padding-left: 3vw;
+  line-height: 8.2vw; }
+
+.user_page .menu {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border-top: 1px solid #eef0ef; }
+  .user_page .menu a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 25%;
+    height: 25vw;
+    font-size: 3.5vw;
+    color: #333;
+    background-color: #f8f8f8;
+    border-right: 1px solid #eef0ef;
+    border-bottom: 1px solid #eef0ef; }
+    .user_page .menu a:nth-of-type(4n) {
+      border: none; }
+    .user_page .menu a img {
+      width: 7vw;
+      margin-bottom: 2vw; }
