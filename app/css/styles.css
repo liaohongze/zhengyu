@@ -3132,6 +3132,135 @@ body {
 
 html,
 body {
+  width: 100%; }
+
+.opendraw {
+  width: 100%;
+  margin-top: 14vw; }
+  .opendraw .fiextop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vw;
+    background: #ee3015;
+    color: #fff;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 12vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .opendraw .kaijianglist {
+    width: 100%;
+    padding: 0 1.5vw;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .opendraw .kaijianglist a {
+      margin-top: 5vw; }
+      .opendraw .kaijianglist a .data_list {
+        width: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; }
+        .opendraw .kaijianglist a .data_list .data_list_lf {
+          width: 16vw;
+          border-radius: 50%;
+          overflow: hidden; }
+          .opendraw .kaijianglist a .data_list .data_list_lf img {
+            width: 100%; }
+        .opendraw .kaijianglist a .data_list .data_list_rt {
+          width: 78vw;
+          padding: 0 1.5vw;
+          padding-left: 3vw;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+          .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_top {
+            width: 100%; }
+            .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_top .kaijiangtitle {
+              float: left;
+              color: #333;
+              font-size: 4vw; }
+            .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_top .kaijiangtime {
+              float: right;
+              font-size: 3vw;
+              color: #666666; }
+            .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_top .kaijiangqishu {
+              float: right;
+              font-size: 3vw;
+              color: #666666;
+              margin-right: 4.5vw; }
+          .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_bottom {
+            margin-top: 2vw;
+            width: 100%; }
+            .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_bottom p {
+              margin: 0;
+              float: left;
+              height: 6vw;
+              padding: .3vw 3.5vw;
+              line-height: 5vw;
+              background: lightgreen;
+              border-radius: 5vw;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box; }
+              .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_bottom p span {
+                color: #fff;
+                font-size: 3.2vw; }
+              .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_bottom p b {
+                font-weight: 400;
+                margin: 0 1vw;
+                color: #fff;
+                font-size: 3.2vw; }
+            .opendraw .kaijianglist a .data_list .data_list_rt .data_list_rt_bottom img {
+              width: 3.5vw;
+              float: right; }
+        .opendraw .kaijianglist a .data_list.jing11xuan5 .data_list_rt .data_list_rt_bottom p {
+          background: none;
+          padding-left: 0; }
+          .opendraw .kaijianglist a .data_list.jing11xuan5 .data_list_rt .data_list_rt_bottom p span {
+            display: inline-block;
+            width: 6vw;
+            height: 6vw;
+            border-radius: 50%;
+            background: #ee3015;
+            color: #fff;
+            text-align: center;
+            line-height: 6vw; }
+        .opendraw .kaijianglist a .data_list.jingkuai3 .data_list_rt .data_list_rt_bottom p {
+          background: none;
+          padding-left: 0; }
+          .opendraw .kaijianglist a .data_list.jingkuai3 .data_list_rt .data_list_rt_bottom p span {
+            display: inline-block;
+            width: 6vw;
+            height: 6vw; }
+            .opendraw .kaijianglist a .data_list.jingkuai3 .data_list_rt .data_list_rt_bottom p span img {
+              width: 100%; }
+          .opendraw .kaijianglist a .data_list.jingkuai3 .data_list_rt .data_list_rt_bottom p:nth-of-type(2) {
+            font-size: 3.8vw;
+            color: #666666; }
+      .opendraw .kaijianglist a:nth-of-type(1) {
+        margin-top: 0; }
+
+html,
+body {
   margin: 0;
   padding: 0;
   background: #fff; }
@@ -3919,3 +4048,152 @@ body {
     .user_page .menu a img {
       width: 7vw;
       margin-bottom: 2vw; }
+
+.opendrawhistory {
+  width: 100%;
+  margin-top: 14vw; }
+  .opendrawhistory .fiextop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vw;
+    background: #ee3015;
+    text-align: center;
+    line-height: 14vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .opendrawhistory .fiextop img {
+      float: left;
+      width: 6vw;
+      margin-top: 3vw;
+      padding-left: 3vw; }
+    .opendrawhistory .fiextop p {
+      height: 100%;
+      display: inline-block;
+      color: #fff;
+      font-size: 4vw;
+      margin: 0; }
+  .opendrawhistory .kaijianglist {
+    width: 100%; }
+    .opendrawhistory .kaijianglist .tablist {
+      width: 100%;
+      padding: 0 2vw;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 13vw;
+      margin-top: 3vw; }
+      .opendrawhistory .kaijianglist .tablist .top_numer {
+        width: 100%;
+        color: #666666;
+        font-size: 3.6vw; }
+      .opendrawhistory .kaijianglist .tablist .bottom_number {
+        margin-top: 1.5vw;
+        width: 100%; }
+        .opendrawhistory .kaijianglist .tablist .bottom_number span {
+          display: inline-block;
+          width: 6vw;
+          height: 6vw;
+          border-radius: 50%;
+          background: #ee3015;
+          color: #fff;
+          text-align: center;
+          line-height: 6vw; }
+
+.opendrawhistorykuai3 {
+  width: 100%;
+  margin-top: 14vw; }
+  .opendrawhistorykuai3 .fiextop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12vw;
+    background: #ee3015;
+    text-align: center;
+    line-height: 14vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .opendrawhistorykuai3 .fiextop img {
+      float: left;
+      width: 6vw;
+      margin-top: 3vw;
+      padding-left: 3vw; }
+    .opendrawhistorykuai3 .fiextop p {
+      height: 100%;
+      display: inline-block;
+      color: #fff;
+      font-size: 4vw;
+      margin: 0; }
+  .opendrawhistorykuai3 .kaijianglist {
+    width: 100%; }
+    .opendrawhistorykuai3 .kaijianglist .tablist {
+      width: 100%;
+      padding: 0 2vw;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 13vw;
+      margin-top: 3vw; }
+      .opendrawhistorykuai3 .kaijianglist .tablist .top_numer {
+        width: 100%;
+        color: #666666;
+        font-size: 3.6vw; }
+      .opendrawhistorykuai3 .kaijianglist .tablist .bottom_number {
+        margin-top: 1.5vw;
+        width: 100%;
+        height: 8vw;
+        line-height: 8vw; }
+        .opendrawhistorykuai3 .kaijianglist .tablist .bottom_number span {
+          display: inline-block;
+          width: 6vw;
+          height: 6vw; }
+          .opendrawhistorykuai3 .kaijianglist .tablist .bottom_number span img {
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle; }
+        .opendrawhistorykuai3 .kaijianglist .tablist .bottom_number p {
+          margin: 0;
+          display: inline-block;
+          color: #666666;
+          font-size: 3.7vw; }
+
+#football .historydatabottom .itemcenter {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  #football .historydatabottom .itemcenter .datalist_team_rt .datalist_team_rt_top span:nth-of-type(2) {
+    color: #ee3015; }
+  #football .historydatabottom .itemcenter .data_tab {
+    width: 96%;
+    margin: 0 auto; }
+    #football .historydatabottom .itemcenter .data_tab table {
+      margin-top: 2vw;
+      border-collapse: collapse; }
+      #football .historydatabottom .itemcenter .data_tab table th {
+        width: 19vw;
+        padding: 0;
+        height: 7vw;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #F5F5F5;
+        border: 1px solid #ddd;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 3.5vw;
+        font-weight: 400;
+        color: #666666; }
+      #football .historydatabottom .itemcenter .data_tab table td {
+        width: 20%;
+        height: 8vw;
+        line-height: 8vw;
+        border: 1px solid #ddd;
+        text-align: center; }
+        #football .historydatabottom .itemcenter .data_tab table td.td_data {
+          color: #ee3015;
+          font-size: 3.5vw; }
