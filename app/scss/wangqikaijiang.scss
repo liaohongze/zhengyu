@@ -1,0 +1,172 @@
+.opendrawhistory {
+    width: 100%;
+    margin-top: 14vw;
+    .fiextop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12vw;
+        background: #ee3015;
+        text-align: center;
+        line-height: 14vw;
+        box-sizing: border-box;
+        img {
+            float: left;
+            width: 6vw;
+            margin-top: 3vw;
+            padding-left: 3vw;
+        }
+        p {
+            height: 100%;
+            display: inline-block;
+            color: #fff;
+            font-size: 4vw;
+            margin: 0;
+        }
+    }
+    .kaijianglist {
+        width: 100%;
+        .tablist {
+            width: 100%;
+            padding: 0 2vw;
+            box-sizing: border-box;
+            height: 13vw;
+            margin-top: 3vw;
+            .top_numer {
+                width: 100%;
+                color: #666666;
+                font-size: 3.6vw;
+            }
+            .bottom_number {
+                margin-top: 1.5vw;
+                width: 100%;
+                span {
+                    display: inline-block;
+                    width: 6vw;
+                    height: 6vw;
+                    border-radius: 50%;
+                    background: #ee3015;
+                    color: #fff;
+                    text-align: center;
+                    line-height: 6vw;
+                }
+            }
+        }
+    }
+}
+
+.opendrawhistorykuai3 {
+    width: 100%;
+    margin-top: 14vw;
+    .fiextop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12vw;
+        background: #ee3015;
+        text-align: center;
+        line-height: 14vw;
+        box-sizing: border-box;
+        img {
+            float: left;
+            width: 6vw;
+            margin-top: 3vw;
+            padding-left: 3vw;
+        }
+        p {
+            height: 100%;
+            display: inline-block;
+            color: #fff;
+            font-size: 4vw;
+            margin: 0;
+        }
+    }
+    .kaijianglist {
+        width: 100%;
+        .tablist {
+            width: 100%;
+            padding: 0 2vw;
+            box-sizing: border-box;
+            height: 13vw;
+            margin-top: 3vw;
+            .top_numer {
+                width: 100%;
+                color: #666666;
+                font-size: 3.6vw;
+            }
+            .bottom_number {
+                margin-top: 1.5vw;
+                width: 100%;
+                height: 8vw;
+                line-height: 8vw;
+                span {
+                    display: inline-block;
+                    width: 6vw;
+                    height: 6vw;
+                    img {
+                        width: 100%;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+                p {
+                    margin: 0;
+                    display: inline-block;
+                    color: #666666;
+                    font-size: 3.7vw;
+                }
+            }
+        }
+    }
+}
+
+#football {
+    .historydatabottom {
+        .itemcenter {
+            align-items: center;
+            .datalist_team_rt {
+                .datalist_team_rt_top {
+                    span {
+                      &:nth-of-type(2){
+                        color: #ee3015;
+                      }
+                    }
+                }
+            }
+              .data_tab{
+                width: 96%;
+                margin: 0 auto;
+                table{
+                  margin-top: 2vw;
+                  border-collapse:collapse;
+                  th{
+                    width: 19vw;
+                    padding: 0;
+                    height:7vw;
+                    vertical-align: middle;
+                    text-align: center;
+                    background-color: #F5F5F5;
+                    border: 1px solid #ddd;
+                    box-sizing: border-box;
+                    font-size: 3.5vw;
+                    font-weight: 400;
+                    color: #666666;
+                  }
+                  td{
+                    width: 20%;
+                    height: 8vw;
+                    line-height: 8vw;
+                    border: 1px solid #ddd;
+                    text-align: center;
+                    &.td_data{
+                      color: #ee3015;
+                      font-size: 3.5vw;
+                    }
+                  }
+                }
+              }
+        }
+    }
+}

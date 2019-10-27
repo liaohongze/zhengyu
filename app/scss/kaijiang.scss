@@ -1,0 +1,145 @@
+html,
+body {
+    width: 100%;
+}
+
+.opendraw {
+    width: 100%;
+    margin-top: 14vw;
+    .fiextop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12vw;
+        background: #ee3015;
+        color: #fff;
+        font-size: 4vw;
+        text-align: center;
+        line-height: 12vw;
+        box-sizing: border-box;
+    }
+    .kaijianglist {
+        width: 100%;
+        padding: 0 1.5vw;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        a {
+            margin-top: 5vw;
+            .data_list {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                .data_list_lf {
+                    width: 16vw;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .data_list_rt {
+                   width: 78vw;
+                  padding: 0 1.5vw;
+                  padding-left: 3vw;
+                  box-sizing: border-box;
+                    .data_list_rt_top {
+                        width: 100%;
+                        .kaijiangtitle {
+                            float: left;
+                            color: #333;
+                            font-size: 4vw;
+                        }
+                        .kaijiangtime {
+                            float: right;
+                            font-size: 3vw;
+                            color: #666666;
+                        }
+                        .kaijiangqishu{
+                            float: right;
+                            font-size: 3vw;
+                            color: #666666;
+                            margin-right: 4.5vw;
+                        }
+                    }
+                    .data_list_rt_bottom {
+                        margin-top: 2vw;
+                        width: 100%;
+                        p {
+                            margin: 0;
+                            float: left;
+                            height: 6vw;
+                            padding: .3vw 3.5vw;
+                            line-height: 5vw;
+                            background: lightgreen;
+                            border-radius: 5vw;
+                            box-sizing: border-box;
+                            span {
+                                color: #fff;
+                                font-size: 3.2vw;
+                            }
+                            b {
+                                font-weight: 400;
+                                margin: 0 1vw;
+                                color: #fff;
+                                font-size: 3.2vw;
+                            }
+                        }
+                        img {
+                            width: 3.5vw;
+                            float: right;
+                        }
+                    }
+                }
+                  &.jing11xuan5{
+                    .data_list_rt {
+                      .data_list_rt_bottom{
+                        p{
+                          background: none;
+                            padding-left: 0;
+                          span{
+                            display: inline-block;
+                            width: 6vw;
+                            height: 6vw;
+                            border-radius: 50%;
+                            background: #ee3015;
+                            color: #fff;
+                            text-align: center;
+                            line-height: 6vw;
+                          }
+
+                        }
+                      }
+                    }
+                  }
+                  &.jingkuai3{
+                    .data_list_rt {
+                      .data_list_rt_bottom{
+                        p{
+                            background: none;
+                            padding-left: 0;
+                          span{
+                            display: inline-block;
+                            width: 6vw;
+                            height: 6vw;
+                           img{
+                             width: 100%;
+                           }
+                          }
+                          &:nth-of-type(2){
+                            font-size: 3.8vw;
+                            color: #666666;
+                          }
+                        }
+                      }
+                    }
+                  }
+            }
+            &:nth-of-type(1) {
+                margin-top: 0;
+            }
+        }
+    }
+}
