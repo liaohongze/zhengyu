@@ -1,4 +1,4 @@
-require(['until','swiper'], function (until, Swiper) {
+require(['until', 'swiper'], function (until, Swiper) {
   var swiper = new Swiper('.swiper-container', {
     pagination: '.swiper-pagination',
     paginationClickable: true,
@@ -13,13 +13,13 @@ require(['until','swiper'], function (until, Swiper) {
     until.tc1()
   })
   //快3
-   $(document).on('click', '.kuai3xialachoose', function () {
+  $(document).on('click', '.kuai3xialachoose', function () {
     until.tc2()
   })
-   $(document).on('click', '.zuqiuxialachoose', function () {
+  $(document).on('click', '.zuqiuxialachoose', function () {
     until.tc3();
-    if(!morenselecttop) morenselecttop=0;
-    if(!morenselectcontainer)morenselectcontainer=0;
+    if (!morenselecttop) morenselecttop = 0;
+    if (!morenselectcontainer) morenselectcontainer = 0;
     $('.tabtc div').eq(morenselecttop).addClass('selected').siblings().removeClass('selected');
     $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
     $('.topcontainer .playrules').eq(morenselecttop).find('div').eq(morenselectcontainer).addClass('select').siblings().removeClass('select');
@@ -33,21 +33,21 @@ require(['until','swiper'], function (until, Swiper) {
       $(this).removeClass('select')
     } else {
       $(this).addClass('select');
-      var poptitle =  $(this).find('span').text();
-      $('.xialachoose p').text('普通'+ poptitle); //11选5标题
+      var poptitle = $(this).find('span').text();
+      $('.xialachoose p').text('普通' + poptitle); //11选5标题
       $('.kuai3xialachoose p').text(poptitle); //快3标题
       // 第一种玩法只有一组单选数据  将dierzhongwanfa 这个类名再加上一个 isnone 这个类名 隐藏即可
       // 如果是第二种玩法,有胆拖和选号的, 将diyizhongwanfa这个类名再加上 isnone 这个类名隐藏即可
 
-      if(poptitle === '前二组选'){ //11选5 两组显示数据
+      if (poptitle === '前二组选') { //11选5 两组显示数据
         $('.diyizhongwanfa').addClass('isnone');
         $('.dierzhongwanfa').removeClass('isnone');
-      }else{
-         $('.dierzhongwanfa').addClass('isnone');
+      } else {
+        $('.dierzhongwanfa').addClass('isnone');
         $('.diyizhongwanfa').removeClass('isnone');
       }
 
-      if(poptitle == '三不同号'){
+      if (poptitle == '三不同号') {
 
       }
       layer.closeAll();
@@ -60,15 +60,15 @@ require(['until','swiper'], function (until, Swiper) {
       $(this).removeClass('select')
     } else {
       $(this).addClass('select');
-      var poptitle =  $(this).find('span').text();
-      $('.xialachoose p').text('胆拖'+ poptitle);
+      var poptitle = $(this).find('span').text();
+      $('.xialachoose p').text('胆拖' + poptitle);
       $('.kuai3xialachoose p').text(poptitle); //快3标题
-       layer.closeAll();
+      layer.closeAll();
     }
   })
 
-//选择号码
- $(document).on('click', '.number div', function () {
+  //选择号码
+  $(document).on('click', '.number div', function () {
     if ($(this).hasClass('selected')) {
       $(this).removeClass('selected')
     } else {
@@ -77,16 +77,16 @@ require(['until','swiper'], function (until, Swiper) {
   })
 
   //点击机选
-   $(document).on('click', '.jixuan', function () {
+  $(document).on('click', '.jixuan', function () {
     $(this).parent().addClass('isnone');
     $('.secondnav').removeClass('isnone');
   })
   // 点击清空
-   $(document).on('click', '.qingkong', function () {
+  $(document).on('click', '.qingkong', function () {
     $('div').removeClass('selected');
   })
-//点击取消
-   $(document).on('click', '.quxiao', function () {
+  //点击取消
+  $(document).on('click', '.quxiao', function () {
     $(this).parent().addClass('isnone');
     $('.firstnav').removeClass('isnone');
   })
@@ -94,56 +94,82 @@ require(['until','swiper'], function (until, Swiper) {
 
   //足球头部选择玩法 区域 开始 ---------------
   $(document).on('click', '.tabtc div', function () {
-      morenselecttop = $(this).index();
+    morenselecttop = $(this).index();
     $(this).addClass('selected').siblings().removeClass('selected');
-    console.log( $('.playrules').eq(morenselecttop))
-      $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
+    console.log($('.playrules').eq(morenselecttop))
+    $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
   })
   $(document).on('click', '.playrules div', function () {
     morenselectcontainer = $(this).index();
     if ($(this).hasClass('select')) {
-        layer.closeAll();
-        $('.zuqiuxialachoose p').text(poptitle); //足球标题
+      layer.closeAll();
+      $('.zuqiuxialachoose p').text(poptitle); //足球标题
     } else {
       $(this).addClass('select');
-      var poptitle =  $(this).find('span').text();
+      var poptitle = $(this).find('span').text();
       $('.zuqiuxialachoose p').text(poptitle); //足球标题
-       layer.closeAll();
+      layer.closeAll();
     }
   })
 
-//选择号码
-$(document).on('click', '.datalist_team_rt_bottom div', function () {
-  if ($(this).hasClass('selected')) {
-    $(this).removeClass('selected')
-  } else {
-    $(this).addClass('selected');
-  }
-})
-console.log($('#morestc'))
-$(document).on('click', '.morechoosetc img', function () {
-      layer.open({
-        type: 1,
-        closeBtn: 0, //不显示关闭按钮
-        anim: 2,
-        shadeClose: true, //开启遮罩关闭
-        content: $('#morestc').html()
-      });
-})
+  //选择号码
+  $(document).on('click', '.datalist_team_rt_bottom div', function () {
+    if ($(this).hasClass('selected')) {
+      $(this).removeClass('selected')
+    } else {
+      $(this).addClass('selected');
+    }
+  })
+  console.log($('#morestc'))
+  $(document).on('click', '.morechoosetc img', function () {
+    layer.open({
+      type: 1,
+      closeBtn: 0, //不显示关闭按钮
+      anim: 2,
+      shadeClose: true, //开启遮罩关闭
+      content: $('#morestc').html()
+    });
+  })
 
   //篮球头部选择玩法 区域 结束 ---------------
 
 
   //点击展开历史记录数据
-   $(document).on('click', '.xialablock', function () {
-     $(this).parent().parent().find('.historydatabottom').toggle(300);
+  $(document).on('click', '.xialablock', function () {
+    $(this).parent().parent().find('.historydatabottom').toggle(300);
   })
-    $(document).on('click', '.openrule', function () {
+  $(document).on('click', '.openrule', function () {
     $('.rules').toggle(300);
   })
   // 倒计时
-    var intDiff = parseInt(720);//倒计时总秒数量
-    $(function(){
-      until.timer(intDiff);
-    });
-})
+  var intDiff = parseInt(720);//倒计时总秒数量
+  $(function () {
+    until.timer(intDiff);
+  });
+
+  $('.trend_wrap .bottom_table .content_col').scroll(function() {
+    var left = $(this).scrollLeft();
+    $('.trend_wrap .top_table .top_title .content_col').scrollLeft(left);
+    $('.trend_wrap .top_table .period_content .content_col').scrollLeft(left);
+  });
+
+  $('.trend_wrap .top_table .top_title .content_col').scroll(function() {
+    var left = $(this).scrollLeft();
+    $('.trend_wrap .bottom_table .content_col').scrollLeft(left);
+    $('.trend_wrap .top_table .period_content .content_col').scrollLeft(left);
+  });
+
+  $('.trend_wrap .top_table .period_content .content_col').scroll(function() {
+    var left = $(this).scrollLeft();
+    $('.trend_wrap .bottom_table .content_col').scrollLeft(left);
+    $('.trend_wrap .top_table .top_title .content_col').scrollLeft(left);
+
+    var top = $(this).scrollTop();
+    $('.trend_wrap .top_table .period_content .title').scrollTop(top);
+  });
+
+  $('.trend_wrap .top_table .period_content .title').scroll(function() {
+    var top = $(this).scrollTop();
+    $('.trend_wrap .top_table .period_content .content_col').scrollTop(top);
+  });
+});

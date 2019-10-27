@@ -1,0 +1,95 @@
+.trend_lottery_page {
+  header {
+    height: 12vw;
+    padding: 0 3vw;
+    line-height: 12vw;
+    text-align: center;
+    background: #e43017;
+
+    a {
+      float: left;
+      height: 6vw;
+      margin-top: 3vw;
+
+      img[alt="left_arrow"] {
+        display: block;
+        width: 6vw;
+      }
+    }
+
+    h2 {
+      font-size: 4vw;
+      font-weight: normal;
+      color: #fff;
+    }
+  }
+
+  .tabs_trigger {
+    position: relative;
+    width: 100%;
+    height: 9vw;
+    border-bottom: 2px solid #dcdcdc;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 90%;
+      content: '';
+      background-color: #dcdcdc;
+      transform: translate(-50%, -50%);
+    }
+
+    a {
+      position: absolute;
+      bottom: -2px;
+      width: 40%;
+      font-size: 3.5vw;
+      line-height: 9vw;
+      text-align: center;
+      border-bottom: 2px solid #dcdcdc;
+
+      &:first-of-type {
+        left: 5%;
+      }
+
+      &:last-of-type {
+        right: 5%;
+      }
+
+      &.active {
+        color: #e43017;
+        border-color: #e43017;
+      }
+    }
+  }
+
+  .content {
+    font-size: 3.5vw;
+    color: #acaead;
+
+    tbody {
+      tr {
+        &:nth-of-type(odd) {
+          background-color: #f2f2f0;
+        }
+      }
+    }
+
+    tr {
+      height: 8vw;
+      border-bottom: 1px solid #c5c5c5;
+    }
+
+    th,
+    td {
+      text-align: center;
+      border-right: 1px solid #c5c5c5;
+
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+  }
+}
