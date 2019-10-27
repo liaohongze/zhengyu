@@ -15,18 +15,6 @@ require(['until', 'swiper'], function (until, Swiper) {
   })
 
   //快3
-<<<<<<< HEAD
-  $(document).on('click', '.kuai3xialachoose', function () {
-    until.tc2()
-  })
-  $(document).on('click', '.zuqiuxialachoose', function () {
-    until.tc3();
-    if (!morenselecttop) morenselecttop = 0;
-    if (!morenselectcontainer) morenselectcontainer = 0;
-    $('.tabtc div').eq(morenselecttop).addClass('selected').siblings().removeClass('selected');
-    $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
-    $('.topcontainer .playrules').eq(morenselecttop).find('div').eq(morenselectcontainer).addClass('select').siblings().removeClass('select');
-=======
    $(document).on('click', '.kuai3xialachoose', function () {
     until.tc2();
      if(morenselecttop == 999){
@@ -38,7 +26,6 @@ require(['until', 'swiper'], function (until, Swiper) {
     else{
       $('.commoncontent div').eq(morenselecttop).addClass('select').siblings().removeClass('select');
     }
->>>>>>> 41114d187d1df60cc5ad840e1b8a5f0ab0ff433d
   })
 
 
@@ -60,29 +47,16 @@ require(['until', 'swiper'], function (until, Swiper) {
       var poptitle = $(this).find('span').text();
       $('.xialachoose p').text('普通' + poptitle); //11选5标题
       $('.kuai3xialachoose p').text(poptitle); //快3标题
-<<<<<<< HEAD
-      // 第一种玩法只有一组单选数据  将dierzhongwanfa 这个类名再加上一个 isnone 这个类名 隐藏即可
-      // 如果是第二种玩法,有胆拖和选号的, 将diyizhongwanfa这个类名再加上 isnone 这个类名隐藏即可
-
-      if (poptitle === '前二组选') { //11选5 两组显示数据
-=======
       if(poptitle === '前二组选'){ //11选5 两组显示数据
->>>>>>> 41114d187d1df60cc5ad840e1b8a5f0ab0ff433d
         $('.diyizhongwanfa').addClass('isnone');
         $('.dierzhongwanfa').removeClass('isnone');
       } else {
         $('.dierzhongwanfa').addClass('isnone');
         $('.diyizhongwanfa').removeClass('isnone');
       }
-<<<<<<< HEAD
-
-      if (poptitle == '三不同号') {
-
-=======
       if(morenselecttop == 1){  //两不同号
         $('.playnumberdiv').eq(0).removeClass('isnone').siblings().addClass('isnone');
         $('.playnumberdiv').eq(0).find('.container_title p').text('猜中2个不同号码即中奖');
->>>>>>> 41114d187d1df60cc5ad840e1b8a5f0ab0ff433d
       }
      else if( morenselecttop == 2){ //和值
         $('.playnumberdiv').eq(1).removeClass('isnone').siblings().addClass('isnone');
@@ -107,10 +81,6 @@ require(['until', 'swiper'], function (until, Swiper) {
       var poptitle = $(this).find('span').text();
       $('.xialachoose p').text('胆拖' + poptitle);
       $('.kuai3xialachoose p').text(poptitle); //快3标题
-<<<<<<< HEAD
-      layer.closeAll();
-    }
-=======
        if( dantuoindex == 0){ // 胆拖三不同号
       $('.playnumberdiv').eq(5).removeClass('isnone').siblings().addClass('isnone');
       $('.playnumberdiv').eq(5).find('.container_title').eq(0).find('p').text('胆码(选1-2个)');
@@ -123,7 +93,6 @@ require(['until', 'swiper'], function (until, Swiper) {
      }
     morenselecttop = 999;
        layer.closeAll();
->>>>>>> 41114d187d1df60cc5ad840e1b8a5f0ab0ff433d
   })
 
   //选择号码
@@ -162,43 +131,14 @@ require(['until', 'swiper'], function (until, Swiper) {
   $(document).on('click', '.playrules div', function () {
     morenselectcontainer = $(this).index();
     if ($(this).hasClass('select')) {
-<<<<<<< HEAD
-      layer.closeAll();
-      $('.zuqiuxialachoose p').text(poptitle); //足球标题
-=======
         layer.closeAll();
         // 对应内容显示隐藏
         $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
         $('.zuqiuxialachoose p').text(poptitle); //足球标题
->>>>>>> 41114d187d1df60cc5ad840e1b8a5f0ab0ff433d
     } else {
       $(this).addClass('select');
       var poptitle = $(this).find('span').text();
       $('.zuqiuxialachoose p').text(poptitle); //足球标题
-<<<<<<< HEAD
-      layer.closeAll();
-    }
-  })
-
-  //选择号码
-  $(document).on('click', '.datalist_team_rt_bottom div', function () {
-    if ($(this).hasClass('selected')) {
-      $(this).removeClass('selected')
-    } else {
-      $(this).addClass('selected');
-    }
-  })
-  console.log($('#morestc'))
-  $(document).on('click', '.morechoosetc img', function () {
-    layer.open({
-      type: 1,
-      closeBtn: 0, //不显示关闭按钮
-      anim: 2,
-      shadeClose: true, //开启遮罩关闭
-      content: $('#morestc').html()
-    });
-  })
-=======
         // 对应内容显示隐藏
        $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
        layer.closeAll();
@@ -231,7 +171,6 @@ $(document).on('click', '.datalist_team_rt_bottomtc', function () {
       $('#morestc1').removeClass('hidden');
       $('body').css('position', 'fixed');
 })
->>>>>>> 41114d187d1df60cc5ad840e1b8a5f0ab0ff433d
 
 // 半全场弹窗
 $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
@@ -315,3 +254,4 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
     $('.trend_wrap .top_table .period_content .content_col').scrollTop(top);
   });
 });
+
