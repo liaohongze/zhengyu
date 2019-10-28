@@ -122,13 +122,13 @@ require(['until', 'swiper'], function (until, Swiper) {
 
 
   //足球头部选择玩法 区域 开始 ---------------
-  $(document).on('click', '.tabtc div', function () {
+  $(document).on('click', '.football .tabtc div', function () {
     morenselecttop = $(this).index();
     $(this).addClass('selected').siblings().removeClass('selected');
     console.log($('.playrules').eq(morenselecttop))
     $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
   })
-  $(document).on('click', '.playrules div', function () {
+  $(document).on('click', '.football .playrules div', function () {
     morenselectcontainer = $(this).index();
     if ($(this).hasClass('select')) {
         layer.closeAll();
@@ -151,6 +151,9 @@ $(document).on('click', '.datalist_team_rt_bottom div', function () {
     $(this).removeClass('selected')
   } else {
     $(this).addClass('selected');
+  }
+  if($(this).hasClass('rangshengfupeilv')){
+       $(this).removeClass('selected')
   }
 })
 console.log($('#morestc'))
@@ -182,6 +185,7 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
      $('#morestc').addClass('hidden');
        $('#morestc1').addClass('hidden');
         $('#morestc2').addClass('hidden');
+        $('#morestc3').addClass('hidden');
         $('.samebiaoge div').removeClass('isselected')
   })
 
@@ -190,6 +194,7 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
      $('#morestc').addClass('hidden');
      $('#morestc1').addClass('hidden');
     $('#morestc2').addClass('hidden');
+    $('#morestc3').addClass('hidden');
      $('.samebiaoge div').removeClass('isselected');
   })
 
@@ -209,10 +214,41 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
     $('.tabtc div').eq(morenselecttop).addClass('selected').siblings().removeClass('selected');
     $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
     $('.topcontainer .playrules').eq(morenselecttop).find('div').eq(morenselectcontainer).addClass('select').siblings().removeClass('select');
-
-
   })
   //足球头部选择玩法 区域 结束 ---------------
+
+  // 篮球开始
+  $(document).on('click', '.basketball .playrules div', function () {
+    morenselectcontainer = $(this).index();
+    if ($(this).hasClass('select')) {
+        layer.closeAll();
+        // 对应内容显示隐藏
+        $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
+        $('.lanqiuxialachoose p').text(poptitle); //篮球标题
+    } else {
+      $(this).addClass('select');
+      var poptitle = $(this).find('span').text();
+      $('.lanqiuxialachoose p').text(poptitle); //篮球标题
+        // 对应内容显示隐藏
+       $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
+       layer.closeAll();
+    }
+  })
+$(document).on('click', '.hunhetanchuang', function () {
+  console.log(222222)
+      $('#morestc3').removeClass('hidden');
+      $('body').css('position', 'fixed');
+})
+
+  $(document).on('click', '.lanqiuxialachoose', function () {
+    until.tc5();
+    if(!morenselecttop) morenselecttop=0;
+    if(!morenselectcontainer)morenselectcontainer=0;
+    $('.tabtc div').eq(morenselecttop).addClass('selected').siblings().removeClass('selected');
+    $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
+    $('.topcontainer .playrules').eq(morenselecttop).find('div').eq(morenselectcontainer).addClass('select').siblings().removeClass('select');
+  })
+
 
 
   //点击展开历史记录数据

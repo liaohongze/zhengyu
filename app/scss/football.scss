@@ -54,7 +54,7 @@
         }
     }
 }
-#football{
+#football,#basketball{
     background: #e3e3e3;
     .historydata{
         background: #e3e3e3;
@@ -221,7 +221,7 @@
 .hidden{
     display: none;
 }
-#morestc,#morestc1,#morestc2{
+#morestc,#morestc1,#morestc2,#morestc3{
    width: 100%;
     height: 100%;
     position: fixed;
@@ -405,6 +405,11 @@ z-index: 99;
       }
     }
       &#morestc2{
+      .tc4{
+        top: 20%;
+      }
+    }
+       &#morestc3{
       .tc4{
         top: 20%;
       }

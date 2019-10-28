@@ -74,7 +74,7 @@ define(['layer','jquery'], function() {
       closeBtn: 0, //不显示关闭按钮
       anim: 2,
       shadeClose: true, //开启遮罩关闭
-      content: '<div class="tc1 tc3">\n'+
+      content: '<div class="tc1 tc3 football">\n'+
       '<div class="tabtc">\n'+
         '<div class="lf selected">\n'+
           '<p>过关玩法</p>\n'+
@@ -103,6 +103,7 @@ define(['layer','jquery'], function() {
     '</div>\n'
     });
   }
+
   //  足球更多选项弹窗
   function tc4() {
     layer.open({
@@ -141,6 +142,41 @@ define(['layer','jquery'], function() {
     });
   }
 
+// 篮球
+  function tc5() {
+    layer.open({
+      type: 1,
+      skin: 'myskin', //样式类名
+      closeBtn: 0, //不显示关闭按钮
+      anim: 2,
+      shadeClose: true, //开启遮罩关闭
+      content: '<div class="tc1 tc3 basketball">\n'+
+      '<div class="tabtc">\n'+
+        '<div class="lf selected">\n'+
+          '<p>过关玩法</p>\n'+
+        '</div>\n'+
+       ' <div class="rt">\n'+
+          '<p>单关玩法</p>\n'+
+        '</div>\n'+
+        '<div class="clear"></div></div>\n'+
+      '<div class="topcontainer">\n'+
+        '<div class="playrules">\n'+
+            '<div class="select"><span>胜负</span></div>\n'+
+            '<div><span>让分胜负</span></div>\n'+
+            '<div><span>胜分差</span></div>\n'+
+            '<div><span>大小分</span></div>\n'+
+            '<div><span>混合投注</span></div>\n'+
+          '</div>\n'+
+          '<div class="playrules isnone">\n'+
+            '<div class="select"><span>胜负</span></div>\n'+
+            '<div><span>让分胜负</span></div>\n'+
+            '<div><span>胜分差</span></div>\n'+
+            '<div><span>大小分</span></div>\n'+
+          '</div>\n'+
+      '</div>\n'+
+    '</div>\n'
+    });
+  }
 //倒计时
     function timer(intDiff){
       window.setInterval(function(){
@@ -166,6 +202,7 @@ define(['layer','jquery'], function() {
      tc2:tc2,
      tc3:tc3,
      tc4:tc4,
+     tc5:tc5,
     timer:timer
   }
 })
