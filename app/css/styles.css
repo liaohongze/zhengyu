@@ -2266,6 +2266,73 @@ body {
       #basketball .hunhetouzu .historydatabottom .qishudata .hunhetanchuang.hunhelf p:nth-of-type(3), #basketball .hunhetouzu .historydatabottom .qishudata .hunhelf.hunhelf p:nth-of-type(3) {
         background: #f67055; }
 
+.charge_page {
+  height: 100%;
+  background-color: #f5f5f5; }
+  .charge_page header {
+    height: 12vw;
+    padding: 0 3vw;
+    line-height: 12vw;
+    text-align: center;
+    background: #e43017; }
+    .charge_page header a {
+      float: left;
+      height: 6vw;
+      margin-top: 3vw; }
+      .charge_page header a img[alt="left_arrow"] {
+        display: block;
+        width: 6vw; }
+    .charge_page header h2 {
+      font-size: 4vw;
+      font-weight: normal;
+      color: #fff; }
+  .charge_page .list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .charge_page .list a {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 94.5%;
+      height: 16.8vw;
+      padding: 0 3vw;
+      margin-top: 2.8vw;
+      background-color: #fff; }
+      .charge_page .list a img[alt="pay"] {
+        width: 10vw;
+        height: 10vw; }
+      .charge_page .list a img[alt="seemore"] {
+        width: 7vw;
+        height: 7vw; }
+      .charge_page .list a h5 {
+        margin: 0 2vw; }
+      .charge_page .list a p {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        overflow: hidden;
+        font-size: 3.5vw;
+        color: #8e8e8e;
+        text-overflow: ellipsis; }
+
 .lf {
   float: left; }
 
