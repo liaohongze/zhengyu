@@ -228,30 +228,28 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
     until.timer(intDiff);
   });
 
-  $('.trend_wrap .bottom_table .content_col').scroll(function() {
+  $('#bottom_content_col').scroll(function() {
     var left = $(this).scrollLeft();
-    $('.trend_wrap .top_table .top_title .content_col').scrollLeft(left);
-    $('.trend_wrap .top_table .period_content .content_col').scrollLeft(left);
+    $('#title_content_col').scrollLeft(left);
+    $('#preiod_content_col').scrollLeft(left);
   });
 
-  $('.trend_wrap .top_table .top_title .content_col').scroll(function() {
+  $('#title_content_col').scroll(function() {
     var left = $(this).scrollLeft();
-    $('.trend_wrap .bottom_table .content_col').scrollLeft(left);
-    $('.trend_wrap .top_table .period_content .content_col').scrollLeft(left);
+    $('#bottom_content_col').scrollLeft(left);
+    $('#preiod_content_col').scrollLeft(left);
   });
 
-  $('.trend_wrap .top_table .period_content .content_col').scroll(function() {
+  $('#preiod_content_col').scroll(function() {
     var left = $(this).scrollLeft();
-    $('.trend_wrap .bottom_table .content_col').scrollLeft(left);
-    $('.trend_wrap .top_table .top_title .content_col').scrollLeft(left);
+    $('#bottom_content_col').scrollLeft(left);
+    $('#title_content_col').scrollLeft(left);
 
-    var top = $(this).scrollTop();
-    $('.trend_wrap .top_table .period_content .title').scrollTop(top);
+    $('#period_title').scrollTop($(this).scrollTop());
   });
 
-  $('.trend_wrap .top_table .period_content .title').scroll(function() {
-    var top = $(this).scrollTop();
-    $('.trend_wrap .top_table .period_content .content_col').scrollTop(top);
+  $('#period_title').scroll(function() {
+    $('#preiod_content_col').scrollTop($(this).scrollTop());
   });
 });
 
