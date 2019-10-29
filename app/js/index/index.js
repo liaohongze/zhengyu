@@ -342,5 +342,13 @@ $(document).on('click','.shanchudata',function(){
   //     $(value).attr('value');
   //   });
   // });
+
+  $('.change_type span').on('click', function() {
+    var has = $(this).hasClass('active');
+    if (!has) {
+      $(this).siblings().removeClass('active')
+      $(this).addClass('active');
+    }
+  })
 });
 

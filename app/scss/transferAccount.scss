@@ -1,0 +1,32 @@
+.transfer_account_page {
+  height: 100%;
+  background-color: #f6f6f6;
+
+  .change_type {
+    display: flex;
+
+    span {
+      width: 30.8vw;
+      padding: 1.2vw 0;
+      font-size: 3.5vw;
+      color: #ba3f53;
+      text-align: center;
+      border: 1px solid #ba3f53;
+
+      &:first-of-type {
+        border-top-left-radius: 1vw;
+        border-bottom-left-radius: 1vw;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: 1vw;
+        border-bottom-right-radius: 1vw;
+      }
+
+      &.active {
+        color: #fff;
+        background-color: #ba3f53;
+      }
+    }
+  }
+}

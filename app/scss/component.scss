@@ -1,0 +1,28 @@
+// 斑马线表单
+.public_cross_form {
+  .form_item {
+    display: flex;
+    align-items: center;
+    padding: 2vw 6vw;
+    margin-top: 3vw;
+    color: #333;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    label {
+      width: 17.1vw;
+      text-align: right;
+    }
+
+    .cotent {
+      flex: 1;
+      margin-left: 4vw;
+      font-size: 4vw;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
