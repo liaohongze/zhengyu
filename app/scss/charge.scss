@@ -67,3 +67,103 @@
     }
   }
 }
+
+.charge_pay_page {
+  height: 100%;
+  background-color: #f5f5f5;
+
+  header {
+    height: 12vw;
+    padding: 0 3vw;
+    line-height: 12vw;
+    text-align: center;
+    background: #e43017;
+
+    a {
+      float: left;
+      height: 6vw;
+      margin-top: 3vw;
+
+      img[alt="left_arrow"] {
+        display: block;
+        width: 6vw;
+      }
+    }
+
+    h2 {
+      font-size: 4vw;
+      font-weight: normal;
+      color: #fff;
+    }
+  }
+
+  .panel {
+    box-sizing: border-box;
+    width: 94.4%;
+    padding: 2.7vw;
+    margin: 2.8vw;
+    background-color: #fff;
+
+    h3 {
+      display: flex;
+      align-items: center;
+      padding-bottom: 3vw;
+      border-bottom: 1px solid #333;
+
+      img {
+        width: 10vw;
+        height: 10vw;
+        margin-right: 3vw;
+      }
+    }
+
+    .ffp {
+      display: block;
+      width: 26.6vw;
+      height: 8vw;
+      margin-top: 3vw;
+      font-size: 3.5vw;
+      line-height: 8vw;
+      color: #fff;
+      text-align: center;
+      background-color: #f95740;
+      border-radius: 1vw;
+    }
+
+    > form {
+      display: flex;
+      align-items: center;
+      margin-top: 3vw;
+
+      label {
+        padding-left: 2vw;
+      }
+
+      input {
+        flex: 1;
+        height: 11vw;
+        padding-left: 3vw;
+        border: 1px solid #aaa;
+        border-radius: 1vw;
+      }
+    }
+
+    .tip {
+      display: flex;
+      align-items: flex-start;
+      padding: 3.4vw;
+      margin-top: 4vw;
+      font-size: 3.5vw;
+      color: #006100;
+      background-color: #e5f2e8;
+      border: 1px solid #55ad62;
+      border-radius: 1vw;
+
+      img {
+        width: 4.7vw;
+        height: 4.7vw;
+        margin-right: 3.4vw;
+      }
+    }
+  }
+}

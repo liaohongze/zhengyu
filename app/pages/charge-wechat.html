@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>选择支付方式</title>
+	<title>微信支付</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="../js/widgets/swiper/swiper-3.4.2.min.css">
@@ -18,7 +18,7 @@
         <![endif]-->
 
 	<!-- Add your site or application content here -->
-	<div class="charge_page">
+	<div class="charge_pay_page">
 		<header>
 			<a href="javascript: window.history.back();">
 				<img src="../images/index/left-icon.png" alt="left_arrow">
@@ -27,24 +27,28 @@
 			<h2>充值</h2>
 		</header>
 
-		<div class="list">
-			<a href="./charge-wechat.html">
-				<img src="../images/wechatpay.jpeg" alt="pay">
-				<h5>微信</h5>
-				<p>【线下】充值快捷方便，成功率高</p>
-				<img src="../images/seemore.jpeg" alt="seemore">
-			</a>
+		<div class="panel">
+			<h3>
+				<img src="../images/wechatpay.jpeg" alt="">
+				<span>微信</span>
+			</h3>
+			<span class="ffp">微信FFP</span>
 
-			<a href="./charge-alipay.html">
-				<img src="../images/alipay.jpg" alt="pay">
-				<h5>支付宝</h5>
-				<p>快捷方便，成功率高</p>
-				<img src="../images/seemore.jpeg" alt="seemore">
-			</a>
+			<form>
+				<label for="">充值金额：</label>
+				<input type="number" placeholder="请输入充值金额">
+			</form>
+
+			<div class="tip">
+				<img src="../images/icon-tip.png" alt="">
+				<p>
+					手续费<span class="red">无</span>，单笔充值限额<span class="red">100.00～5,000.00</span>元，充值总额无上限，全自动，秒到账
+				</p>
+			</div>
 		</div>
-	</div>
 
-	<script src="../js/vendor/require.js" defer async='true' data-main='../js/main.js'></script>
+		<button class="main_long_btn">确定</button>
+	</div>
 </body>
 
 </html>

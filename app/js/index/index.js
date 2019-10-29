@@ -287,5 +287,13 @@ $(document).on('click', '.hunhetanchuang', function () {
   $('#period_title').scroll(function() {
     $('#preiod_content_col').scrollTop($(this).scrollTop());
   });
+  
+  // $('#get_select_num').on('click', function() {
+  //   var selects = $('.choosenumber .number .selected');
+  //   selects.each(function(key, value) {
+  //     $(value).attr('id');
+  //     $(value).attr('value');
+  //   });
+  // });
 });
 
