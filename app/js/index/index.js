@@ -198,6 +198,11 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
      $('.samebiaoge div').removeClass('isselected');
   })
 
+    $(document).on('click','.opentc',function(){
+     $('#morestc1').removeClass('hidden');
+      $('body').css('position', 'fixed');
+  })
+
    $(document).on('click','.samebiaoge div',function(){
      if ($(this).hasClass('isselected')) {
       $(this).removeClass('isselected')
@@ -250,6 +255,48 @@ $(document).on('click', '.hunhetanchuang', function () {
   })
 
 
+  // 输入框左减右加
+
+        var t = $(".zhuiqi #text_box1");
+            $("#add1").click(function(){
+                t.val(parseInt(t.val())+1)
+                setTotal();
+            })
+            $("#min1").click(function(){
+                t.val(parseInt(t.val())-1)
+                setTotal();
+            })
+            function setTotal(){
+                var tt = $("#text_box1").val();
+                if(tt<=0){
+                    alert('输入的值错误！');
+                    t.val(parseInt(t.val())+1)
+                }
+            }
+
+        var m = $(".zhuibei #text_box2");
+            $("#add2").click(function(){
+                m.val(parseInt(m.val())+1)
+                setTotal();
+            })
+            $("#min2").click(function(){
+                m.val(parseInt(m.val())-1)
+                setTotal();
+            })
+            function setTotal(){
+                var tm = $("#text_box2").val();
+                if(tm<=0){
+                    alert('输入的值错误！');
+                    m.val(parseInt(m.val())+1)
+                }
+            }
+
+
+            // 点击删除数据
+
+$(document).on('click','.shanchudata',function(){
+   $(this).parent().parent().remove();
+})
 
   //点击展开历史记录数据
   $(document).on('click', '.xialablock', function () {
