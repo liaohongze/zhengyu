@@ -12,6 +12,7 @@ require(['until', 'swiper'], function (until, Swiper) {
   // 福建11选5
   $(document).on('click', '.xialachoose', function () {
     until.tc1();
+    $('body').removeClass('selected');
     if(morenselecttop == 999){
       $('.commoncontent div').eq(0).removeClass('select');
   }
@@ -50,7 +51,15 @@ require(['until', 'swiper'], function (until, Swiper) {
     // 11选5玩法显示内容说明
     // 第一种玩法只有一组单选数据  将dierzhongwanfa 这个类名再加上一个 isnone 这个类名 隐藏即可
       // 如果是第二种玩法,有胆拖和选号的, 将diyizhongwanfa这个类名再加上 isnone 这个类名隐藏即可
-
+      $('.diyizhongwanfa .number div').removeClass('selected')
+      $('.dierzhongwanfa .number div').removeClass('selected')
+      $('.disanzhongwanfa .number div').removeClass('selected')
+      $('.disizhongwanfa .number div').removeClass('selected');
+      $('.sanbutonghao .number div').removeClass('selected');
+      $('.hezhi .number div').removeClass('selected');
+      $('.caiduizi .number div').removeClass('selected');
+      $('.caishunzi .number div').removeClass('selected');
+      $('.caibaozi .number div').removeClass('selected');
       morenselecttop = $(this).index();
       $(this).addClass('select');
       var popValue = $(this).find('span').attr('data-value');
@@ -58,20 +67,30 @@ require(['until', 'swiper'], function (until, Swiper) {
       $('.xialachoose p').text('普通' + poptitle); //11选5标题
       $('.kuai3xialachoose p').text(poptitle); //快3标题
       if(popValue === '1'){ //11选5 显示数据
+
         $('.diyizhongwanfa').removeClass('isnone');
         $('.dierzhongwanfa').addClass('isnone');
         $('.disanzhongwanfa').addClass('isnone');
+        $('.disizhongwanfa').addClass('isnone');
       }
       if(popValue === '2'){
+        $(this).removeClass('selected')
         $('.diyizhongwanfa').addClass('isnone');
-        $('.dierzhongwanfa').removeClass('isnone');
+        $('.dierzhongwanfa').addClass('isnone');
         $('.disanzhongwanfa').addClass('isnone');
+        $('.disizhongwanfa').removeClass('isnone');
       }
      if(popValue === '3'){
+       $(this).removeClass('selected')
         $('.diyizhongwanfa').addClass('isnone');
         $('.dierzhongwanfa').addClass('isnone');
         $('.disanzhongwanfa').removeClass('isnone');
+         $('.disizhongwanfa').addClass('isnone');
       }
+        if(morenselecttop == 0){ //三不同号
+        $('.playnumberdiv').eq(0).removeClass('isnone').siblings().addClass('isnone');
+        $('.playnumberdiv').eq(0).find('.container_title p').text('猜中3个不同号码即中奖');
+        }
       if(morenselecttop == 1){  //两不同号
         $('.playnumberdiv').eq(0).removeClass('isnone').siblings().addClass('isnone');
         $('.playnumberdiv').eq(0).find('.container_title p').text('猜中2个不同号码即中奖');
@@ -100,20 +119,27 @@ require(['until', 'swiper'], function (until, Swiper) {
       var poptitle = $(this).find('span').text();
       $('.xialachoose p').text('胆拖' + poptitle);
       $('.kuai3xialachoose p').text(poptitle); //快3标题
+      $('.diyizhongwanfa .number div').removeClass('selected')
+      $('.dierzhongwanfa .number div').removeClass('selected')
+      $('.disanzhongwanfa .number div').removeClass('selected')
+      $('.disizhongwanfa .number div').removeClass('selected');
       if(popValue === '1'){ //11选5 显示数据
         $('.diyizhongwanfa').removeClass('isnone');
         $('.dierzhongwanfa').addClass('isnone');
         $('.disanzhongwanfa').addClass('isnone');
+         $('.disizhongwanfa').addClass('isnone');
       }
       if(popValue === '2'){
         $('.diyizhongwanfa').addClass('isnone');
         $('.dierzhongwanfa').removeClass('isnone');
         $('.disanzhongwanfa').addClass('isnone');
+         $('.disizhongwanfa').addClass('isnone');
       }
      if(popValue === '3'){
         $('.diyizhongwanfa').addClass('isnone');
         $('.dierzhongwanfa').addClass('isnone');
         $('.disanzhongwanfa').removeClass('isnone');
+         $('.disizhongwanfa').addClass('isnone');
       }
        if( dantuoindex == 0){ // 胆拖三不同号
       $('.playnumberdiv').eq(5).removeClass('isnone').siblings().addClass('isnone');
@@ -368,7 +394,7 @@ $(document).on('click','.shanchudata',function(){
   $('#period_title').scroll(function() {
     $('#preiod_content_col').scrollTop($(this).scrollTop());
   });
-  
+
   // $('#get_select_num').on('click', function() {
   //   var selects = $('.choosenumber .number .selected');
   //   selects.each(function(key, value) {
