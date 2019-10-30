@@ -11,7 +11,16 @@ require(['until', 'swiper'], function (until, Swiper) {
   var dantuoindex;
   // 福建11选5
   $(document).on('click', '.xialachoose', function () {
-    until.tc1()
+    until.tc1();
+    if(morenselecttop == 999){
+      $('.commoncontent div').eq(0).removeClass('select');
+  }
+  if(dantuoindex == 0 || dantuoindex == 1){
+     $('.dantuocontent div').eq(dantuoindex).addClass('select').siblings().removeClass('select');
+  }
+  else{
+    $('.commoncontent div').eq(morenselecttop).addClass('select').siblings().removeClass('select');
+  }
   })
 
   //快3
@@ -44,15 +53,24 @@ require(['until', 'swiper'], function (until, Swiper) {
 
       morenselecttop = $(this).index();
       $(this).addClass('select');
+      var popValue = $(this).find('span').attr('data-value');
       var poptitle = $(this).find('span').text();
       $('.xialachoose p').text('普通' + poptitle); //11选5标题
       $('.kuai3xialachoose p').text(poptitle); //快3标题
-      if(poptitle === '前二组选'){ //11选5 两组显示数据
+      if(popValue === '1'){ //11选5 显示数据
+        $('.diyizhongwanfa').removeClass('isnone');
+        $('.dierzhongwanfa').addClass('isnone');
+        $('.disanzhongwanfa').addClass('isnone');
+      }
+      if(popValue === '2'){
         $('.diyizhongwanfa').addClass('isnone');
         $('.dierzhongwanfa').removeClass('isnone');
-      } else {
+        $('.disanzhongwanfa').addClass('isnone');
+      }
+     if(popValue === '3'){
+        $('.diyizhongwanfa').addClass('isnone');
         $('.dierzhongwanfa').addClass('isnone');
-        $('.diyizhongwanfa').removeClass('isnone');
+        $('.disanzhongwanfa').removeClass('isnone');
       }
       if(morenselecttop == 1){  //两不同号
         $('.playnumberdiv').eq(0).removeClass('isnone').siblings().addClass('isnone');

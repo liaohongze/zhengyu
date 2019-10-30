@@ -12,10 +12,10 @@ define(['layer','jquery'], function() {
       content: '<div class="tc1">\n' +
       ' <p class="commontitle">普通:</p>\n' +
       ' <div class="commoncontent">\n' +
-      ' <div class="select"><span>任选一</span></div>\n' +
-      '<div><span>任选二</span></div>\n' +
-      ' <div><span>任选三</span></div>\n' +
-      '<div><span>任选四</span></div>\n' +
+      ' <div class="select" data-value="1"><span>任选一</span></div>\n' +
+      '<div><span data-value="1">任选二</span></div>\n' +
+      ' <div><span data-value="2">任选三</span></div>\n' +
+      '<div><span data-value="3">任选四</span></div>\n' +
       '<div><span>任选五</span></div>\n' +
       '<div><span>任选六</span></div>\n' +
       '<div><span>任选七</span></div>\n' +
