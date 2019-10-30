@@ -56,6 +56,7 @@ require(['until', 'swiper'], function (until, Swiper) {
       $('.disanzhongwanfa .number div').removeClass('selected')
       $('.disizhongwanfa .number div').removeClass('selected');
       $('.sanbutonghao .number div').removeClass('selected');
+      $('.butonghao .number div').removeClass('selected');
       $('.hezhi .number div').removeClass('selected');
       $('.caiduizi .number div').removeClass('selected');
       $('.caishunzi .number div').removeClass('selected');
@@ -123,6 +124,12 @@ require(['until', 'swiper'], function (until, Swiper) {
       $('.dierzhongwanfa .number div').removeClass('selected')
       $('.disanzhongwanfa .number div').removeClass('selected')
       $('.disizhongwanfa .number div').removeClass('selected');
+      $('.sanbutonghao .number div').removeClass('selected');
+       $('.butonghao .number div').removeClass('selected');
+      $('.hezhi .number div').removeClass('selected');
+      $('.caiduizi .number div').removeClass('selected');
+      $('.caishunzi .number div').removeClass('selected');
+      $('.caibaozi .number div').removeClass('selected');
       if(popValue === '1'){ //11选5 显示数据
         $('.diyizhongwanfa').removeClass('isnone');
         $('.dierzhongwanfa').addClass('isnone');
