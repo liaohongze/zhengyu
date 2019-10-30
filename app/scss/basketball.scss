@@ -1,0 +1,99 @@
+#basketball {
+    .historydatabottom {
+        .qishudata {
+            .datalist_team_rt {
+                .datalist_team_rt_bottom {
+                    div {
+                        width: 48% !important;
+                    }
+                    &.rangshengfupeilvdiv {
+                        div {
+                            width: 30% !important;
+                            &.rangshengfupeilv {
+                                color: #e43015;
+                            }
+                        }
+                    }
+                      &.lanqiuhunhe{
+                        div{
+                           width: 30% !important;
+                           &:nth-of-type(2){
+                            width: 9vw!important;
+                            border: none;
+                            font-size: 3vw;
+                            color: #e43015;
+                           }
+                        }
+                      }
+                }
+            }
+              .datalist_team_lf{
+                // padding-top: 13vw;
+              }
+        }
+    }
+    #morestc1,#morestc3{
+        .tc4 {
+            .pingcontainer {
+                .pingcontainer_rt {
+                    .samebiaoge {
+                        div {
+                            width: calc(100% / 3);
+                        }
+                    }
+                }
+            }
+            .fucontainer {
+                .fucontainer_rt {
+                    .samebiaoge {
+                        div {
+                            width: calc(100% / 3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+      .hunhetouzu{
+        .historydatabottom{
+          .qishudata{
+            .datalist_team_lf{
+              width: 18%;
+            }
+            .datalist_team_rt{
+              width: 61%;
+            }
+             .hunhetanchuang,.hunhelf{
+               width: 11%;
+              height: 29vw;
+              margin-top: 11vw;
+              border: 1px solid #e3e3e3;
+              border-radius: 5px;
+              p{
+                display: block;
+                font-size: 3.7vw;
+                text-align: center;
+                height: calc(100% / 3);
+              }
+              &.hunhelf{
+                width: 5vw;
+                p{
+                  font-size: 3vw;
+                  line-height: 1.5;
+                  color: #fff;
+                  &:nth-of-type(1){
+                    background: #f3c951;
+                  }
+                    &:nth-of-type(2){
+                      background: #4e98f7;
+                  }
+                      &:nth-of-type(3){
+                        background: #f67055;
+                  }
+                }
+              }
+              }
+          }
+        }
+      }
+}

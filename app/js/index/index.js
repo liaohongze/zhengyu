@@ -140,13 +140,13 @@ require(['until', 'swiper'], function (until, Swiper) {
 
 
   //足球头部选择玩法 区域 开始 ---------------
-  $(document).on('click', '.tabtc div', function () {
+  $(document).on('click', '.football .tabtc div', function () {
     morenselecttop = $(this).index();
     $(this).addClass('selected').siblings().removeClass('selected');
     console.log($('.playrules').eq(morenselecttop))
     $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
   })
-  $(document).on('click', '.playrules div', function () {
+  $(document).on('click', '.football .playrules div', function () {
     morenselectcontainer = $(this).index();
     if ($(this).hasClass('select')) {
         layer.closeAll();
@@ -169,6 +169,9 @@ $(document).on('click', '.datalist_team_rt_bottom div', function () {
     $(this).removeClass('selected')
   } else {
     $(this).addClass('selected');
+  }
+  if($(this).hasClass('rangshengfupeilv')){
+       $(this).removeClass('selected')
   }
 })
 console.log($('#morestc'))
@@ -200,6 +203,7 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
      $('#morestc').addClass('hidden');
        $('#morestc1').addClass('hidden');
         $('#morestc2').addClass('hidden');
+        $('#morestc3').addClass('hidden');
         $('.samebiaoge div').removeClass('isselected')
   })
 
@@ -208,7 +212,13 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
      $('#morestc').addClass('hidden');
      $('#morestc1').addClass('hidden');
     $('#morestc2').addClass('hidden');
+    $('#morestc3').addClass('hidden');
      $('.samebiaoge div').removeClass('isselected');
+  })
+
+    $(document).on('click','.opentc',function(){
+     $('#morestc1').removeClass('hidden');
+      $('body').css('position', 'fixed');
   })
 
    $(document).on('click','.samebiaoge div',function(){
@@ -227,11 +237,84 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
     $('.tabtc div').eq(morenselecttop).addClass('selected').siblings().removeClass('selected');
     $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
     $('.topcontainer .playrules').eq(morenselecttop).find('div').eq(morenselectcontainer).addClass('select').siblings().removeClass('select');
-
-
   })
   //足球头部选择玩法 区域 结束 ---------------
 
+  // 篮球开始
+  $(document).on('click', '.basketball .playrules div', function () {
+    morenselectcontainer = $(this).index();
+    if ($(this).hasClass('select')) {
+        layer.closeAll();
+        // 对应内容显示隐藏
+        $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
+        $('.lanqiuxialachoose p').text(poptitle); //篮球标题
+    } else {
+      $(this).addClass('select');
+      var poptitle = $(this).find('span').text();
+      $('.lanqiuxialachoose p').text(poptitle); //篮球标题
+        // 对应内容显示隐藏
+       $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
+       layer.closeAll();
+    }
+  })
+$(document).on('click', '.hunhetanchuang', function () {
+  console.log(222222)
+      $('#morestc3').removeClass('hidden');
+      $('body').css('position', 'fixed');
+})
+
+  $(document).on('click', '.lanqiuxialachoose', function () {
+    until.tc5();
+    if(!morenselecttop) morenselecttop=0;
+    if(!morenselectcontainer)morenselectcontainer=0;
+    $('.tabtc div').eq(morenselecttop).addClass('selected').siblings().removeClass('selected');
+    $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
+    $('.topcontainer .playrules').eq(morenselecttop).find('div').eq(morenselectcontainer).addClass('select').siblings().removeClass('select');
+  })
+
+
+  // 输入框左减右加
+
+        var t = $(".zhuiqi #text_box1");
+            $("#add1").click(function(){
+                t.val(parseInt(t.val())+1)
+                setTotal();
+            })
+            $("#min1").click(function(){
+                t.val(parseInt(t.val())-1)
+                setTotal();
+            })
+            function setTotal(){
+                var tt = $("#text_box1").val();
+                if(tt<=0){
+                    alert('输入的值错误！');
+                    t.val(parseInt(t.val())+1)
+                }
+            }
+
+        var m = $(".zhuibei #text_box2");
+            $("#add2").click(function(){
+                m.val(parseInt(m.val())+1)
+                setTotal();
+            })
+            $("#min2").click(function(){
+                m.val(parseInt(m.val())-1)
+                setTotal();
+            })
+            function setTotal(){
+                var tm = $("#text_box2").val();
+                if(tm<=0){
+                    alert('输入的值错误！');
+                    m.val(parseInt(m.val())+1)
+                }
+            }
+
+
+            // 点击删除数据
+
+$(document).on('click','.shanchudata',function(){
+   $(this).parent().parent().remove();
+})
 
   //点击展开历史记录数据
   $(document).on('click', '.xialablock', function () {
@@ -246,30 +329,44 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
     until.timer(intDiff);
   });
 
-  $('.trend_wrap .bottom_table .content_col').scroll(function() {
+  $('#bottom_content_col').scroll(function() {
     var left = $(this).scrollLeft();
-    $('.trend_wrap .top_table .top_title .content_col').scrollLeft(left);
-    $('.trend_wrap .top_table .period_content .content_col').scrollLeft(left);
+    $('#title_content_col').scrollLeft(left);
+    $('#preiod_content_col').scrollLeft(left);
   });
 
-  $('.trend_wrap .top_table .top_title .content_col').scroll(function() {
+  $('#title_content_col').scroll(function() {
     var left = $(this).scrollLeft();
-    $('.trend_wrap .bottom_table .content_col').scrollLeft(left);
-    $('.trend_wrap .top_table .period_content .content_col').scrollLeft(left);
+    $('#bottom_content_col').scrollLeft(left);
+    $('#preiod_content_col').scrollLeft(left);
   });
 
-  $('.trend_wrap .top_table .period_content .content_col').scroll(function() {
+  $('#preiod_content_col').scroll(function() {
     var left = $(this).scrollLeft();
-    $('.trend_wrap .bottom_table .content_col').scrollLeft(left);
-    $('.trend_wrap .top_table .top_title .content_col').scrollLeft(left);
+    $('#bottom_content_col').scrollLeft(left);
+    $('#title_content_col').scrollLeft(left);
 
-    var top = $(this).scrollTop();
-    $('.trend_wrap .top_table .period_content .title').scrollTop(top);
+    $('#period_title').scrollTop($(this).scrollTop());
   });
 
-  $('.trend_wrap .top_table .period_content .title').scroll(function() {
-    var top = $(this).scrollTop();
-    $('.trend_wrap .top_table .period_content .content_col').scrollTop(top);
+  $('#period_title').scroll(function() {
+    $('#preiod_content_col').scrollTop($(this).scrollTop());
   });
+  
+  // $('#get_select_num').on('click', function() {
+  //   var selects = $('.choosenumber .number .selected');
+  //   selects.each(function(key, value) {
+  //     $(value).attr('id');
+  //     $(value).attr('value');
+  //   });
+  // });
+
+  $('.change_type span').on('click', function() {
+    var has = $(this).hasClass('active');
+    if (!has) {
+      $(this).siblings().removeClass('active')
+      $(this).addClass('active');
+    }
+  })
 });
 

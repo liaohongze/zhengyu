@@ -3,31 +3,6 @@
   height: 100%;
   background-color: #f6f6f6;
 
-  header {
-    height: 12vw;
-    padding: 0 3vw;
-    line-height: 12vw;
-    text-align: center;
-    background: #e43017;
-
-    a {
-      float: left;
-      height: 6vw;
-      margin-top: 3vw;
-
-      img[alt="left_arrow"] {
-        display: block;
-        width: 6vw;
-      }
-    }
-
-    h2 {
-      font-size: 4vw;
-      font-weight: normal;
-      color: #fff;
-    }
-  }
-
   form {
     margin-top: 3.8vw;
 
