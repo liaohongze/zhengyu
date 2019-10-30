@@ -5,7 +5,6 @@ require(['until', 'swiper'], function (until, Swiper) {
     loop: true,
     autoplay: 3000
   });
-
   var morenselecttop      //弹窗打开默认选择 标题索引
   var morenselectcontainer;  //弹窗打开默认选择 内容索引
   var dantuoindex;

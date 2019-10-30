@@ -271,6 +271,7 @@
   </div>
 </body>
 <script src="../js/libs/require.js" data-main="../js/index/index.js"></script>
+<script src="../js/index/11xuan5.js"></script>
 <script src="../js/libs/require.config.js"></script>
 <script>
   function GetRequest() {
@@ -289,54 +290,6 @@
   var params = GetRequest();
   console.log(params)
 
-
-  $('.bottom .firstnav > button').on('click', function () {
-    // 玩法
-    var code = $('.commoncontent div.select span').attr('data-code');    
-
-    var gameType = $('.commoncontent div.select span').attr('data-value');
-    var gameDatas = [
-      [],
-      [],
-      []
-    ];
-
-    // 有1组
-    if (gameType === '1') {
-      var selects1 = $('.group1_1 .select')
-      selects1.each(function (key, value) {
-        gameDatas[0].push($(value).attr('value'));
-      });
-    }
-
-    // 有2组
-    if (gameType === '2') {
-      var selects1 = $('.group2_1 .select')
-      selects1.each(function (key, value) {
-        gameDatas[0].push($(value).attr('value'));
-      });
-      var selects2 = $('.group2_2 .select')
-      selects2.each(function (key, value) {
-        gameDatas[1].push($(value).attr('value'));
-      });
-    }
-
-    // 有3组
-    if (gameType === '3') {
-      var selects1 = $('.group3_1 .select')
-      selects1.each(function (key, value) {
-        gameDatas[0].push($(value).attr('value'));
-      });
-      var selects2 = $('.group3_2 .select')
-      selects2.each(function (key, value) {
-        gameDatas[1].push($(value).attr('value'));
-      });
-      var selects2 = $('.group3_3 .select')
-      selects2.each(function (key, value) {
-        gameDatas[1].push($(value).attr('value'));
-      });
-    }
-  });
 </script>
 
 </html>

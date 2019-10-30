@@ -7,6 +7,7 @@ require.config({
         "swiper":"../widgets/swiper/swiper-3.4.2.min",
         "layer":"../widgets/layer/layer",
         "until":'../widgets/until',
+        "11xuan5":'../index/11xuan5'
     },
     shim: {
         "jquery": {
@@ -21,6 +22,9 @@ require.config({
           "until":{
             "deps":['jquery','layer']
           },
+          "11xuan5":{
+            "deps":['jquery']
+          }
     }
 });
 
