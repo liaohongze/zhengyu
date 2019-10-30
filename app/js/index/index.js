@@ -96,9 +96,25 @@ require(['until', 'swiper'], function (until, Swiper) {
   $(document).on('click', '.dantuocontent div', function () {
        dantuoindex = $(this).index();
       $(this).addClass('select');
+      var popValue = $(this).find('span').attr('data-value');
       var poptitle = $(this).find('span').text();
       $('.xialachoose p').text('胆拖' + poptitle);
       $('.kuai3xialachoose p').text(poptitle); //快3标题
+      if(popValue === '1'){ //11选5 显示数据
+        $('.diyizhongwanfa').removeClass('isnone');
+        $('.dierzhongwanfa').addClass('isnone');
+        $('.disanzhongwanfa').addClass('isnone');
+      }
+      if(popValue === '2'){
+        $('.diyizhongwanfa').addClass('isnone');
+        $('.dierzhongwanfa').removeClass('isnone');
+        $('.disanzhongwanfa').addClass('isnone');
+      }
+     if(popValue === '3'){
+        $('.diyizhongwanfa').addClass('isnone');
+        $('.dierzhongwanfa').addClass('isnone');
+        $('.disanzhongwanfa').removeClass('isnone');
+      }
        if( dantuoindex == 0){ // 胆拖三不同号
       $('.playnumberdiv').eq(5).removeClass('isnone').siblings().addClass('isnone');
       $('.playnumberdiv').eq(5).find('.container_title').eq(0).find('p').text('胆码(选1-2个)');

@@ -12,34 +12,30 @@ define(['layer','jquery'], function() {
       content: '<div class="tc1">\n' +
       ' <p class="commontitle">普通:</p>\n' +
       ' <div class="commoncontent">\n' +
-      ' <div class="select" data-value="1"><span>任选一</span></div>\n' +
-      '<div><span data-value="1">任选二</span></div>\n' +
-      ' <div><span data-value="2">任选三</span></div>\n' +
-      '<div><span data-value="3">任选四</span></div>\n' +
-      '<div><span>任选五</span></div>\n' +
-      '<div><span>任选六</span></div>\n' +
-      '<div><span>任选七</span></div>\n' +
-      '<div><span>任选八</span></div>\n' +
-      '<div><span>前二直选</span></div>\n' +
-      '<div><span>前二组选</span></div>\n' +
-      '<div><span>前三直选</span></div>\n' +
-      '<div><span>前四组选</span></div>\n' +
-      '<div><span>乐选三</span></div>\n' +
-      '<div><span>乐选四</span></div>\n' +
-      '<div><span>乐选五</span></div></div>\n' +
+      ' <div class="select" data-value="1"><span>任选二</span></div>\n' +
+      ' <div><span data-value="1">任选三</span></div>\n' +
+      '<div><span data-value="1">任选四</span></div>\n' +
+      '<div><span data-value="1">任选五</span></div>\n' +
+      '<div><span data-value="1">任选六</span></div>\n' +
+      '<div><span data-value="1">任选七</span></div>\n' +
+      '<div><span data-value="1">任选八</span></div>\n' +
+      '<div><span data-value="2">前二直选</span></div>\n' +
+      '<div><span data-value="1">前二组选</span></div>\n' +
+      '<div><span data-value="3">前三直选</span></div>\n' +
+      '<div><span data-value="1">前四组选</span></div>\n' +
+      '<div><span data-value="3">乐选三</span></div>\n' +
+      '<div><span data-value="1">乐选四</span></div>\n' +
+      '<div><span data-value="1">乐选五</span></div></div>\n' +
       ' <p class="commontitle">胆拖:</p>\n' +
       ' <div class="dantuocontent">\n' +
-      ' <div><span>任选一</span></div>\n' +
-      '<div><span>任选二</span></div>\n' +
-      ' <div><span>任选三</span></div>\n' +
-      '<div><span>任选四</span></div>\n' +
-      '<div><span>任选五</span></div>\n' +
-      '<div><span>任选六</span></div>\n' +
-      '<div><span>任选七</span></div>\n' +
-      '<div><span>任选八</span></div>\n' +
-      '<div><span>前二直选</span></div>\n' +
-      '<div><span>前二组选</span></div>\n' +
-      '<div><span>前三直选</span></div>'
+      '<div><span  data-value="2">任选二</span></div>\n' +
+      ' <div><span data-value="2">任选三</span></div>\n' +
+      '<div><span  data-value="2">任选四</span></div>\n' +
+      '<div><span  data-value="2">任选五</span></div>\n' +
+      '<div><span  data-value="2">任选六</span></div>\n' +
+      '<div><span  data-value="2">任选七</span></div>\n' +
+      '<div><span  data-value="2">前二组选</span></div>\n' +
+      '<div><span  data-value="2">前三组选</span></div>\n'
     });
   }
   // 快3
