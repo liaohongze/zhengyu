@@ -76,7 +76,7 @@
       </div>
       <div class="choosenumber">
         <span class="xuanhao">选号</span>
-        <div class="number">
+        <div class="number group1_1">
           <div><span>01</span></div>
           <div><span>02</span></div>
           <div><span>03</span></div>
@@ -115,18 +115,18 @@
       </div>
       <div class="choosenumber">
         <span class="xuanhao">选号</span>
-        <div class="number">
-          <div id="1_1" value="01"><span>01</span></div>
-          <div id="1_2" value="02"><span>02</span></div>
-          <div id="1_3" value="03"><span>03</span></div>
-          <div id="1_4" value="04"><span>04</span></div>
-          <div id="1_5" value="05"><span>05</span></div>
-          <div id="1_6" value="06"><span>06</span></div>
-          <div id="1_7" value="07"><span>07</span></div>
-          <div id="1_8" value="08"><span>08</span></div>
-          <div id="1_9" value="09"><span>09</span></div>
-          <div id="1_10" value="10"><span>10</span></div>
-          <div id="1_11" value="11"><span>11</span></div>
+        <div class="number group2_1">
+          <div><span>01</span></div>
+          <div><span>02</span></div>
+          <div><span>03</span></div>
+          <div><span>04</span></div>
+          <div><span>05</span></div>
+          <div><span>06</span></div>
+          <div><span>07</span></div>
+          <div><span>08</span></div>
+          <div><span>09</span></div>
+          <div><span>10</span></div>
+          <div><span>11</span></div>
         </div>
       </div>
       <div class="kb5"> </div>
@@ -135,18 +135,18 @@
       </div>
       <div class="choosenumber">
         <span class="xuanhao">选号</span>
-        <div class="number">
-          <div id="2_1" value="01"><span>01</span></div>
-          <div id="2_2" value="02"><span>02</span></div>
-          <div id="2_3" value="03"><span>03</span></div>
-          <div id="2_4" value="04"><span>04</span></div>
-          <div id="2_5" value="05"><span>05</span></div>
-          <div id="2_6" value="06"><span>06</span></div>
-          <div id="2_7" value="07"><span>07</span></div>
-          <div id="2_8" value="08"><span>08</span></div>
-          <div id="2_9" value="09"><span>09</span></div>
-          <div id="2_10" value="10"><span>10</span></div>
-          <div id="2_11" value="11"><span>11</span></div>
+        <div class="number group2_2">
+          <div><span>01</span></div>
+          <div><span>02</span></div>
+          <div><span>03</span></div>
+          <div><span>04</span></div>
+          <div><span>05</span></div>
+          <div><span>06</span></div>
+          <div><span>07</span></div>
+          <div><span>08</span></div>
+          <div><span>09</span></div>
+          <div><span>10</span></div>
+          <div><span>11</span></div>
         </div>
       </div>
     </div>
@@ -160,12 +160,12 @@
   </div>
   <div class="disanzhongwanfa isnone">
     <div class="container">
-        <div class='container_title'>
-            <p>每位至少选择1个号码</p>
-        </div>
+      <div class='container_title'>
+        <p>每位至少选择1个号码</p>
+      </div>
       <div class="choosenumber">
         <span class="xuanhao">选号</span>
-        <div class="number">
+        <div class="number group3_1">
           <div><span>01</span></div>
           <div><span>02</span></div>
           <div><span>03</span></div>
@@ -182,7 +182,7 @@
       <div class="kb5"> </div>
       <div class="choosenumber">
         <span class="xuanhao">选号</span>
-        <div class="number">
+        <div class="number group3_2">
           <div><span>01</span></div>
           <div><span>02</span></div>
           <div><span>03</span></div>
@@ -199,7 +199,7 @@
       <div class="kb5"> </div>
       <div class="choosenumber">
         <span class="xuanhao">选号</span>
-        <div class="number">
+        <div class="number group3_3">
           <div><span>01</span></div>
           <div><span>02</span></div>
           <div><span>03</span></div>
@@ -224,12 +224,12 @@
   </div>
   <div class="disizhongwanfa isnone">
     <div class="container">
-        <div class='container_title'>
-            <p>至少选择2个号码</p>
-        </div>
+      <div class='container_title'>
+        <p>至少选择2个号码</p>
+      </div>
       <div class="choosenumber">
         <span class="xuanhao">选号</span>
-        <div class="number">
+        <div class="number group4_1">
           <div><span>01</span></div>
           <div><span>02</span></div>
           <div><span>03</span></div>
@@ -246,7 +246,7 @@
       <div class="kb5"> </div>
       <div class="choosenumber">
         <span class="xuanhao">选号</span>
-        <div class="number">
+        <div class="number group4_2">
           <div><span>01</span></div>
           <div><span>02</span></div>
           <div><span>03</span></div>
@@ -288,6 +288,55 @@
 
   var params = GetRequest();
   console.log(params)
+
+
+  $('.bottom .firstnav > button').on('click', function () {
+    // 玩法
+    var code = $('.commoncontent div.select span').attr('data-code');    
+
+    var gameType = $('.commoncontent div.select span').attr('data-value');
+    var gameDatas = [
+      [],
+      [],
+      []
+    ];
+
+    // 有1组
+    if (gameType === '1') {
+      var selects1 = $('.group1_1 .select')
+      selects1.each(function (key, value) {
+        gameDatas[0].push($(value).attr('value'));
+      });
+    }
+
+    // 有2组
+    if (gameType === '2') {
+      var selects1 = $('.group2_1 .select')
+      selects1.each(function (key, value) {
+        gameDatas[0].push($(value).attr('value'));
+      });
+      var selects2 = $('.group2_2 .select')
+      selects2.each(function (key, value) {
+        gameDatas[1].push($(value).attr('value'));
+      });
+    }
+
+    // 有3组
+    if (gameType === '3') {
+      var selects1 = $('.group3_1 .select')
+      selects1.each(function (key, value) {
+        gameDatas[0].push($(value).attr('value'));
+      });
+      var selects2 = $('.group3_2 .select')
+      selects2.each(function (key, value) {
+        gameDatas[1].push($(value).attr('value'));
+      });
+      var selects2 = $('.group3_3 .select')
+      selects2.each(function (key, value) {
+        gameDatas[1].push($(value).attr('value'));
+      });
+    }
+  });
 </script>
 
 </html>
