@@ -1,53 +1,9 @@
-require(['jquery'],function(jquery){
+require(['jquery','layer'],function(jquery,layer){
     $('.bottom .firstnav > button').on('click', function () {
     // 玩法
-    var code = $('.commoncontent div.select span').attr('data-code');
-
-    var gameType = $('.commoncontent div.select span').attr('data-value');
-    var gameDatas = [
-      [],
-      [],
-      []
-    ];
-
-    // 有1组
-    if (gameType === '1') {
-      var selects1 = $('.group1_1 .select')
-      selects1.each(function (key, value) {
-        gameDatas[0].push($(value).attr('value'));
-      });
-    }
-
-    // 有2组
-    if (gameType === '2') {
-      var selects1 = $('.group2_1 .select')
-      selects1.each(function (key, value) {
-        gameDatas[0].push($(value).attr('value'));
-      });
-      var selects2 = $('.group2_2 .select')
-      selects2.each(function (key, value) {
-        gameDatas[1].push($(value).attr('value'));
-      });
-    }
-
-    // 有3组
-    if (gameType === '3') {
-      var selects1 = $('.group3_1 .select')
-      selects1.each(function (key, value) {
-        gameDatas[0].push($(value).attr('value'));
-      });
-      var selects2 = $('.group3_2 .select')
-      selects2.each(function (key, value) {
-        gameDatas[1].push($(value).attr('value'));
-      });
-      var selects2 = $('.group3_3 .select')
-      selects2.each(function (key, value) {
-        gameDatas[1].push($(value).attr('value'));
-      });
-    }
 
     var detailplay = $('.xialachoose p').text();
-    var changeData={ischangeName:detailplay,isSelectedData:[[],[],[]]};
+    var changeData={ischangeName:detailplay,totalNum:totalNum,isSelectedData:[[],[],[]]};
     $('.number div.selected').each(function(key,value){
       if($(this).parent().hasClass('group1_1'))changeData.isSelectedData[0].push($(this).find('span').text())
 
@@ -63,8 +19,35 @@ require(['jquery'],function(jquery){
 
       if($(this).parent().hasClass('group3_3')) changeData.isSelectedData[2].push($(this).find('span').text())
     })
+    var totalNum = changeData.isSelectedData[0].length + changeData.isSelectedData[1].length + changeData.isSelectedData[2].length
+    changeData.totalNum = totalNum
+      // console.log(totalNum)
       console.log(changeData)   //这个就是你要的结果, 是一个对象,包括选中的玩法类型和对应的号码,
-    // if()
+
+      function addSrc(arr,item){
+        var newarr = arr.slice(0);
+            newarr.push(item);
+            return newarr;
+      }
+    if(changeData.isSelectedData[0] =='' && changeData.isSelectedData[1] && changeData.isSelectedData[2] ==''){
+      //当选择为空时
+      layer.open({
+        content: '选择不能为空',
+        skin: 'msg',
+        time: 2
+    });
+    }else{  //选择不为空时弹出提示
+      var localStorageData = JSON.parse(window.localStorage.getItem('sureData'));
+      // console.log()
+      if(localStorageData != null){
+        window.localStorage.setItem("sureData",JSON.stringify(addSrc(localStorageData,changeData)));
+        location.href = '../../pages/touzhudan.html'
+      }else{
+        window.localStorage.setItem("sureData",JSON.stringify([]))
+        window.localStorage.setItem("sureData",JSON.stringify([changeData]));
+        location.href = '../../pages/touzhudan.html'
+      }
+    }
   });
 
 })
