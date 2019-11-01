@@ -58,21 +58,7 @@ require(['jquery', 'layer'], function(jquery, layer) {
       for(var k = 0;k<listData[i].isSelectedData[2].length;k++){
       var srcnew3 = listData[i].isSelectedData[2].join(' ');
       }
-      if(srcnew1 == undefined) {
-        srcnew1=""
-      }else{
-        srcnew1
-      }
-      if(srcnew2 == undefined) {
-        srcnew2=""
-      }else{
-        srcnew2
-      }
-      if(srcnew3 == undefined) {
-        srcnew3=""
-      }else{
-        srcnew3
-      }
+
       var tijiaoObj = {};
       //判断srcnew1,srcnew2,srcnew3是否为空
        var ball = srcnew1 + '#' + srcnew2 + '#' + srcnew3;

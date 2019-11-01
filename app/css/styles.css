@@ -4209,6 +4209,8 @@ body {
           box-sizing: border-box; }
           #touzhudan .touzhucontainer .touzhucontainercenter .xuanzhu .rt img {
             width: 6vw; }
+        #touzhudan .touzhucontainer .touzhucontainercenter .xuanzhu:last-of-type {
+          margin-bottom: 45vw; }
   #touzhudan .bottom {
     height: 43vw; }
     #touzhudan .bottom .qingkong {
