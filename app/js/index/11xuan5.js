@@ -3,7 +3,7 @@ require(['jquery', 'layer'], function(jquery, layer) {
     // 玩法
 
     var detailplay = $('.xialachoose p').text();
-    var changeData = { ischangeName: detailplay, totalNum: totalNum, isSelectedData: [
+    var changeData = { ischangeName: detailplay, totalNum: totalNum,singleOrDouble: singleOrDouble,zhushu:zhushu,amount:amount,isSelectedData: [
         [],
         [],
         []
@@ -144,7 +144,7 @@ require(['jquery', 'layer'], function(jquery, layer) {
         amount = amount * zhushu;
       }
     }
-    alert(firstLength + "==" + twoLength + "==" + threeLength);
+    // alert(firstLength + "==" + twoLength + "==" + threeLength);
     if (winType == '普通前三直选') {
       if (firstLength > 1 || twoLength > 1 || threeLength > 1) { //第一球选择超过一球或者第二球选择超过一球为复式
         singleOrDouble = "复式";
@@ -171,7 +171,7 @@ require(['jquery', 'layer'], function(jquery, layer) {
     //普通玩法计算结束
     //胆码玩法开始计算
     if (winType == '胆码任选二') {
-      alert(twoLength);
+      // alert(twoLength);
       if (twoLength > 2) { //因为任选二胆码最多只能选一个所以只需要判断拖码
         singleOrDouble = "复式";
         zhushu = twoLength;
@@ -240,6 +240,9 @@ require(['jquery', 'layer'], function(jquery, layer) {
 
     var totalNum = changeData.isSelectedData[0].length + changeData.isSelectedData[1].length + changeData.isSelectedData[2].length
     changeData.totalNum = totalNum
+    changeData.singleOrDouble = singleOrDouble;
+     changeData.zhushu = zhushu;
+      changeData.amount = amount;
     // console.log(totalNum)
     console.log(changeData) //这个就是你要的结果, 是一个对象,包括选中的玩法类型和对应的号码,
 
