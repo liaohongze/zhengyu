@@ -12,27 +12,27 @@ require(['until', 'swiper'], function (until, Swiper) {
   $(document).on('click', '.xialachoose', function () {
     until.tc1();
     $('body').removeClass('selected');
-    if(morenselecttop == 999){
+    if (morenselecttop == 999) {
       $('.commoncontent div').eq(0).removeClass('select');
-  }
-  if(dantuoindex == 0 || dantuoindex == 1){
-     $('.dantuocontent div').eq(dantuoindex).addClass('select').siblings().removeClass('select');
-  }
-  else{
-    $('.commoncontent div').eq(morenselecttop).addClass('select').siblings().removeClass('select');
-  }
+    }
+    if (dantuoindex == 0 || dantuoindex == 1) {
+      $('.dantuocontent div').eq(dantuoindex).addClass('select').siblings().removeClass('select');
+    }
+    else {
+      $('.commoncontent div').eq(morenselecttop).addClass('select').siblings().removeClass('select');
+    }
   })
 
   //快3
-   $(document).on('click', '.kuai3xialachoose', function () {
+  $(document).on('click', '.kuai3xialachoose', function () {
     until.tc2();
-     if(morenselecttop == 999){
-        $('.commoncontent div').eq(0).removeClass('select');
+    if (morenselecttop == 999) {
+      $('.commoncontent div').eq(0).removeClass('select');
     }
-    if(dantuoindex == 0 || dantuoindex == 1){
-       $('.dantuocontent div').eq(dantuoindex).addClass('select').siblings().removeClass('select');
+    if (dantuoindex == 0 || dantuoindex == 1) {
+      $('.dantuocontent div').eq(dantuoindex).addClass('select').siblings().removeClass('select');
     }
-    else{
+    else {
       $('.commoncontent div').eq(morenselecttop).addClass('select').siblings().removeClass('select');
     }
   })
@@ -49,116 +49,116 @@ require(['until', 'swiper'], function (until, Swiper) {
 
     // 11选5玩法显示内容说明
     // 第一种玩法只有一组单选数据  将dierzhongwanfa 这个类名再加上一个 isnone 这个类名 隐藏即可
-      // 如果是第二种玩法,有胆拖和选号的, 将diyizhongwanfa这个类名再加上 isnone 这个类名隐藏即可
-      $('.diyizhongwanfa .number div').removeClass('selected')
-      $('.dierzhongwanfa .number div').removeClass('selected')
-      $('.disanzhongwanfa .number div').removeClass('selected')
-      $('.disizhongwanfa .number div').removeClass('selected');
-      $('.sanbutonghao .number div').removeClass('selected');
-      $('.butonghao .number div').removeClass('selected');
-      $('.hezhi .number div').removeClass('selected');
-      $('.caiduizi .number div').removeClass('selected');
-      $('.caishunzi .number div').removeClass('selected');
-      $('.caibaozi .number div').removeClass('selected');
-      morenselecttop = $(this).index();
-      $(this).addClass('select');
-      var popValue = $(this).find('span').attr('data-value');
-      var poptitle = $(this).find('span').text();
-      $('.xialachoose p').text('普通' + poptitle); //11选5标题
-      $('.kuai3xialachoose p').text(poptitle); //快3标题
-      if(popValue === '1'){ //11选5 显示数据
+    // 如果是第二种玩法,有胆拖和选号的, 将diyizhongwanfa这个类名再加上 isnone 这个类名隐藏即可
+    $('.diyizhongwanfa .number div').removeClass('selected')
+    $('.dierzhongwanfa .number div').removeClass('selected')
+    $('.disanzhongwanfa .number div').removeClass('selected')
+    $('.disizhongwanfa .number div').removeClass('selected');
+    $('.sanbutonghao .number div').removeClass('selected');
+    $('.butonghao .number div').removeClass('selected');
+    $('.hezhi .number div').removeClass('selected');
+    $('.caiduizi .number div').removeClass('selected');
+    $('.caishunzi .number div').removeClass('selected');
+    $('.caibaozi .number div').removeClass('selected');
+    morenselecttop = $(this).index();
+    $(this).addClass('select');
+    var popValue = $(this).find('span').attr('data-value');
+    var poptitle = $(this).find('span').text();
+    $('.xialachoose p').text('普通' + poptitle); //11选5标题
+    $('.kuai3xialachoose p').text(poptitle); //快3标题
+    if (popValue === '1') { //11选5 显示数据
 
-        $('.diyizhongwanfa').removeClass('isnone');
-        $('.dierzhongwanfa').addClass('isnone');
-        $('.disanzhongwanfa').addClass('isnone');
-        $('.disizhongwanfa').addClass('isnone');
-      }
-      if(popValue === '2'){
-        $(this).removeClass('selected')
-        $('.diyizhongwanfa').addClass('isnone');
-        $('.dierzhongwanfa').addClass('isnone');
-        $('.disanzhongwanfa').addClass('isnone');
-        $('.disizhongwanfa').removeClass('isnone');
-      }
-     if(popValue === '3'){
-       $(this).removeClass('selected')
-        $('.diyizhongwanfa').addClass('isnone');
-        $('.dierzhongwanfa').addClass('isnone');
-        $('.disanzhongwanfa').removeClass('isnone');
-         $('.disizhongwanfa').addClass('isnone');
-      }
-        if(morenselecttop == 0){ //三不同号
-        $('.playnumberdiv').eq(0).removeClass('isnone').siblings().addClass('isnone');
-        $('.playnumberdiv').eq(0).find('.container_title p').text('猜中3个不同号码即中奖');
-        }
-      if(morenselecttop == 1){  //两不同号
-        $('.playnumberdiv').eq(0).removeClass('isnone').siblings().addClass('isnone');
-        $('.playnumberdiv').eq(0).find('.container_title p').text('猜中2个不同号码即中奖');
-      }
-     else if( morenselecttop == 2){ //和值
-        $('.playnumberdiv').eq(1).removeClass('isnone').siblings().addClass('isnone');
-     }
-    else if( morenselecttop == 3){ //猜对子
-        $('.playnumberdiv').eq(2).removeClass('isnone').siblings().addClass('isnone');
-     }
-    else if( morenselecttop == 4){ //猜顺子
-        $('.playnumberdiv').eq(3).removeClass('isnone').siblings().addClass('isnone');
-     }
-    else if( morenselecttop == 5){ //猜豹子
-    $('.playnumberdiv').eq(4).removeClass('isnone').siblings().addClass('isnone');
-     }
-      dantuoindex = 999;
-      layer.closeAll();
+      $('.diyizhongwanfa').removeClass('isnone');
+      $('.dierzhongwanfa').addClass('isnone');
+      $('.disanzhongwanfa').addClass('isnone');
+      $('.disizhongwanfa').addClass('isnone');
+    }
+    if (popValue === '2') {
+      $(this).removeClass('selected')
+      $('.diyizhongwanfa').addClass('isnone');
+      $('.dierzhongwanfa').addClass('isnone');
+      $('.disanzhongwanfa').addClass('isnone');
+      $('.disizhongwanfa').removeClass('isnone');
+    }
+    if (popValue === '3') {
+      $(this).removeClass('selected')
+      $('.diyizhongwanfa').addClass('isnone');
+      $('.dierzhongwanfa').addClass('isnone');
+      $('.disanzhongwanfa').removeClass('isnone');
+      $('.disizhongwanfa').addClass('isnone');
+    }
+    if (morenselecttop == 0) { //三不同号
+      $('.playnumberdiv').eq(0).removeClass('isnone').siblings().addClass('isnone');
+      $('.playnumberdiv').eq(0).find('.container_title p').text('猜中3个不同号码即中奖');
+    }
+    if (morenselecttop == 1) {  //两不同号
+      $('.playnumberdiv').eq(0).removeClass('isnone').siblings().addClass('isnone');
+      $('.playnumberdiv').eq(0).find('.container_title p').text('猜中2个不同号码即中奖');
+    }
+    else if (morenselecttop == 2) { //和值
+      $('.playnumberdiv').eq(1).removeClass('isnone').siblings().addClass('isnone');
+    }
+    else if (morenselecttop == 3) { //猜对子
+      $('.playnumberdiv').eq(2).removeClass('isnone').siblings().addClass('isnone');
+    }
+    else if (morenselecttop == 4) { //猜顺子
+      $('.playnumberdiv').eq(3).removeClass('isnone').siblings().addClass('isnone');
+    }
+    else if (morenselecttop == 5) { //猜豹子
+      $('.playnumberdiv').eq(4).removeClass('isnone').siblings().addClass('isnone');
+    }
+    dantuoindex = 999;
+    layer.closeAll();
   })
 
   // 点击选中选项  胆拖
   $(document).on('click', '.dantuocontent div', function () {
-       dantuoindex = $(this).index();
-      $(this).addClass('select');
-      var popValue = $(this).find('span').attr('data-value');
-      var poptitle = $(this).find('span').text();
-      $('.xialachoose p').text('胆拖' + poptitle);
-      $('.kuai3xialachoose p').text(poptitle); //快3标题
-      $('.diyizhongwanfa .number div').removeClass('selected')
-      $('.dierzhongwanfa .number div').removeClass('selected')
-      $('.disanzhongwanfa .number div').removeClass('selected')
-      $('.disizhongwanfa .number div').removeClass('selected');
-      $('.sanbutonghao .number div').removeClass('selected');
-       $('.butonghao .number div').removeClass('selected');
-      $('.hezhi .number div').removeClass('selected');
-      $('.caiduizi .number div').removeClass('selected');
-      $('.caishunzi .number div').removeClass('selected');
-      $('.caibaozi .number div').removeClass('selected');
-      if(popValue === '1'){ //11选5 显示数据
-        $('.diyizhongwanfa').removeClass('isnone');
-        $('.dierzhongwanfa').addClass('isnone');
-        $('.disanzhongwanfa').addClass('isnone');
-         $('.disizhongwanfa').addClass('isnone');
-      }
-      if(popValue === '2'){
-        $('.diyizhongwanfa').addClass('isnone');
-        $('.dierzhongwanfa').removeClass('isnone');
-        $('.disanzhongwanfa').addClass('isnone');
-         $('.disizhongwanfa').addClass('isnone');
-      }
-     if(popValue === '3'){
-        $('.diyizhongwanfa').addClass('isnone');
-        $('.dierzhongwanfa').addClass('isnone');
-        $('.disanzhongwanfa').removeClass('isnone');
-         $('.disizhongwanfa').addClass('isnone');
-      }
-       if( dantuoindex == 0){ // 胆拖三不同号
+    dantuoindex = $(this).index();
+    $(this).addClass('select');
+    var popValue = $(this).find('span').attr('data-value');
+    var poptitle = $(this).find('span').text();
+    $('.xialachoose p').text('胆拖' + poptitle);
+    $('.kuai3xialachoose p').text(poptitle); //快3标题
+    $('.diyizhongwanfa .number div').removeClass('selected')
+    $('.dierzhongwanfa .number div').removeClass('selected')
+    $('.disanzhongwanfa .number div').removeClass('selected')
+    $('.disizhongwanfa .number div').removeClass('selected');
+    $('.sanbutonghao .number div').removeClass('selected');
+    $('.butonghao .number div').removeClass('selected');
+    $('.hezhi .number div').removeClass('selected');
+    $('.caiduizi .number div').removeClass('selected');
+    $('.caishunzi .number div').removeClass('selected');
+    $('.caibaozi .number div').removeClass('selected');
+    if (popValue === '1') { //11选5 显示数据
+      $('.diyizhongwanfa').removeClass('isnone');
+      $('.dierzhongwanfa').addClass('isnone');
+      $('.disanzhongwanfa').addClass('isnone');
+      $('.disizhongwanfa').addClass('isnone');
+    }
+    if (popValue === '2') {
+      $('.diyizhongwanfa').addClass('isnone');
+      $('.dierzhongwanfa').removeClass('isnone');
+      $('.disanzhongwanfa').addClass('isnone');
+      $('.disizhongwanfa').addClass('isnone');
+    }
+    if (popValue === '3') {
+      $('.diyizhongwanfa').addClass('isnone');
+      $('.dierzhongwanfa').addClass('isnone');
+      $('.disanzhongwanfa').removeClass('isnone');
+      $('.disizhongwanfa').addClass('isnone');
+    }
+    if (dantuoindex == 0) { // 胆拖三不同号
       $('.playnumberdiv').eq(5).removeClass('isnone').siblings().addClass('isnone');
       $('.playnumberdiv').eq(5).find('.container_title').eq(0).find('p').text('胆码(选1-2个)');
       $('.playnumberdiv').eq(5).find('.container_title').eq(1).find('p').text('拖码(胆+拖≥3个)');
-     }
-       else if( dantuoindex == 1){ //胆拖二不同号
-       $('.playnumberdiv').eq(5).removeClass('isnone').siblings().addClass('isnone');
-        $('.playnumberdiv').eq(5).find('.container_title').eq(0).find('p').text('胆码(选一个)');
+    }
+    else if (dantuoindex == 1) { //胆拖二不同号
+      $('.playnumberdiv').eq(5).removeClass('isnone').siblings().addClass('isnone');
+      $('.playnumberdiv').eq(5).find('.container_title').eq(0).find('p').text('胆码(选一个)');
       $('.playnumberdiv').eq(5).find('.container_title').eq(1).find('p').text('拖码(胆+拖≥2个)');
-     }
+    }
     morenselecttop = 999;
-       layer.closeAll();
+    layer.closeAll();
   })
 
   //选择号码
@@ -197,80 +197,90 @@ require(['until', 'swiper'], function (until, Swiper) {
   $(document).on('click', '.football .playrules div', function () {
     morenselectcontainer = $(this).index();
     if ($(this).hasClass('select')) {
-        layer.closeAll();
-        // 对应内容显示隐藏
-        $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
-        $('.zuqiuxialachoose p').text(poptitle); //足球标题
+      layer.closeAll();
+      // 对应内容显示隐藏
+      $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
+      $('.zuqiuxialachoose p').text(poptitle); //足球标题
     } else {
       $(this).addClass('select');
       var poptitle = $(this).find('span').text();
       $('.zuqiuxialachoose p').text(poptitle); //足球标题
-        // 对应内容显示隐藏
-       $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
-       layer.closeAll();
+      // 对应内容显示隐藏
+      $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
+      layer.closeAll();
     }
   })
 
-//选择号码
-$(document).on('click', '.datalist_team_rt_bottom div', function () {
-  if ($(this).hasClass('selected')) {
-    $(this).removeClass('selected')
-  } else {
-    $(this).addClass('selected');
-  }
-  if($(this).hasClass('rangshengfupeilv')){
-       $(this).removeClass('selected')
-  }
-})
-console.log($('#morestc'))
+  //选择号码
+  $(document).on('click', '.datalist_team_rt_bottom div', function () {
+    if ($(this).hasClass('selected')) {
+      $(this).removeClass('selected')
+    } else {
+      $(this).addClass('selected');
+    }
+    if ($(this).hasClass('rangshengfupeilv')) {
+      $(this).removeClass('selected')
+    }
+  })
 
-$(document).on('click', '.morechoosetc img', function () {
-      // layer.open({
-      //   type: 1,
-      //   closeBtn: 0, //不显示关闭按钮
-      //   shadeClose: true, //开启遮罩关闭
-      //   content: $('#morestc').prop("innerHTML")
-      // });
-      $('#morestc').removeClass('hidden');
-      $('body').css('position', 'fixed');
-})
+  $(document).on('click', '.morechoosetc img', function () {
+    // layer.open({
+    //   type: 1,
+    //   closeBtn: 0, //不显示关闭按钮
+    //   shadeClose: true, //开启遮罩关闭
+    //   content: $('#morestc').prop("innerHTML")
+    // });
+    $('#morestc').removeClass('hidden');
+    $('body').css('position', 'fixed');
+  })
 
-// 比分弹窗
-$(document).on('click', '.datalist_team_rt_bottomtc', function () {
-      $('#morestc1').removeClass('hidden');
-      $('body').css('position', 'fixed');
-})
+  // 比分弹窗
+  $(document).on('click', '.datalist_team_rt_bottomtc', function () {
+    $('#morestc1').removeClass('hidden');
+    $('body').css('position', 'fixed');
+  })
 
-// 半全场弹窗
-$(document).on('click', '.datalist_team_rt_bottomtc2', function () {
-      $('#morestc2').removeClass('hidden');
-      $('body').css('position', 'fixed');
-})
-// 取消按钮
- $(document).on('click','.quxiaobtn',function(){
-     $('#morestc').addClass('hidden');
-       $('#morestc1').addClass('hidden');
-        $('#morestc2').addClass('hidden');
-        $('#morestc3').addClass('hidden');
-        $('.samebiaoge div').removeClass('isselected')
+  // 半全场弹窗
+  $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
+    $('#morestc2').removeClass('hidden');
+    $('body').css('position', 'fixed');
+  })
+  // 取消按钮
+  $(document).on('click', '.quxiaobtn', function () {
+    $('#morestc').addClass('hidden');
+    $('#morestc1').addClass('hidden');
+    $('#morestc2').addClass('hidden');
+    $('#morestc3').addClass('hidden');
+    $('.samebiaoge div').removeClass('isselected')
   })
 
   // 确定按钮
-   $(document).on('click','.submitbtn',function(){
-     $('#morestc').addClass('hidden');
-     $('#morestc1').addClass('hidden');
+  $(document).on('click', '.submitbtn', function () {
+    $('#morestc').addClass('hidden');
+    $('#morestc1').addClass('hidden');
     $('#morestc2').addClass('hidden');
     $('#morestc3').addClass('hidden');
-     $('.samebiaoge div').removeClass('isselected');
+    $('.samebiaoge div').removeClass('isselected');
   })
 
-    $(document).on('click','.opentc',function(){
-     $('#morestc1').removeClass('hidden');
-      $('body').css('position', 'fixed');
+  $(document).on('click', '.opentc', function () {
+    $('#morestc1').removeClass('hidden');
+    var sureData = JSON.parse(window.localStorage.getItem('sureData'))
+    var totalZhushu = 0, totalAmount = 0;
+
+    sureData.forEach(item => {
+      totalZhushu += item.zhushu
+      totalAmount += item.amount
+    });
+
+    $('.total_amount').text(totalAmount)
+    $('.total_zhushu').text(totalZhushu)
+
+    $('body').css('position', 'fixed');
   })
 
-   $(document).on('click','.samebiaoge div',function(){
-     if ($(this).hasClass('isselected')) {
+  $(document).on('click', '.samebiaoge div', function () {
+    if ($(this).hasClass('isselected')) {
       $(this).removeClass('isselected')
     } else {
       $(this).addClass('isselected');
@@ -280,8 +290,8 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
 
   $(document).on('click', '.zuqiuxialachoose', function () {
     until.tc3();
-    if(!morenselecttop) morenselecttop=0;
-    if(!morenselectcontainer)morenselectcontainer=0;
+    if (!morenselecttop) morenselecttop = 0;
+    if (!morenselectcontainer) morenselectcontainer = 0;
     $('.tabtc div').eq(morenselecttop).addClass('selected').siblings().removeClass('selected');
     $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
     $('.topcontainer .playrules').eq(morenselecttop).find('div').eq(morenselectcontainer).addClass('select').siblings().removeClass('select');
@@ -292,29 +302,29 @@ $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
   $(document).on('click', '.basketball .playrules div', function () {
     morenselectcontainer = $(this).index();
     if ($(this).hasClass('select')) {
-        layer.closeAll();
-        // 对应内容显示隐藏
-        $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
-        $('.lanqiuxialachoose p').text(poptitle); //篮球标题
+      layer.closeAll();
+      // 对应内容显示隐藏
+      $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
+      $('.lanqiuxialachoose p').text(poptitle); //篮球标题
     } else {
       $(this).addClass('select');
       var poptitle = $(this).find('span').text();
       $('.lanqiuxialachoose p').text(poptitle); //篮球标题
-        // 对应内容显示隐藏
-       $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
-       layer.closeAll();
+      // 对应内容显示隐藏
+      $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
+      layer.closeAll();
     }
   })
-$(document).on('click', '.hunhetanchuang', function () {
-  console.log(222222)
-      $('#morestc3').removeClass('hidden');
-      $('body').css('position', 'fixed');
-})
+  $(document).on('click', '.hunhetanchuang', function () {
+    console.log(222222)
+    $('#morestc3').removeClass('hidden');
+    $('body').css('position', 'fixed');
+  })
 
   $(document).on('click', '.lanqiuxialachoose', function () {
     until.tc5();
-    if(!morenselecttop) morenselecttop=0;
-    if(!morenselectcontainer)morenselectcontainer=0;
+    if (!morenselecttop) morenselecttop = 0;
+    if (!morenselectcontainer) morenselectcontainer = 0;
     $('.tabtc div').eq(morenselecttop).addClass('selected').siblings().removeClass('selected');
     $('.topcontainer .playrules').eq(morenselecttop).removeClass('isnone').siblings().addClass('isnone');
     $('.topcontainer .playrules').eq(morenselecttop).find('div').eq(morenselectcontainer).addClass('select').siblings().removeClass('select');
@@ -323,46 +333,50 @@ $(document).on('click', '.hunhetanchuang', function () {
 
   // 输入框左减右加
 
-        var t = $(".zhuiqi #text_box1");
-            $("#add1").click(function(){
-                t.val(parseInt(t.val())+1)
-                setTotal();
-            })
-            $("#min1").click(function(){
-                t.val(parseInt(t.val())-1)
-                setTotal();
-            })
-            function setTotal(){
-                var tt = $("#text_box1").val();
-                if(tt<=0){
-                    alert('输入的值错误！');
-                    t.val(parseInt(t.val())+1)
-                }
-            }
+  var t = $(".zhuiqi #text_box1");
+  $("#add1").click(function () {
+    t.val(parseInt(t.val()) + 1)
+    $('.period').text(parseInt(t.val()))
+    setTotal();
+  })
+  $("#min1").click(function () {
+    t.val(parseInt(t.val()) - 1)
+    $('.period').text(parseInt(t.val()))
+    setTotal();
+  })
+  function setTotal() {
+    var tt = $("#text_box1").val();
+    if (tt <= 0) {
+      alert('输入的值错误！');
+      t.val(parseInt(t.val()) + 1)
+    }
+  }
 
-        var m = $(".zhuibei #text_box2");
-            $("#add2").click(function(){
-                m.val(parseInt(m.val())+1)
-                setTotal();
-            })
-            $("#min2").click(function(){
-                m.val(parseInt(m.val())-1)
-                setTotal();
-            })
-            function setTotal(){
-                var tm = $("#text_box2").val();
-                if(tm<=0){
-                    alert('输入的值错误！');
-                    m.val(parseInt(m.val())+1)
-                }
-            }
+  var m = $(".zhuibei #text_box2");
+  $("#add2").click(function () {
+    m.val(parseInt(m.val()) + 1)
+    $('.multiple').text(parseInt(m.val()))
+    setTotal();
+  })
+  $("#min2").click(function () {
+    m.val(parseInt(m.val()) - 1)
+    $('.multiple').text(parseInt(m.val()))
+    setTotal();
+  })
+  function setTotal() {
+    var tm = $("#text_box2").val();
+    if (tm <= 0) {
+      alert('输入的值错误！');
+      m.val(parseInt(m.val()) + 1)
+    }
+  }
 
 
-            // 点击删除数据
+  // 点击删除数据
 
-$(document).on('click','.shanchudata',function(){
-   $(this).parent().parent().remove();
-})
+  $(document).on('click', '.shanchudata', function () {
+    $(this).parent().parent().remove();
+  })
 
   //点击展开历史记录数据
   $(document).on('click', '.xialablock', function () {
@@ -377,19 +391,19 @@ $(document).on('click','.shanchudata',function(){
     until.timer(intDiff);
   });
 
-  $('#bottom_content_col').scroll(function() {
+  $('#bottom_content_col').scroll(function () {
     var left = $(this).scrollLeft();
     $('#title_content_col').scrollLeft(left);
     $('#preiod_content_col').scrollLeft(left);
   });
 
-  $('#title_content_col').scroll(function() {
+  $('#title_content_col').scroll(function () {
     var left = $(this).scrollLeft();
     $('#bottom_content_col').scrollLeft(left);
     $('#preiod_content_col').scrollLeft(left);
   });
 
-  $('#preiod_content_col').scroll(function() {
+  $('#preiod_content_col').scroll(function () {
     var left = $(this).scrollLeft();
     $('#bottom_content_col').scrollLeft(left);
     $('#title_content_col').scrollLeft(left);
@@ -397,7 +411,7 @@ $(document).on('click','.shanchudata',function(){
     $('#period_title').scrollTop($(this).scrollTop());
   });
 
-  $('#period_title').scroll(function() {
+  $('#period_title').scroll(function () {
     $('#preiod_content_col').scrollTop($(this).scrollTop());
   });
 
@@ -409,7 +423,7 @@ $(document).on('click','.shanchudata',function(){
   //   });
   // });
 
-  $('.change_type span').on('click', function() {
+  $('.change_type span').on('click', function () {
     var has = $(this).hasClass('active');
     if (!has) {
       $(this).siblings().removeClass('active')

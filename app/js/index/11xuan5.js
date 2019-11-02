@@ -3,6 +3,7 @@ require(['jquery', 'layer'], function(jquery, layer) {
     // 玩法
 
     var detailplay = $('.xialachoose p').text();
+    console.log(detailplay)
     var changeData = { ischangeName: detailplay, totalNum: totalNum,singleOrDouble: singleOrDouble,zhushu:zhushu,amount:amount,isSelectedData: [
         [],
         [],
@@ -241,10 +242,9 @@ require(['jquery', 'layer'], function(jquery, layer) {
     var totalNum = changeData.isSelectedData[0].length + changeData.isSelectedData[1].length + changeData.isSelectedData[2].length
     changeData.totalNum = totalNum
     changeData.singleOrDouble = singleOrDouble;
-     changeData.zhushu = zhushu;
-      changeData.amount = amount;
-    // console.log(totalNum)
-    console.log(changeData) //这个就是你要的结果, 是一个对象,包括选中的玩法类型和对应的号码,
+    changeData.zhushu = zhushu;
+    changeData.amount = amount;
+    // console.log(changeData) //这个就是你要的结果, 是一个对象,包括选中的玩法类型和对应的号码,
 
     function addSrc(arr, item) {
       var newarr = arr.slice(0);
@@ -271,5 +271,4 @@ require(['jquery', 'layer'], function(jquery, layer) {
       }
     }
   });
-
 })

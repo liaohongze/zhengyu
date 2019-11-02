@@ -8,6 +8,7 @@ require.config({
         "layer":"../widgets/layer/layer",
         "until":'../widgets/until',
         "11xuan5":'../index/11xuan5',
+        "kuai3":'../index/kuai3',
         "touzhudan":'../index/touzhudan'
     },
     shim: {
@@ -24,6 +25,9 @@ require.config({
             "deps":['jquery','layer']
           },
           "11xuan5":{
+            "deps":['jquery','layer']
+          },
+          "kuai3":{
             "deps":['jquery','layer']
           },
           "touzhudan":{

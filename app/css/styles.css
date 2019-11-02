@@ -3725,7 +3725,8 @@ body {
         text-align: center;
         border: 1px solid #e3e3e3;
         margin: 1vw .5vw; }
-        .hezhi .container .choosenumbertop .top-two div span {
+        .hezhi .container .choosenumbertop .top-two div span,
+        .hezhi .container .choosenumbertop .top-two div i {
           color: #666;
           font-size: 3.5vw;
           display: block;
@@ -3733,7 +3734,8 @@ body {
           line-height: 15vw; }
         .hezhi .container .choosenumbertop .top-two div.selected {
           background: #e43015; }
-          .hezhi .container .choosenumbertop .top-two div.selected span {
+          .hezhi .container .choosenumbertop .top-two div.selected span,
+          .hezhi .container .choosenumbertop .top-two div.selected i {
             color: #fff; }
   .hezhi .container .choosenumber {
     display: -webkit-box;
@@ -3768,7 +3770,8 @@ body {
         border: 1px solid #e3e3e3;
         margin: 1vw .5vw;
         border-radius: 0; }
-        .hezhi .container .choosenumber .number div span {
+        .hezhi .container .choosenumber .number div span,
+        .hezhi .container .choosenumber .number div i {
           color: #666;
           font-size: 3.5vw;
           display: block;
@@ -3776,7 +3779,8 @@ body {
           line-height: 15vw; }
         .hezhi .container .choosenumber .number div.selected {
           background: #e43015; }
-          .hezhi .container .choosenumber .number div.selected span {
+          .hezhi .container .choosenumber .number div.selected span,
+          .hezhi .container .choosenumber .number div.selected i {
             color: #fff; }
   .hezhi .container .bottom-title {
     width: 100%;
@@ -4263,7 +4267,8 @@ body {
         height: 18vw; }
         #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom #text_box1,
         #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom #text_box2 {
-          width: 9vw; }
+          width: 9vw;
+          text-align: center; }
   #touzhudan #morestc1 {
     width: 100%;
     margin: 0 auto; }
