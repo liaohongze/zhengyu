@@ -6,31 +6,34 @@ require(['jquery', 'layer'], function (jquery, layer) {
   var htmlList = '';
   var spanList = '';
   var totalZhushu = 0, totalAmount = 0;
-  if (listData.length) {
-    for (var v = 0; v < listData.length; v++) {
-      var i;
-      for (i = 0; i < listData[v].totalNum; i++) {
-        isSelectNumbersrc = isSelectNumbersrc.concat(listData[v].isSelectedData[i]);
-        spanList += '<span>' + isSelectNumbersrc[i] + '</span>\n';
-        // console.log(spanList)
+  if (listData !== null) {
+    if (listData.length) {
+      for (var v = 0; v < listData.length; v++) {
+        var i;
+        for (i = 0; i < listData[v].totalNum; i++) {
+          isSelectNumbersrc = isSelectNumbersrc.concat(listData[v].isSelectedData[i]);
+          spanList += '<span>' + isSelectNumbersrc[i] + '</span>\n';
+          // console.log(spanList)
+        }
+        htmlList += '<div class="xuanzhu">\n' +
+          '<div class="lf"><p>\n' +
+          spanList +
+          '</p><p>' + listData[v].ischangeName + listData[v].singleOrDouble + listData[v].zhushu + '注' + listData[v].amount + '元</p>\n' +
+          '</div> <div class="rt"> <img src="../images/index/close-ico.png" class="shanchudata" alt=""></div>\n' +
+          '<div class="clear"></div></div>';
+        isSelectNumbersrc = [];
+        spanList = '';
+
+        // 计算总注数和总金额
+        totalZhushu += listData[v].zhushu;
+        totalAmount += listData[v].amount;
       }
-      htmlList += '<div class="xuanzhu">\n' +
-        '<div class="lf"><p>\n' +
-        spanList +
-        '</p><p>' + listData[v].ischangeName + '</p>\n' +
-        '</div> <div class="rt"> <img src="../images/index/close-ico.png" class="shanchudata" alt=""></div>\n' +
-        '<div class="clear"></div></div>';
-      isSelectNumbersrc = [];
-      spanList = '';
 
-      // 计算总注数和总金额
-      totalZhushu += listData[v].zhushu
-      totalAmount += listData[v].amount
+      $('.total_amount').text(totalAmount);
+      $('.total_zhushu').text(totalZhushu);
     }
-
-    $('.total_amount').text(totalAmount)
-    $('.total_zhushu').text(totalZhushu)
   }
+
 
   $('.touzhucontainercenter').append(htmlList);
 
@@ -63,8 +66,10 @@ require(['jquery', 'layer'], function (jquery, layer) {
       for (var v = 0; v < listData[i].isSelectedData[1].length; v++) {
         var srcnew2 = listData[i].isSelectedData[1].join(' ');
       }
-      for (var k = 0; k < listData[i].isSelectedData[2].length; k++) {
-        var srcnew3 = listData[i].isSelectedData[2].join(' ');
+      if (listData[i].isSelectedData[2] != null) {
+        for (var k = 0; k < listData[i].isSelectedData[2].length; k++) {
+          var srcnew3 = listData[i].isSelectedData[2].join(' ');
+        }
       }
       if (srcnew1 == undefined) {
         srcnew1 = ""
@@ -114,15 +119,16 @@ require(['jquery', 'layer'], function (jquery, layer) {
       adr.push(tijiaoObj);
     }
     var betData = adr;
-    var paramJson = JSON.stringify(betData);
-    alert(paramJson);
+    var lotteryType = $("#lotteryType").html();
+    var paramData = { "betData": JSON.stringify(betData), "lotteryType": lotteryType };
+    var paramJson = JSON.stringify(paramData);
     $.ajax({
-      url: "/bc/front/fjk5BetDetail/saveBet",    //请求的url地址
+      url: "/bc/front/commonBetDetail/saveBet",    //请求的url地址
       dataType: "json",   //返回格式为json
       async: true,//请求是否异步，默认为异步，这也是ajax重要特性
-      data: paramJson,    //参数值
+      data: paramData,    //参数值
       type: "POST",   //请求方式
-      contentType: "application/json",
+      //contentType: "application/json",
       success: function (result) {
         if (result.success) {
           layer.open({
@@ -132,6 +138,7 @@ require(['jquery', 'layer'], function (jquery, layer) {
           });
           //homeTypeClick('order');
           window.localStorage.removeItem('sureData')
+          homeTypeClick('order')
         } else {
           layer.open({
             content: result.msg,

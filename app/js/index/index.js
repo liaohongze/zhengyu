@@ -65,7 +65,7 @@ require(['until', 'swiper'], function (until, Swiper) {
     var popValue = $(this).find('span').attr('data-value');
     var poptitle = $(this).find('span').text();
     $('.xialachoose p').text('普通' + poptitle); //11选5标题
-    $('.kuai3xialachoose p').text(poptitle); //快3标题
+    $('.kuai3xialachoose p').text('普通' + poptitle); //快3标题
     if (popValue === '1') { //11选5 显示数据
 
       $('.diyizhongwanfa').removeClass('isnone');
@@ -81,7 +81,7 @@ require(['until', 'swiper'], function (until, Swiper) {
       $('.disizhongwanfa').removeClass('isnone');
     }
     if (popValue === '3') {
-      $(this).removeClass('selected')
+      $(this).removeClass('selected');
       $('.diyizhongwanfa').addClass('isnone');
       $('.dierzhongwanfa').addClass('isnone');
       $('.disanzhongwanfa').removeClass('isnone');
@@ -118,7 +118,7 @@ require(['until', 'swiper'], function (until, Swiper) {
     var popValue = $(this).find('span').attr('data-value');
     var poptitle = $(this).find('span').text();
     $('.xialachoose p').text('胆拖' + poptitle);
-    $('.kuai3xialachoose p').text(poptitle); //快3标题
+    $('.kuai3xialachoose p').text('胆拖' + poptitle); //快3标题
     $('.diyizhongwanfa .number div').removeClass('selected')
     $('.dierzhongwanfa .number div').removeClass('selected')
     $('.disanzhongwanfa .number div').removeClass('selected')
@@ -164,11 +164,13 @@ require(['until', 'swiper'], function (until, Swiper) {
   //选择号码
   $(document).on('click', '.number div', function () {
     if ($(this).hasClass('selected')) {
-      $(this).removeClass('selected')
+      $(this).removeClass('selected');
+      if ($(this).hasClass('sibling')) $(this).siblings().removeClass('selected');
     } else {
       $(this).addClass('selected');
+      if ($(this).hasClass('sibling')) $(this).siblings().addClass('selected');
     }
-  })
+  });
 
   //点击机选
   $(document).on('click', '.jixuan', function () {

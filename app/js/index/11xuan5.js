@@ -263,11 +263,11 @@ require(['jquery', 'layer'], function(jquery, layer) {
       // console.log()
       if (localStorageData != null) {
         window.localStorage.setItem("sureData", JSON.stringify(addSrc(localStorageData, changeData)));
-        location.href = '../../pages/touzhudan.html'
+        lotteryClick('order','2')
       } else {
         window.localStorage.setItem("sureData", JSON.stringify([]))
         window.localStorage.setItem("sureData", JSON.stringify([changeData]));
-        location.href = '../../pages/touzhudan.html'
+        lotteryClick('order','2')
       }
     }
   });

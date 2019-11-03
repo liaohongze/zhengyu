@@ -310,8 +310,8 @@ body {
           margin: 1vw .5vw;
           border-radius: 0;
 
-					span,
-					i {
+          span,
+          i {
             color: #666;
             font-size: 3.5vw;
             display: block;
@@ -323,7 +323,7 @@ body {
             background: rgb(228, 48, 21);
 
             span,
-						i {
+            i {
               color: #fff;
             }
           }
@@ -436,6 +436,36 @@ body {
             height: 15vw;
             line-height: 15vw;
           }
+        }
+      }
+    }
+  }
+}
+
+.caishunzi {
+  .container {
+    .container_title {
+      p {
+        margin-top: 5vw;
+        font-size: 5vw;
+        text-align: center;
+      }
+    }
+
+    .choosenumber {
+      justify-content: center;
+
+      .number {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: 0;
+
+        div {
+          width: 40vw;
+          height: 40vw;
+          line-height: 40vw;
+          border-radius: 0;
         }
       }
     }

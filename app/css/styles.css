@@ -3876,6 +3876,33 @@ body {
         height: 15vw;
         line-height: 15vw; }
 
+.caishunzi .container .container_title p {
+  margin-top: 5vw;
+  font-size: 5vw;
+  text-align: center; }
+
+.caishunzi .container .choosenumber {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .caishunzi .container .choosenumber .number {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: auto;
+    margin: 0; }
+    .caishunzi .container .choosenumber .number div {
+      width: 40vw;
+      height: 40vw;
+      line-height: 40vw;
+      border-radius: 0; }
+
 .caibaozi .container {
   width: 100%; }
   .caibaozi .container .container_title {
@@ -4164,42 +4191,42 @@ body {
   #touzhudan .touzhucontainer {
     width: 100%; }
     #touzhudan .touzhucontainer .touzhucontainertop {
-      width: 100%;
-      background: #e3e3e3;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: distribute;
       justify-content: space-around;
+      width: 100%;
       padding: 3vw 6vw;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; }
+      background: #e3e3e3; }
       #touzhudan .touzhucontainer .touzhucontainertop div {
         width: 28vw;
         height: 8vw;
-        border-radius: 4px;
-        color: #e43017;
-        background: #fff;
-        line-height: 8vw;
-        text-align: center;
         font-size: 3.7vw;
-        border: 1px solid #e3e3e3; }
+        line-height: 8vw;
+        color: #e43017;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #e3e3e3;
+        border-radius: 4px; }
     #touzhudan .touzhucontainer .touzhucontainercenter {
-      width: 100%;
-      height: 28vw;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      width: 100%;
+      height: 28vw; }
       #touzhudan .touzhucontainer .touzhucontainercenter .xuanzhu {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         width: 100%;
         height: 100%;
         padding: 0 3vw;
-        border-bottom: 1px solid #e3e3e3;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box; }
+        border-bottom: 1px solid #e3e3e3; }
         #touzhudan .touzhucontainer .touzhucontainercenter .xuanzhu p {
           font-size: 4.5vw;
           color: #666666; }
@@ -4215,6 +4242,10 @@ body {
             width: 6vw; }
         #touzhudan .touzhucontainer .touzhucontainercenter .xuanzhu:last-of-type {
           margin-bottom: 45vw; }
+        #touzhudan .touzhucontainer .touzhucontainercenter .xuanzhu .lf p:last-of-type {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
   #touzhudan .bottom {
     height: 43vw; }
     #touzhudan .bottom .qingkong {

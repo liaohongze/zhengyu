@@ -7,10 +7,16 @@ require(['jquery', 'layer'], function(jquery, layer) {
         [],
         []
       ] };
-      var changeData2 = { ischangeName: detailplay, totalNum: totalNum,singleOrDouble: singleOrDouble,zhushu:zhushu,amount:amount,isSelectedData: [
+    var changeData2 = { ischangeName: detailplay, totalNum: totalNum,singleOrDouble: singleOrDouble,zhushu:zhushu,amount:amount,isSelectedData: [
         [],
         []
       ] };
+
+    if ($('.number div.selected').parent().hasClass('two_zhudan')) {
+      changeData.ischangeName = detailplay + $('.number div.selected').parent('.two_zhudan_group_1').data('title');
+      changeData2.ischangeName = detailplay + $('.number div.selected').parent('.two_zhudan_group_2').data('title');
+    }
+
     $('.number div.selected').each(function(key, value) {
       if ($(this).parent().hasClass('two_zhudan')) {
         if ($(this).parent().hasClass('two_zhudan_group_1')) {
@@ -109,12 +115,12 @@ require(['jquery', 'layer'], function(jquery, layer) {
       if (localStorageData != null) {
         window.localStorage.setItem("sureData", JSON.stringify(addSrc(localStorageData, changeData)));
         $('.number div.selected').parent().hasClass('two_zhudan') && window.localStorage.setItem("sureData", JSON.stringify(addSrc(JSON.parse(window.localStorage.getItem('sureData')), changeData2)));
-        location.href = '../../pages/touzhudan.html'
+        lotteryClick('order','1')
       } else {
         window.localStorage.setItem("sureData", JSON.stringify([]))
         window.localStorage.setItem("sureData", JSON.stringify([changeData]));
         $('.number div.selected').parent().hasClass('two_zhudan') && window.localStorage.setItem("sureData", JSON.stringify(addSrc(JSON.parse(window.localStorage.getItem('sureData')), changeData2)));
-        location.href = '../../pages/touzhudan.html'
+        lotteryClick('order','1')
       }
     }
   });
