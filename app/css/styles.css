@@ -5309,6 +5309,45 @@ body {
           color: #ee3015;
           font-size: 3.5vw; }
 
+.withdraw_page {
+  height: 100%;
+  background-color: #f6f6f6; }
+  .withdraw_page .panel {
+    width: 95%;
+    padding: 4vw 3vw 0;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff; }
+    .withdraw_page .panel form .form_item {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-bottom: 4vw; }
+      .withdraw_page .panel form .form_item label {
+        height: 10vw;
+        padding: 0 3vw;
+        margin-right: 3vw;
+        line-height: 10vw;
+        text-align: center;
+        background-color: #f5f6f8;
+        border-radius: 1.2vw; }
+      .withdraw_page .panel form .form_item span i {
+        color: #d19858; }
+      .withdraw_page .panel form .form_item input {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        height: 10vw;
+        padding-left: 3vw;
+        border: 1px solid #c6c6c8;
+        border-radius: 1.2vw; }
+
 .zijinmingxi_page {
   width: 100%; }
   .zijinmingxi_page .zijinmingxi {
