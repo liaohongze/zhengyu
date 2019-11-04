@@ -2975,6 +2975,118 @@ body {
       width: 7vw;
       margin: 2vw auto 1vw; }
 
+.gerencaipiaoyingkui_page {
+  width: 100%; }
+  .gerencaipiaoyingkui_page .public_header select {
+    background: none;
+    height: 8vw;
+    color: #fff; }
+    .gerencaipiaoyingkui_page .public_header select option {
+      color: #333; }
+  .gerencaipiaoyingkui_page .zijinmingxi {
+    width: 100%;
+    padding: 1.5vw;
+    margin-top: 2vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .gerencaipiaoyingkui_page .zijinmingxi .top_selecttime {
+      width: 100%; }
+      .gerencaipiaoyingkui_page .zijinmingxi .top_selecttime input {
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        width: 46%;
+        background: #fff;
+        height: 9.5vw;
+        font-size: 3.3vw; }
+      .gerencaipiaoyingkui_page .zijinmingxi .top_selecttime button {
+        width: 19vw;
+        height: 9.5vw;
+        background: #f7583c;
+        outline: none;
+        font-size: 3.8vw;
+        color: #fff;
+        border-radius: 4px; }
+      .gerencaipiaoyingkui_page .zijinmingxi .top_selecttime span {
+        color: #666666;
+        font-size: 4vw; }
+      .gerencaipiaoyingkui_page .zijinmingxi .top_selecttime div {
+        width: 19vw;
+        height: 9.5vw;
+        font-size: 3.5vw;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 9.5vw;
+        display: inline-block; }
+    .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container {
+      width: 100%;
+      margin: 5.5vw auto 0; }
+      .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul {
+        width: 100%; }
+        .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li {
+          list-style: none;
+          background: #fefefe;
+          border-bottom: 1px solid #f7f5f6;
+          border-radius: 4px;
+          margin-top: 5vw; }
+          .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data {
+            width: 100%;
+            padding-bottom: 3.5vw; }
+            .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type {
+              width: 95%;
+              border-bottom: 2px solid #f7583c;
+              margin: 0 auto;
+              padding-top: 3vw;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box; }
+              .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type span {
+                width: 22vw;
+                height: 7vw;
+                color: #fff;
+                background: #f7583c;
+                display: inline-block;
+                font-size: 3.5vw;
+                text-align: center;
+                line-height: 8vw;
+                border-radius: 4px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                font-weight: bold; }
+              .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type b {
+                font-size: 3.5vw;
+                margin-left: 1.5vw; }
+            .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type {
+              width: 95%;
+              margin: 3vw auto 0; }
+              .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p {
+                border-bottom: 1px solid #fff; }
+                .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p span {
+                  font-size: 3.5vw; }
+                  .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p span.white_span {
+                    font-weight: bold;
+                    width: 13vw;
+                    height: 7vw;
+                    text-align: center;
+                    line-height: 8vw;
+                    background: #fff;
+                    color: #333;
+                    display: inline-block;
+                    border-radius: 4px;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0; }
+                .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p b {
+                  font-size: 3.5vw;
+                  margin-left: 2.5vw; }
+                  .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p b.yingkui {
+                    color: #e43017; }
+                .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p.second_p {
+                  width: 49%;
+                  display: inline-block; }
+              .gerencaipiaoyingkui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type .baixian {
+                margin-top: 3.5vw; }
+
 .top {
   width: 100%;
   margin-bottom: 3vw;
