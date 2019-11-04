@@ -45,6 +45,12 @@ a {
   background-color: #e43017;
   border-radius: 11.1vw; }
 
+.no_more_data {
+  margin-top: 5vw;
+  font-size: 3.5vw;
+  color: #888;
+  text-align: center; }
+
 .font-1 {
   font-size: 1px !important; }
 
@@ -4185,6 +4191,55 @@ body {
     .login_page .forget_password a,
     .forget_page .forget_password a {
       color: #626262; }
+
+.team_manage_page {
+  height: 100%;
+  background-color: #f6f6f6; }
+  .team_manage_page .search_form {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2vw 3.5vw;
+    background-color: #eaeaea; }
+    .team_manage_page .search_form input {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      height: 8.4vw;
+      text-align: center;
+      border-radius: 1vw; }
+    .team_manage_page .search_form button {
+      width: 22.3vw;
+      height: 8.4vw;
+      margin-left: 2vw;
+      color: #fff;
+      background-color: #e43017;
+      border-radius: 1vw; }
+  .team_manage_page ul li {
+    margin-bottom: 3vw; }
+  .team_manage_page ul .info {
+    padding: 0 3vw;
+    margin-bottom: 2vw;
+    overflow: hidden;
+    background-color: #fff; }
+    .team_manage_page ul .info h3 {
+      padding: 2vw 0;
+      font-weight: bold; }
+    .team_manage_page ul .info p {
+      margin-bottom: 2vw;
+      font-size: 3.5vw;
+      color: #666; }
+      .team_manage_page ul .info p span {
+        float: right; }
+  .team_manage_page ul button {
+    width: 20vw;
+    height: 8vw;
+    margin-left: 3vw;
+    color: #fff;
+    background-color: #e43017;
+    border-radius: 4vw; }
 
 #touzhudan {
   background: #fff; }
