@@ -1,0 +1,63 @@
+.team_manage_page {
+  height: 100%;
+  background-color: #f6f6f6;
+
+  .search_form {
+    display: flex;
+    padding: 2vw 3.5vw;
+    background-color: #eaeaea;
+
+    input {
+      flex: 1;
+      height: 8.4vw;
+      text-align: center;
+      border-radius: 1vw;
+    }
+
+    button {
+      width: 22.3vw;
+      height: 8.4vw;
+      margin-left: 2vw;
+      color: #fff;
+      background-color: #e43017;
+      border-radius: 1vw;
+    }
+  }
+
+  ul {
+    li {
+      margin-bottom: 3vw;
+    }
+
+    .info {
+      padding: 0 3vw;
+      margin-bottom: 2vw;
+      overflow: hidden;
+      background-color: #fff;
+
+      h3 {
+        padding: 2vw 0;
+        font-weight: bold;
+      }
+
+      p {
+        margin-bottom: 2vw;
+        font-size: 3.5vw;
+        color: #666;
+
+        span {
+          float: right;
+        }
+      }
+    }
+
+    button {
+      width: 20vw;
+      height: 8vw;
+      margin-left: 3vw;
+      color: #fff;
+      background-color: #e43017;
+      border-radius: 4vw;
+    }
+  }
+}
