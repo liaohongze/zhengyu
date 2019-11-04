@@ -115,12 +115,14 @@ require(['jquery', 'layer'], function(jquery, layer) {
       if (localStorageData != null) {
         window.localStorage.setItem("sureData", JSON.stringify(addSrc(localStorageData, changeData)));
         $('.number div.selected').parent().hasClass('two_zhudan') && window.localStorage.setItem("sureData", JSON.stringify(addSrc(JSON.parse(window.localStorage.getItem('sureData')), changeData2)));
-        lotteryClick('order','1')
+        // lotteryClick('order','1')
+        location.href= "../../pages/touzhudan.html"
       } else {
         window.localStorage.setItem("sureData", JSON.stringify([]))
         window.localStorage.setItem("sureData", JSON.stringify([changeData]));
         $('.number div.selected').parent().hasClass('two_zhudan') && window.localStorage.setItem("sureData", JSON.stringify(addSrc(JSON.parse(window.localStorage.getItem('sureData')), changeData2)));
-        lotteryClick('order','1')
+        // lotteryClick('order','1')
+        location.href= "../../pages/touzhudan.html"
       }
     }
   });
