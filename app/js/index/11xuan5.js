@@ -263,11 +263,13 @@ require(['jquery', 'layer'], function(jquery, layer) {
       // console.log()
       if (localStorageData != null) {
         window.localStorage.setItem("sureData", JSON.stringify(addSrc(localStorageData, changeData)));
-        lotteryClick('order','2')
+        // lotteryClick('order','2')
+        location.href= "../../pages/touzhudan.html"
       } else {
         window.localStorage.setItem("sureData", JSON.stringify([]))
         window.localStorage.setItem("sureData", JSON.stringify([changeData]));
-        lotteryClick('order','2')
+        // lotteryClick('order','2')
+        location.href= "../../pages/touzhudan.html"
       }
     }
   });
