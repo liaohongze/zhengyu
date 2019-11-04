@@ -2303,6 +2303,117 @@ body {
   height: 100%;
   background-color: #f6f6f6; }
 
+.caipiaotuidui_page {
+  width: 100%; }
+  .caipiaotuidui_page .public_header select {
+    background: none;
+    height: 8vw;
+    color: #fff; }
+    .caipiaotuidui_page .public_header select option {
+      color: #333; }
+  .caipiaotuidui_page .zijinmingxi {
+    width: 100%;
+    padding: 1.5vw;
+    margin-top: 2vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .caipiaotuidui_page .zijinmingxi .top_selecttime {
+      width: 100%; }
+      .caipiaotuidui_page .zijinmingxi .top_selecttime input {
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        width: 24%;
+        background: #fff;
+        height: 9.5vw;
+        font-size: 3.3vw; }
+      .caipiaotuidui_page .zijinmingxi .top_selecttime button {
+        width: 19vw;
+        height: 9.5vw;
+        background: #f7583c;
+        outline: none;
+        font-size: 3.8vw;
+        color: #fff;
+        border-radius: 4px; }
+      .caipiaotuidui_page .zijinmingxi .top_selecttime span {
+        color: #666666;
+        font-size: 4vw; }
+      .caipiaotuidui_page .zijinmingxi .top_selecttime div {
+        width: 19vw;
+        height: 9.5vw;
+        font-size: 3.5vw;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 9.5vw;
+        display: inline-block; }
+    .caipiaotuidui_page .zijinmingxi .zijinmingxi_container {
+      width: 100%;
+      margin: 5.5vw auto 0; }
+      .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul {
+        width: 100%; }
+        .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li {
+          list-style: none;
+          background: #f7f5f6;
+          border-radius: 4px;
+          margin-top: 5vw; }
+          .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data {
+            width: 100%;
+            padding-bottom: 3.5vw; }
+            .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type {
+              width: 95%;
+              border-bottom: 2px solid #f7583c;
+              margin: 0 auto;
+              padding-top: 3vw;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box; }
+              .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type span {
+                width: 22vw;
+                height: 7vw;
+                color: #fff;
+                background: #f7583c;
+                display: inline-block;
+                font-size: 3.5vw;
+                text-align: center;
+                line-height: 8vw;
+                border-radius: 4px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                font-weight: bold; }
+              .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type b {
+                font-size: 3.5vw;
+                margin-left: 1.5vw; }
+            .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type {
+              width: 95%;
+              margin: 3vw auto 0; }
+              .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p {
+                border-bottom: 1px solid #fff; }
+                .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p span {
+                  font-size: 3.5vw; }
+                  .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p span.white_span {
+                    font-weight: bold;
+                    width: 18vw;
+                    height: 7vw;
+                    text-align: center;
+                    line-height: 8vw;
+                    background: #fff;
+                    color: #333;
+                    display: inline-block;
+                    border-radius: 4px;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0; }
+                .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p b {
+                  font-size: 3.5vw;
+                  margin-left: 2.5vw; }
+                  .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p b.yingkui {
+                    color: #e43017; }
+                .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p.second_p {
+                  width: 49%;
+                  display: inline-block; }
+              .caipiaotuidui_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type .baixian {
+                margin-top: 3.5vw; }
+
 .charge_page {
   height: 100%;
   background-color: #f5f5f5; }
@@ -4631,6 +4742,115 @@ body {
     .trend_lottery_page .content td:last-of-type {
       border-right: 0; }
 
+.tuiduitouzhujilu_page {
+  width: 100%; }
+  .tuiduitouzhujilu_page .public_header select {
+    background: none;
+    height: 8vw;
+    color: #fff; }
+    .tuiduitouzhujilu_page .public_header select option {
+      color: #333; }
+  .tuiduitouzhujilu_page .zijinmingxi {
+    width: 100%;
+    padding: 1.5vw;
+    margin-top: 2vw;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .tuiduitouzhujilu_page .zijinmingxi .top_selecttime {
+      width: 100%; }
+      .tuiduitouzhujilu_page .zijinmingxi .top_selecttime input {
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        width: 24%;
+        background: #fff;
+        height: 9.5vw;
+        font-size: 3.3vw; }
+      .tuiduitouzhujilu_page .zijinmingxi .top_selecttime select {
+        width: 19vw;
+        height: 9.5vw;
+        background: #fff;
+        border: 1px solid #e3e3e3;
+        font-size: 3.8vw; }
+      .tuiduitouzhujilu_page .zijinmingxi .top_selecttime span {
+        color: #666666;
+        font-size: 4vw; }
+      .tuiduitouzhujilu_page .zijinmingxi .top_selecttime div {
+        width: 19vw;
+        height: 9.5vw;
+        font-size: 3.5vw;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 9.5vw;
+        display: inline-block; }
+    .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container {
+      width: 100%;
+      margin: 5.5vw auto 0; }
+      .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul {
+        width: 100%; }
+        .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li {
+          list-style: none;
+          background: #f7f5f6;
+          border-radius: 4px;
+          margin-top: 5vw; }
+          .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data {
+            width: 100%;
+            padding-bottom: 3.5vw; }
+            .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type {
+              width: 95%;
+              border-bottom: 2px solid #f7583c;
+              margin: 0 auto;
+              padding-top: 3vw;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box; }
+              .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type span {
+                width: 22vw;
+                height: 7vw;
+                color: #fff;
+                background: #f7583c;
+                display: inline-block;
+                font-size: 3.5vw;
+                text-align: center;
+                line-height: 8vw;
+                border-radius: 4px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                font-weight: bold; }
+              .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type b {
+                font-size: 3.5vw;
+                margin-left: 1.5vw; }
+            .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type {
+              width: 95%;
+              margin: 3vw auto 0; }
+              .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p {
+                border-bottom: 1px solid #fff; }
+                .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p span {
+                  font-size: 3.5vw; }
+                  .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p span.white_span {
+                    font-weight: bold;
+                    width: 18vw;
+                    height: 7vw;
+                    text-align: center;
+                    line-height: 8vw;
+                    background: #fff;
+                    color: #333;
+                    display: inline-block;
+                    border-radius: 4px;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0; }
+                .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p b {
+                  font-size: 3.5vw;
+                  margin-left: 2.5vw; }
+                  .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p b.yingkui {
+                    color: #e43017; }
+                .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p.second_p {
+                  width: 49%;
+                  display: inline-block; }
+              .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type .baixian {
+                margin-top: 3.5vw; }
+
 .user_page header a img {
   display: block;
   width: 6vw; }
@@ -4902,9 +5122,9 @@ body {
         width: 35%;
         background: #fff;
         height: 9.5vw;
-        font-size: 3.8vw; }
+        font-size: 3.3vw; }
       .zijinmingxi_page .zijinmingxi .top_selecttime select {
-        width: 70px;
+        width: 19vw;
         height: 9.5vw;
         background: #fff;
         border: 1px solid #e3e3e3;
@@ -4926,7 +5146,7 @@ body {
             width: 100%;
             padding-bottom: 3.5vw; }
             .zijinmingxi_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .title_type {
-              width: 90%;
+              width: 95%;
               border-bottom: 2px solid #f7583c;
               margin: 0 auto;
               padding-top: 3vw;
@@ -4950,7 +5170,7 @@ body {
                 font-size: 3.5vw;
                 margin-left: 1.5vw; }
             .zijinmingxi_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type {
-              width: 90%;
+              width: 95%;
               margin: 3vw auto 0; }
               .zijinmingxi_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type p {
                 border-bottom: 1px solid #fff; }

@@ -1,7 +1,17 @@
 
 
-.zijinmingxi_page{
+.caipiaotuidui_page{
     width: 100%;
+    .public_header{
+        select{
+            background: none;
+            height: 8vw;
+            color: #fff;
+            option{
+                color: #333;
+            }
+        }
+    }
     .zijinmingxi{
         width: 100%;
         padding: 1.5vw;
@@ -12,21 +22,33 @@
             input{
                 border: 1px solid #e3e3e3;
                 border-radius: 5px;
-                width: 35%;
+                width:24%;
                 background: #fff;
                 height: 9.5vw;
                 font-size: 3.3vw;
             }
-            select{
+            button{
                 width: 19vw;
                 height: 9.5vw;
-                background: #fff;
-                border: 1px solid #e3e3e3;
+                background: rgb(247,88,60);
+                outline: none;
                 font-size: 3.8vw;
+                color: #fff;
+                border-radius: 4px;
             }
             span{
                 color: #666666;
                 font-size: 4vw;
+            }
+            div{
+                width:19vw;
+                height: 9.5vw;
+                font-size: 3.5vw;
+                border: 1px solid #e3e3e3;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 9.5vw;
+                display: inline-block;
             }
         }
         .zijinmingxi_container{
@@ -91,6 +113,9 @@
                                 b{
                                     font-size: 3.5vw;
                                     margin-left: 2.5vw;
+                                    &.yingkui{
+                                        color: #e43017;
+                                    }
                                 }
                                 &.second_p{
                                     width: 49%;
