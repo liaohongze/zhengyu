@@ -1,0 +1,44 @@
+.withdraw_page {
+  height: 100%;
+  background-color: #f6f6f6;
+
+  .panel {
+    width: 95%;
+    padding: 4vw 3vw 0;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+
+    form {
+      .form_item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4vw;
+
+        label {
+          height: 10vw;
+          padding: 0 3vw;
+          margin-right: 3vw;
+          line-height: 10vw;
+          text-align: center;
+          background-color: #f5f6f8;
+          border-radius: 1.2vw;
+        }
+
+        span {
+          i {
+            color: #d19858;
+          }
+        }
+
+        input {
+          flex: 1;
+          height: 10vw;
+          padding-left: 3vw;
+          border: 1px solid #c6c6c8;
+          border-radius: 1.2vw;
+        }
+      }
+    }
+  }
+}
