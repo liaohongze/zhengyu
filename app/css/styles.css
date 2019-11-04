@@ -4192,6 +4192,98 @@ body {
     .forget_page .forget_password a {
       color: #626262; }
 
+.open_account_page {
+  height: 100%;
+  background-color: #f6f6f6; }
+  .open_account_page .panel {
+    width: 95%;
+    padding: 8vw 3vw 4vw;
+    margin: 2vw auto 0;
+    background-color: #fff; }
+    .open_account_page .panel .tab_triggle {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .open_account_page .panel .tab_triggle span {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 45%;
+        height: 16.7vw;
+        color: #b4b4b4;
+        border: 1px solid #454545;
+        border-radius: 1.5vw; }
+        .open_account_page .panel .tab_triggle span.active {
+          color: #ed2f23;
+          background-color: #fff5f4;
+          border-color: #ed2f23; }
+        .open_account_page .panel .tab_triggle span img {
+          width: 9vw;
+          margin-right: 2vw; }
+        .open_account_page .panel .tab_triggle span i {
+          font-size: 4.5vw; }
+    .open_account_page .panel form .form_item {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 4vw; }
+      .open_account_page .panel form .form_item label {
+        width: 20vw;
+        height: 10vw;
+        margin-right: 3vw;
+        line-height: 10vw;
+        text-align: center;
+        background-color: #f5f6f8;
+        border-radius: 1.2vw; }
+      .open_account_page .panel form .form_item input {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        height: 10vw;
+        padding-left: 3vw;
+        border: 1px solid #c6c6c8;
+        border-radius: 1.2vw; }
+    .open_account_page .panel .tip {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      padding: 3.4vw;
+      margin-top: 4vw;
+      font-size: 3.5vw;
+      color: #006100;
+      background-color: #e5f2e8;
+      border: 1px solid #55ad62;
+      border-radius: 1vw; }
+      .open_account_page .panel .tip img {
+        width: 4.7vw;
+        height: 4.7vw;
+        margin-right: 3.4vw; }
+
 .team_manage_page {
   height: 100%;
   background-color: #f6f6f6; }

@@ -1,0 +1,86 @@
+.open_account_page {
+  height: 100%;
+  background-color: #f6f6f6;
+
+  .panel {
+    width: 95%;
+    padding: 8vw 3vw 4vw;
+    margin: 2vw auto 0;
+    background-color: #fff;
+
+    .tab_triggle {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45%;
+        height: 16.7vw;
+        color: #b4b4b4;
+        border: 1px solid #454545;
+        border-radius: 1.5vw;
+
+        &.active {
+          color: #ed2f23;
+          background-color: #fff5f4;
+          border-color: #ed2f23;
+        }
+
+        img {
+          width: 9vw;
+          margin-right: 2vw;
+        }
+
+        i {
+          font-size: 4.5vw;
+        }
+      }
+    }
+
+    form {
+      .form_item {
+        display: flex;
+        align-items: center;
+        margin-top: 4vw;
+
+        label {
+          width: 20vw;
+          height: 10vw;
+          margin-right: 3vw;
+          line-height: 10vw;
+          text-align: center;
+          background-color: #f5f6f8;
+          border-radius: 1.2vw;
+        }
+
+        input {
+          flex: 1;
+          height: 10vw;
+          padding-left: 3vw;
+          border: 1px solid #c6c6c8;
+          border-radius: 1.2vw;
+        }
+      }
+    }
+
+    .tip {
+      display: flex;
+      align-items: flex-start;
+      padding: 3.4vw;
+      margin-top: 4vw;
+      font-size: 3.5vw;
+      color: #006100;
+      background-color: #e5f2e8;
+      border: 1px solid #55ad62;
+      border-radius: 1vw;
+
+      img {
+        width: 4.7vw;
+        height: 4.7vw;
+        margin-right: 3.4vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>人工开户</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="../js/widgets/swiper/swiper-3.4.2.min.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+	<!-- Add your site or application content here -->
+	<div class="open_account_page">
+		<header class="public_header">
+			<a href="javascript: window.history.back();">
+				<img src="../images/index/left-icon.png" alt="left_icon">
+			</a>
+
+			<h2>人工开户</h2>
+		</header>
+
+		<div class="panel">
+			<div class="tab_triggle">
+				<span class="active" data-type="daili">
+					<img src="../images/daili.png" style="display: none;" alt="common">
+					<img src="../images/daili-active.png" alt="active">
+					<i>代理账号</i>
+				</span>
+				<span data-type="wanjia">
+					<img src="../images/player-account.png" alt="common">
+					<img src="../images/player-account-active.png" style="display: none;" alt="active">
+					<i>玩家账号</i>
+				</span>
+			</div>
+
+			<form action="" class="daili_form">
+				<div class="form_item">
+					<label for="username">用户名：</label>
+					<input type="text" name="username" id="username" placeholder="用户名必须以字母开头(如abc123)">
+				</div>
+				<div class="form_item">
+					<label for="bonus">奖金组：</label>
+					<input type="text" name="bonus" id="bonus" placeholder="代理奖金组范围1500~1500">
+				</div>
+			</form>
+
+			<form action="" class="wanjia_form" style="display: none;">
+				<div class="form_item">
+					<label for="username">用户名：</label>
+					<input type="text" name="username" id="username" placeholder="用户名必须以字母开头(如abc123)">
+				</div>
+				<div class="form_item">
+					<label for="bonus">奖金组：</label>
+					<input type="text" name="bonus" id="bonus" placeholder="玩家奖金组范围1500~1500">
+				</div>
+			</form>
+
+			<div class="tip">
+				<img src="../images/icon-tip.png" alt="">
+				<p>
+					会员初始密码为“a123456”
+				</p>
+			</div>
+		</div>
+
+		<button class="main_long_btn">立即开户</button>
+	</div>
+
+	<script src="../js/libs/require.js" data-main="../js/index/index.js"></script>
+	<script src="../js/index/11xuan5.js"></script>
+	<script src="../js/libs/require.config.js"></script>
+</body>
+
+</html>

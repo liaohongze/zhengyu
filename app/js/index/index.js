@@ -432,5 +432,21 @@ require(['until', 'swiper'], function (until, Swiper) {
       $(this).addClass('active');
     }
   })
+
+  // 人工开户
+  $(document).on('click', '.open_account_page .tab_triggle span', function() {
+    if ($(this).hasClass('active')) return
+
+    $(this).siblings().removeClass('active')
+    $(this).siblings().find('img[alt="active"]').hide()
+    $(this).siblings().find('img[alt="common"]').show()
+
+    $(this).addClass('active')
+    $(this).find('img[alt="active"]').show()
+    $(this).find('img[alt="common"]').hide()
+
+    $('.open_account_page form').hide()
+    $('.open_account_page .' + $(this).data('type') + '_form').show()
+  });
 });
 
