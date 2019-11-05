@@ -207,6 +207,7 @@ require(['until', 'swiper'], function (until, Swiper) {
       $(this).addClass('select');
       var poptitle = $(this).find('span').text();
       $('.zuqiuxialachoose p').text(poptitle); //足球标题
+      $('.zuqiuxialachoose p').attr('game-type', $(this).attr('game-type'));
       // 对应内容显示隐藏
       $('.zuqiuwanfa').eq(morenselectcontainer).removeClass('isnone').siblings().addClass('isnone');
       layer.closeAll();

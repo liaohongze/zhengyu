@@ -81,12 +81,12 @@ define(['layer','jquery'], function() {
         '<div class="clear"></div></div>\n'+
       '<div class="topcontainer">\n'+
         '<div class="playrules">\n'+
-            '<div class="select"><span>胜平负</span></div>\n'+
-            '<div><span>让分胜负</span></div>\n'+
-            '<div><span>混合投注</span></div>\n'+
-            '<div><span>比分</span></div>\n'+
-            '<div><span>半全场</span></div>\n'+
-            '<div><span>总进球</span></div>\n'+
+            '<div class="select" game-type="shengpingfu"><span>胜平负</span></div>\n'+
+            '<div game-type="rangfenshengfu"><span>让分胜负</span></div>\n'+
+            '<div game-type="bifencontainer"><span>混合投注</span></div>\n'+
+            '<div game-type="banquanchang"><span>比分</span></div>\n'+
+            '<div game-type="banquanchang"><span>半全场</span></div>\n'+
+            '<div game-type="zongjinqiu"><span>总进球</span></div>\n'+
           '</div>\n'+
           '<div class="playrules isnone">\n'+
             '<div class="select"><span>胜平负</span></div>\n'+
