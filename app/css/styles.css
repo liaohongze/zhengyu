@@ -2948,6 +2948,66 @@ body {
   #morestc#morestc3 .tc4, #morestc1#morestc3 .tc4, #morestc2#morestc3 .tc4, #morestc3#morestc3 .tc4 {
     top: 20%; }
 
+.football_order_page {
+  height: 100%;
+  background-color: #f5f5f5; }
+  .football_order_page .add_btn {
+    display: block;
+    width: 46%;
+    height: 9.2vw;
+    margin: 3vw auto;
+    color: #e43015;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 1vw; }
+  .football_order_page .order_list {
+    background-color: #fff; }
+    .football_order_page .order_list li {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 4vw 5%; }
+      .football_order_page .order_list li .info {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding-right: 4vw; }
+        .football_order_page .order_list li .info p {
+          margin-bottom: 3vw;
+          text-align: center; }
+          .football_order_page .order_list li .info p span {
+            color: #e43015; }
+        .football_order_page .order_list li .info .datalist_team_rt_bottom {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -moz-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          .football_order_page .order_list li .info .datalist_team_rt_bottom > div {
+            width: 30%;
+            height: 8vw;
+            font-size: 14px;
+            line-height: 8vw;
+            color: #666;
+            text-align: center;
+            border: 1px solid #eee;
+            border-radius: 5px; }
+            .football_order_page .order_list li .info .datalist_team_rt_bottom > div.selected {
+              color: #fff;
+              background: #e43015; }
+      .football_order_page .order_list li img[alt="close"] {
+        width: 6.2vw;
+        height: 6.2vw; }
+
 .footer_menu {
   position: fixed;
   bottom: 0;

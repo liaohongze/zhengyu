@@ -1,0 +1,65 @@
+.football_order_page {
+  height: 100%;
+  background-color: #f5f5f5;
+
+  .add_btn {
+    display: block;
+    width: 46%;
+    height: 9.2vw;
+    margin: 3vw auto;
+    color: #e43015;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 1vw;
+  }
+
+  .order_list {
+    background-color: #fff;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 4vw 5%;
+
+      .info {
+        flex: 1;
+        padding-right: 4vw;
+
+        p {
+          margin-bottom: 3vw;
+          text-align: center;
+
+          span {
+            color: #e43015;
+          }
+        }
+
+        .datalist_team_rt_bottom {
+          display: flex;
+          justify-content: space-between;
+
+          > div {
+            width: 30%;
+            height: 8vw;
+            font-size: 14px;
+            line-height: 8vw;
+            color: #666;
+            text-align: center;
+            border: 1px solid #eee;
+            border-radius: 5px;
+
+            &.selected {
+              color: #fff;
+              background: #e43015;
+            }
+          }
+        }
+      }
+
+      img[alt="close"] {
+        width: 6.2vw;
+        height: 6.2vw;
+      }
+    }
+  }
+}

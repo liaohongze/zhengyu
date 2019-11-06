@@ -18,12 +18,13 @@ require(['jquery', 'layer'], function (jquery, layer) {
 			if (!selectList.length) continue;
 
 			takeOrderList.push({
-				html: $(array[index]).html(),
+				html: $(array[index]).find('.datalist_team_rt_bottom').html(),
 				teamName: [$(array[index]).find('.datalist_team_rt_top span:first').text(), $(array[index]).find('.datalist_team_rt_top span:last').text()]
 			});
 		}
 
 		window.localStorage.setItem('shengpingfuData', JSON.stringify(takeOrderList));
+		location.href = './footballOrder.html?type=shengpingfu';
 	}
 
 	function rangfenshengfuFlow() {
@@ -35,12 +36,13 @@ require(['jquery', 'layer'], function (jquery, layer) {
 			if (!selectList.length) continue;
 
 			takeOrderList.push({
-				html: $(array[index]).html(),
+				html: $(array[index]).find('.datalist_team_rt_bottom').html(),
 				teamName: [$(array[index]).find('.datalist_team_rt_top span:first').text(), $(array[index]).find('.datalist_team_rt_top span:last').text()]
 			});
 		}
 
 		window.localStorage.setItem('rangfenshengfuData', JSON.stringify(takeOrderList));
+		location.href = './footballOrder.html?type=rangfenshengfu';
 	}
 
 	function zongjinqiuFlow() {
@@ -52,11 +54,12 @@ require(['jquery', 'layer'], function (jquery, layer) {
 			if (!selectList.length) continue;
 
 			takeOrderList.push({
-				html: $(array[index]).html(),
+				html: $(array[index]).find('.datalist_team_rt_bottom_wrap').html(),
 				teamName: [$(array[index]).find('.datalist_team_rt_top span:first').text(), $(array[index]).find('.datalist_team_rt_top span:last').text()]
 			});
 		}
 
 		window.localStorage.setItem('zongjinqiuData', JSON.stringify(takeOrderList));
+		location.href = './footballOrder.html?type=zongjinqiu';
 	}
 });

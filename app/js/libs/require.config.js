@@ -10,7 +10,8 @@ require.config({
     '11xuan5': '../index/11xuan5',
     'kuai3': '../index/kuai3',
     'touzhudan': '../index/touzhudan',
-    'football': '../index/football'
+    'football': '../index/football',
+    'footballOrder': '../index/footballOrder'
   },
   shim: {
     'jquery': {
@@ -35,6 +36,9 @@ require.config({
       'deps': ['jquery', 'layer']
     },
     'football': {
+      'deps': ['jquery', 'layer']
+    },
+    'footballOrder': {
       'deps': ['jquery', 'layer']
     }
   }
