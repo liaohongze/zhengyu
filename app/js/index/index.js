@@ -238,16 +238,48 @@ require(['until', 'swiper'], function (until, Swiper) {
   })
 
   // 比分弹窗
-  $(document).on('click', '.datalist_team_rt_bottomtc', function () {
+  $(document).on('click', '.bifenwanfa .datalist_team_rt_bottomtc', function () {
     $('#morestc1').removeClass('hidden');
+    $('#morestc1').attr('data-id', $(this).attr('data-id'));
+
+    // 如果该条单子已选择，复原已选择的项
+    if ($(this).find('span').text() !== '点击展开投注区') {
+      var array = $(this).find('span').text().split(',');
+      var list = $('#morestc1 .samebiaoge div');
+
+      for(var i = 0; i < array.length; i++) {
+        for (var j = 0; j < list.length; j++) {
+          if (array[i] === $(list[j]).find('p').text()) {
+            $(list[j]).addClass('isselected');
+          }
+        }
+      }
+    }
+
     $('body').css('position', 'fixed');
-  })
+  });
 
   // 半全场弹窗
-  $(document).on('click', '.datalist_team_rt_bottomtc2', function () {
+  $(document).on('click', '.banquanchangcontainer .datalist_team_rt_bottomtc2', function () {
     $('#morestc2').removeClass('hidden');
+    $('#morestc2').attr('data-id', $(this).attr('data-id'));
+
+    // 如果该条单子已选择，复原已选择的项
+    if ($(this).find('span').text() !== '点击展开投注区') {
+      var array = $(this).find('span').text().split(',');
+      var list = $('#morestc2 .samebiaoge div');
+
+      for(var i = 0; i < array.length; i++) {
+        for (var j = 0; j < list.length; j++) {
+          if (array[i] === $(list[j]).find('p').text()) {
+            $(list[j]).addClass('isselected');
+          }
+        }
+      }
+    }
+
     $('body').css('position', 'fixed');
-  })
+  });
   // 取消按钮
   $(document).on('click', '.quxiaobtn', function () {
     $('#morestc').addClass('hidden');
@@ -255,7 +287,7 @@ require(['until', 'swiper'], function (until, Swiper) {
     $('#morestc2').addClass('hidden');
     $('#morestc3').addClass('hidden');
     $('.samebiaoge div').removeClass('isselected')
-  })
+  });
 
   // 确定按钮
   $(document).on('click', '.submitbtn', function () {

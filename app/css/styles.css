@@ -2971,7 +2971,10 @@ body {
       -moz-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      padding: 4vw 5%; }
+      padding: 4vw 5%;
+      border-bottom: 1px solid #eee; }
+      .football_order_page .order_list li:last-of-type {
+        border: 0; }
       .football_order_page .order_list li .info {
         -webkit-box-flex: 1;
         -moz-box-flex: 1;
@@ -3005,6 +3008,44 @@ body {
               color: #fff;
               background: #e43015; }
       .football_order_page .order_list li img[alt="close"] {
+        width: 6.2vw;
+        height: 6.2vw; }
+  .football_order_page .other_order_list {
+    background-color: #fff; }
+    .football_order_page .other_order_list li {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 4vw 5%;
+      border-bottom: 1px solid #eee; }
+      .football_order_page .other_order_list li:last-of-type {
+        border: 0; }
+      .football_order_page .other_order_list li .info {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding-right: 4vw; }
+        .football_order_page .other_order_list li .info p {
+          margin-bottom: 3vw;
+          text-align: center; }
+          .football_order_page .other_order_list li .info p span {
+            color: #e43015; }
+        .football_order_page .other_order_list li .info .selected_info {
+          height: 8vw;
+          font-size: 14px;
+          line-height: 8vw;
+          color: #fff;
+          text-align: center;
+          background: #e43015;
+          border: 1px solid #eee;
+          border-radius: 5px; }
+      .football_order_page .other_order_list li img[alt="close"] {
         width: 6.2vw;
         height: 6.2vw; }
 

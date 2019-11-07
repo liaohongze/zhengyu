@@ -207,7 +207,7 @@
 			</div>
 
 			<!-- 混合投注 -->
-			<div class="hunhe zuqiuwanfa isnone">
+			<div class="hunhe hunhetouzhu zuqiuwanfa isnone">
 				<div class="historydata">
 					<div class="historydatatitle">
 						<p><span class="qishu"><b>周六</b> <b class="kongge"></b><b>2019102437</b><b
@@ -297,7 +297,7 @@
 			</div>
 
 			<!-- 比分 -->
-			<div class="bifencontainer zuqiuwanfa isnone">
+			<div class="bifencontainer bifenwanfa zuqiuwanfa isnone">
 				<div class="historydata">
 					<div class="historydatatitle">
 						<p><span class="qishu"><b>周六</b> <b class="kongge"></b><b>2019102437</b><b
@@ -306,7 +306,10 @@
 						<img src="../images/index/xiangxia-icon.png" class="xialablock" alt="">
 						<div class="clear"></div>
 					</div>
-					<div class="historydatabottom">
+
+					<!-- 一条比分开始 -->
+					<!-- 头部的historydatabottom需要加上该条比分的id，点击按钮也需要 -->
+					<div class="historydatabottom" data-id="1">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
@@ -319,14 +322,14 @@
 									<img src="../images/index/vs.png" alt="vs">
 									<span>斯图加特</span>
 								</div>
-								<div class="datalist_team_rt_bottomtc">
+								<div class="datalist_team_rt_bottomtc" data-id="1">
 									<div class="touzhuqutc"><span>点击展开投注区</span></div>
 								</div>
 							</div>
 
 						</div>
 					</div>
-					<div class="historydatabottom">
+					<div class="historydatabottom" data-id="2">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
@@ -339,7 +342,7 @@
 									<img src="../images/index/vs.png" alt="vs">
 									<span>汉诺威96</span>
 								</div>
-								<div class="datalist_team_rt_bottomtc">
+								<div class="datalist_team_rt_bottomtc" data-id="2">
 									<div class="touzhuqutc"><span>点击展开投注区</span></div>
 								</div>
 							</div>
@@ -356,7 +359,7 @@
 						<img src="../images/index/xiangxia-icon.png" class="xialablock" alt="">
 						<div class="clear"></div>
 					</div>
-					<div class="historydatabottom">
+					<div class="historydatabottom" data-id="3">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
@@ -369,7 +372,7 @@
 									<img src="../images/index/vs.png" alt="vs">
 									<span>汉诺威96</span>
 								</div>
-								<div class="datalist_team_rt_bottomtc">
+								<div class="datalist_team_rt_bottomtc" data-id="3">
 									<div class="touzhuqutc"><span>点击展开投注区</span></div>
 								</div>
 							</div>
@@ -390,7 +393,9 @@
 						<img src="../images/index/xiangxia-icon.png" class="xialablock" alt="">
 						<div class="clear"></div>
 					</div>
-					<div class="historydatabottom">
+					<!-- 一条半全场开始 -->
+					<!-- 头部的historydatabottom需要加上该条半全场的id，点击按钮也需要 -->
+					<div class="historydatabottom" data-id="1">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
@@ -403,14 +408,16 @@
 									<img src="../images/index/vs.png" alt="vs">
 									<span>斯图加特</span>
 								</div>
-								<div class="datalist_team_rt_bottomtc2">
+								<div class="datalist_team_rt_bottomtc2" data-id="1">
 									<div class="banquanchangtc"><span>点击展开投注区</span></div>
 								</div>
 							</div>
 
 						</div>
 					</div>
-					<div class="historydatabottom">
+					<!-- 一条半全场结束 -->
+
+					<div class="historydatabottom" data-id="2">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
@@ -423,7 +430,7 @@
 									<img src="../images/index/vs.png" alt="vs">
 									<span>汉诺威96</span>
 								</div>
-								<div class="datalist_team_rt_bottomtc2">
+								<div class="datalist_team_rt_bottomtc2" data-id="2">
 									<div class="banquanchangtc"><span>点击展开投注区</span></div>
 								</div>
 							</div>
@@ -440,7 +447,7 @@
 						<img src="../images/index/xiangxia-icon.png" class="xialablock" alt="">
 						<div class="clear"></div>
 					</div>
-					<div class="historydatabottom">
+					<div class="historydatabottom" data-id="3">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
@@ -453,7 +460,7 @@
 									<img src="../images/index/vs.png" alt="vs">
 									<span>汉诺威96</span>
 								</div>
-								<div class="datalist_team_rt_bottomtc2">
+								<div class="datalist_team_rt_bottomtc2" data-id="3">
 									<div class="banquanchangtc"><span>点击展开投注区</span></div>
 								</div>
 							</div>
@@ -847,22 +854,22 @@
 
 						<div class="bifen2 samebiaoge">
 							<div>
-								<p>1:0</p><b>8.5</b>
+								<p>4:1</p><b>8.5</b>
 							</div>
 							<div>
-								<p>2:0</p><b>10.0</b>
+								<p>4:2</p><b>10.0</b>
 							</div>
 							<div>
-								<p>2:1</p><b>9.5</b>
+								<p>5:0</p><b>9.5</b>
 							</div>
 							<div>
-								<p>3:0</p><b>11.0</b>
+								<p>5:1</p><b>11.0</b>
 							</div>
 							<div>
-								<p>3:1</p><b>13.0</b>
+								<p>5:2</p><b>13.0</b>
 							</div>
 							<div class="flex_grow2">
-								<p>3:2</p><b>胜其他</b>
+								<p>胜其他</p><b>29.0</b>
 							</div>
 						</div>
 					</div>
@@ -875,25 +882,22 @@
 					<div class="pingcontainer_rt">
 						<div class="bifen1 samebiaoge">
 							<div>
-								<p>1:0</p><b>8.5</b>
+								<p>0:0</p><b>8.5</b>
 							</div>
 							<div>
-								<p>2:0</p><b>10.0</b>
+								<p>1:1</p><b>10.0</b>
 							</div>
 							<div>
-								<p>2:1</p><b>9.5</b>
+								<p>2:2</p><b>9.5</b>
 							</div>
 							<div>
-								<p>3:0</p><b>11.0</b>
+								<p>3:3</p><b>11.0</b>
 							</div>
 							<div>
-								<p>3:1</p><b>13.0</b>
+								<p>4:4</p><b>13.0</b>
 							</div>
-							<div>
-								<p>3:2</p><b>18.0</b>
-							</div>
-							<div>
-								<p>4:0</p><b>17.0</b>
+							<div class="flex_grow2">
+								<p>平其他</p><b>18.0</b>
 							</div>
 						</div>
 					</div>
@@ -906,48 +910,45 @@
 					<div class="fucontainer_rt">
 						<div class="bifen1 samebiaoge">
 							<div>
-								<p>1:0</p><b>8.5</b>
+								<p>0:1</p><b>8.5</b>
 							</div>
 							<div>
-								<p>2:0</p><b>10.0</b>
+								<p>0:2</p><b>10.0</b>
 							</div>
 							<div>
-								<p>2:1</p><b>9.5</b>
+								<p>1:2</p><b>9.5</b>
 							</div>
 							<div>
-								<p>3:0</p><b>11.0</b>
+								<p>0:3</p><b>11.0</b>
 							</div>
 							<div>
-								<p>3:1</p><b>13.0</b>
+								<p>1:3</p><b>13.0</b>
 							</div>
 							<div>
-								<p>3:2</p><b>18.0</b>
+								<p>2:3</p><b>18.0</b>
 							</div>
 							<div>
-								<p>4:0</p><b>17.0</b>
+								<p>0:4</p><b>17.0</b>
 							</div>
 						</div>
 						<div class="bifen1 samebiaoge">
 							<div>
-								<p>1:0</p><b>8.5</b>
+								<p>1:4</p><b>8.5</b>
 							</div>
 							<div>
-								<p>2:0</p><b>10.0</b>
+								<p>2:4</p><b>10.0</b>
 							</div>
 							<div>
-								<p>2:1</p><b>9.5</b>
+								<p>0:5</p><b>9.5</b>
 							</div>
 							<div>
-								<p>3:0</p><b>11.0</b>
+								<p>1:5</p><b>11.0</b>
 							</div>
 							<div>
-								<p>3:1</p><b>13.0</b>
+								<p>2:5</p><b>13.0</b>
 							</div>
-							<div>
-								<p>3:2</p><b>18.0</b>
-							</div>
-							<div>
-								<p>4:0</p><b>17.0</b>
+							<div class="flex_grow2">
+								<p>负其他</p><b>18.0</b>
 							</div>
 						</div>
 					</div>
@@ -995,7 +996,7 @@
 								<p>平负</p><b>13.0</b>
 							</div>
 							<div>
-								<p>负胜0</p><b>11.0</b>
+								<p>负胜</p><b>11.0</b>
 							</div>
 							<div>
 								<p>负平</p><b>13.0</b>

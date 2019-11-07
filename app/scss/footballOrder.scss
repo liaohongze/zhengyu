@@ -20,6 +20,11 @@
       display: flex;
       align-items: center;
       padding: 4vw 5%;
+      border-bottom: 1px solid #eee;
+
+      &:last-of-type {
+        border: 0;
+      }
 
       .info {
         flex: 1;
@@ -53,6 +58,51 @@
               background: #e43015;
             }
           }
+        }
+      }
+
+      img[alt="close"] {
+        width: 6.2vw;
+        height: 6.2vw;
+      }
+    }
+  }
+
+  .other_order_list {
+    background-color: #fff;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 4vw 5%;
+      border-bottom: 1px solid #eee;
+
+      &:last-of-type {
+        border: 0;
+      }
+
+      .info {
+        flex: 1;
+        padding-right: 4vw;
+
+        p {
+          margin-bottom: 3vw;
+          text-align: center;
+
+          span {
+            color: #e43015;
+          }
+        }
+
+        .selected_info {
+          height: 8vw;
+          font-size: 14px;
+          line-height: 8vw;
+          color: #fff;
+          text-align: center;
+          background: #e43015;
+          border: 1px solid #eee;
+          border-radius: 5px;
         }
       }
 
