@@ -6,6 +6,8 @@ require(['jquery', 'layer'], function (jquery, layer) {
 
 	if (gameType === 'rangfenshengfu') rangfenshengfuOrderFlow();
 
+	if (gameType === 'hunhetouzhu') hunhetouzhuOrderFlow();
+
 	if (gameType === 'bifenwanfa') bifenwanfaOrderFlow();
 
 	if (gameType === 'banquanchang') banquanchangOrderFlow();
@@ -18,6 +20,10 @@ require(['jquery', 'layer'], function (jquery, layer) {
 
 	function rangfenshengfuOrderFlow() {
 		setCommonHtml();
+	}
+
+	function hunhetouzhuOrderFlow() {
+		setOtherHtml();
 	}
 
 	function bifenwanfaOrderFlow() {
@@ -98,11 +104,7 @@ require(['jquery', 'layer'], function (jquery, layer) {
 		window.localStorage.setItem(gameType + 'Data', JSON.stringify(orderList));
 
 		if (types1.includes(gameType)) {
-			if (gameType === 'zongjinqiu') {
-				setCommonHtml(true);
-			} else {
-				setCommonHtml();
-			}
+			setCommonHtml(gameType === 'zongjinqiu');
 		} else {
 			setOtherHtml();
 		}

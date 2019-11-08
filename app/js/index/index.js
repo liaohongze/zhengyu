@@ -224,21 +224,97 @@ require(['until', 'swiper'], function (until, Swiper) {
     if ($(this).hasClass('rangshengfupeilv')) {
       $(this).removeClass('selected')
     }
-  })
 
-  $(document).on('click', '.morechoosetc img', function () {
-    // layer.open({
-    //   type: 1,
-    //   closeBtn: 0, //不显示关闭按钮
-    //   shadeClose: true, //开启遮罩关闭
-    //   content: $('#morestc').prop("innerHTML")
-    // });
+    // 如果当前是混合投注玩法，执行点击后的流程
+    if ($('#football .zuqiuxialachoose p').attr('game-type') === 'hunhetouzhu') {
+      hunheClickFlow($(this));
+    }
+  });
+
+  function hunheClickFlow($that) {
+    var stringArr = [];
+    var id = $that.parents('.historydatabottom').attr('data-id');
+    var array1 = $that.parents('.historydatabottom').find('.datalist_team_rt_bottom:first .selected');
+    var array2 = $that.parents('.historydatabottom').find('.datalist_team_rt_bottom:last .selected');
+
+    array1.each(function(i, item) {
+      stringArr.push($(item).find('b').text());
+    })
+
+    array2.each(function(i, item) {
+      stringArr.push('让分' + $(item).find('b').text());
+    })
+
+    var hadSelectString = $that.parents('.qishudata').find('.morechoosetc i').text();
+    var hadSelectArr;
+    var newSelectArr = []
+
+    if (hadSelectString === '展开更多选项') {
+      hadSelectArr = []
+    } else {
+      hadSelectArr = hadSelectString.split(',');
+    }
+    
+    if (hadSelectArr.length) {
+      var types = ['胜', '平', '负','让分胜', '让分平', '让分负'];
+
+      hadSelectArr.forEach(function(item, index) {
+        if (types.includes(item)) {
+          hadSelectArr[index] = null;
+        }
+      });
+
+      hadSelectArr.forEach(function(item) {
+        if (item !== null) { newSelectArr.push(item) }
+      });
+
+      stringArr = stringArr.concat(newSelectArr);
+    }
+
+    $('.morechoosetc span[data-id="' + id + '"] i').text(stringArr.length ? stringArr.join(',') : '展开更多选项');
+  }
+
+  // 混合投注点击弹窗
+  $(document).on('click', '.morechoosetc span', function () {
+    $('#morestc .zhudui_name').text($(this).parent().prev().find('.datalist_team_rt_top span:first').text());
+    $('#morestc .ke_name').text($(this).parent().prev().find('.datalist_team_rt_top span:last').text());
     $('#morestc').removeClass('hidden');
+    $('#morestc').attr('data-id', $(this).attr('data-id'));
+
+    // 如果该条单子已选择，复原已选择的项
+    if ($(this).find('i').text() !== '展开更多选项') {
+      var array = $(this).find('i').text().split(',');
+      var list = $('#morestc .samebiaoge div');
+      var line1 = $('#morestc .shengfuchange .samebiaoge:first');
+      var line2 = $('#morestc .shengfuchange .samebiaoge:last');
+
+      for(var i = 0; i < array.length; i++) {
+        for (var j = 0; j < list.length; j++) {
+          if (array[i] === '胜') {
+            line1.find('div:eq(1)').addClass('isselected');
+          } else if (array[i] === '平') {
+            line1.find('div:eq(2)').addClass('isselected');
+          } else if (array[i] === '负') {
+            line1.find('div:eq(3)').addClass('isselected');
+          } else if (array[i] === '让分胜') {
+            line2.find('div:eq(1)').addClass('isselected');
+          } else if (array[i] === '让分平') {
+            line2.find('div:eq(2)').addClass('isselected');
+          } else if (array[i] === '让分负') {
+            line2.find('div:eq(3)').addClass('isselected');
+          } else if (array[i] === $(list[j]).find('p').text()) {
+            $(list[j]).addClass('isselected');
+          }
+        }
+      }
+    }
     $('body').css('position', 'fixed');
   })
 
   // 比分弹窗
   $(document).on('click', '.bifenwanfa .datalist_team_rt_bottomtc', function () {
+    $('#morestc1 .zhudui_name').text($(this).prev().find('span:first').text());
+    $('#morestc1 .ke_name').text($(this).prev().find('span:last').text());
     $('#morestc1').removeClass('hidden');
     $('#morestc1').attr('data-id', $(this).attr('data-id'));
 
@@ -261,6 +337,8 @@ require(['until', 'swiper'], function (until, Swiper) {
 
   // 半全场弹窗
   $(document).on('click', '.banquanchangcontainer .datalist_team_rt_bottomtc2', function () {
+    $('#morestc2 .zhudui_name').text($(this).prev().find('span:first').text());
+    $('#morestc2 .ke_name').text($(this).prev().find('span:last').text());
     $('#morestc2').removeClass('hidden');
     $('#morestc2').attr('data-id', $(this).attr('data-id'));
 

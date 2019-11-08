@@ -18,7 +18,7 @@
 				<img src="../images/index/left-icon.png" alt="">
 			</div>
 			<div class="zuqiuxialachoose">
-				<p game-type="shengpingfu">胜平负</p><img src="../images/index/bottom-icon.png" alt="">
+				<p game-type="hunhetouzhu">混合投注</p><img src="../images/index/bottom-icon.png" alt="">
 			</div>
 			<div class="rightrules">
 				<img src="../images/index/shaixuan.png" class="shaixuan" alt="">
@@ -28,7 +28,7 @@
 
 		<div class="zuqiuplaynumner">
 			<!-- 胜平负 -->
-			<div class="shengpingfu zuqiuwanfa">
+			<div class="shengpingfu zuqiuwanfa isnone">
 				<div class="historydata">
 					<div class="historydatatitle">
 						<p>
@@ -207,7 +207,7 @@
 			</div>
 
 			<!-- 混合投注 -->
-			<div class="hunhe hunhetouzhu zuqiuwanfa isnone">
+			<div class="hunhe hunhetouzhu zuqiuwanfa">
 				<div class="historydata">
 					<div class="historydatatitle">
 						<p><span class="qishu"><b>周六</b> <b class="kongge"></b><b>2019102437</b><b
@@ -216,13 +216,23 @@
 						<img src="../images/index/xiangxia-icon.png" class="xialablock" alt="">
 						<div class="clear"></div>
 					</div>
-					<div class="historydatabottom">
+
+					<!-- 一条混合投注开始 -->
+					<!-- 头部的historydatabottom需要加上该条混合投注的id，点击按钮也需要 -->
+					<div class="historydatabottom" data-id="1">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
 								<p>006</p>
 								<span><b>16:40</b>截止</span>
 							</div>
+
+							<div class="datalist_team_middle">
+								<!-- <span class="zero">0</span> -->
+								<span class="lose">-1</span>
+								<span class="win">+1</span>
+							</div>
+
 							<div class="datalist_team_rt">
 								<div class="datalist_team_rt_top">
 									<span>汉堡</span>
@@ -234,17 +244,38 @@
 									<div><b>平</b><span>3.95</span></div>
 									<div><b>负</b><span>4.20</span></div>
 								</div>
+
+								<!-- 第二排需要加让球属性 -->
+								<div class="datalist_team_rt_bottom">
+									<div><b>胜</b><span>1.58</span></div>
+									<div><b>平</b><span>3.95</span></div>
+									<div><b>负</b><span>4.20</span></div>
+								</div>
 							</div>
-							<div class="morechoosetc"><span>展开更多选项</span><img src="../images/index/xiangxia-icon.png" alt=""></div>
+							<div class="morechoosetc">
+								<span data-id="1">
+									<i>展开更多选项</i>
+									<img src="../images/index/xiangxia-icon.png" alt="">
+								</span>
+							</div>
 						</div>
 					</div>
-					<div class="historydatabottom">
+					<!-- 一条混合投注结束 -->
+
+					<div class="historydatabottom" data-id="2">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
 								<p>007</p>
 								<span><b>16:40</b>截止</span>
 							</div>
+
+							<div class="datalist_team_middle">
+								<span class="zero">0</span>
+								<!-- <span class="lose">-1</span> -->
+								<span class="win">+1</span>
+							</div>
+
 							<div class="datalist_team_rt">
 								<div class="datalist_team_rt_top">
 									<span>卡尔斯鲁厄</span>
@@ -256,8 +287,18 @@
 									<div><b>平</b><span>3.95</span></div>
 									<div><b>负</b><span>4.20</span></div>
 								</div>
+								<div class="datalist_team_rt_bottom">
+									<div><b>胜</b><span>1.58</span></div>
+									<div><b>平</b><span>3.95</span></div>
+									<div><b>负</b><span>4.20</span></div>
+								</div>
 							</div>
-							<div class="morechoosetc"><span>展开更多选项</span><img src="../images/index/xiangxia-icon.png" alt=""></div>
+							<div class="morechoosetc">
+								<span data-id="2">
+									<i>展开更多选项</i>
+									<img src="../images/index/xiangxia-icon.png" alt="">
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -270,13 +311,20 @@
 						<img src="../images/index/xiangxia-icon.png" class="xialablock" alt="">
 						<div class="clear"></div>
 					</div>
-					<div class="historydatabottom">
+					<div class="historydatabottom" data-id="3">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
 								<p>德乙</p>
 								<p>007</p>
 								<span><b>16:40</b>截止</span>
 							</div>
+
+							<div class="datalist_team_middle">
+								<span class="zero">0</span>
+								<span class="lose">-1</span>
+								<!-- <span class="win">+1</span> -->
+							</div>
+
 							<div class="datalist_team_rt">
 								<div class="datalist_team_rt_top">
 									<span>卡尔斯鲁厄</span>
@@ -288,8 +336,18 @@
 									<div><b>平</b><span>3.95</span></div>
 									<div><b>负</b><span>4.20</span></div>
 								</div>
+								<div class="datalist_team_rt_bottom">
+									<div><b>胜</b><span>1.58</span></div>
+									<div><b>平</b><span>3.95</span></div>
+									<div><b>负</b><span>4.20</span></div>
+								</div>
 							</div>
-							<div class="morechoosetc"><span>展开更多选项</span><img src="../images/index/xiangxia-icon.png" alt=""></div>
+							<div class="morechoosetc">
+								<span data-id="3">
+									<i>展开更多选项</i>
+									<img src="../images/index/xiangxia-icon.png" alt="">
+								</span>
+							</div>
 						</div>
 
 					</div>
@@ -326,9 +384,10 @@
 									<div class="touzhuqutc"><span>点击展开投注区</span></div>
 								</div>
 							</div>
-
 						</div>
 					</div>
+					<!-- 一条比分结束 -->
+
 					<div class="historydatabottom" data-id="2">
 						<div class="qishudata">
 							<div class="datalist_team_lf">
@@ -600,14 +659,14 @@
 				<div class="shengfuchange">
 					<div class="shengfuchange_top samebiaoge">
 						<div class="shengfuchange_top_lf"><span>0</span></div>
-						<div><span>主胜</span><b>1.82</b></div>
-						<div><span>平</span><b>3.65</b></div>
-						<div><span>客胜</span><b>3.42</b></div>
+						<div><p>主胜</p><b>1.82</b></div>
+						<div><p>平</p><b>3.65</b></div>
+						<div><p>客胜</p><b>3.42</b></div>
 					</div>
 					<div class="shengfuchange_bottom samebiaoge">
 						<div class="shengfuchange_top_lf"><span>1</span></div>
-						<div><span>主胜</span><b>1.82</b></div>
-						<div><span>平</span><b>3.65</b></div>
+						<div><p>主胜</p><b>1.82</b></div>
+						<div><p>平</p><b>3.65</b></div>
 						<div><span>客胜</span><b>3.42</b></div>
 					</div>
 				</div>
@@ -643,83 +702,83 @@
 
 						<div class="bifen2 samebiaoge">
 							<div>
-								<p>1:0</p><b>8.5</b>
+								<p>4:1</p><b>8.5</b>
 							</div>
 							<div>
-								<p>2:0</p><b>10.0</b>
+								<p>4:2</p><b>10.0</b>
 							</div>
 							<div>
-								<p>2:1</p><b>9.5</b>
+								<p>5:0</p><b>9.5</b>
 							</div>
 							<div>
-								<p>3:0</p><b>11.0</b>
+								<p>5:1</p><b>11.0</b>
 							</div>
 							<div>
-								<p>3:1</p><b>13.0</b>
+								<p>5:2</p><b>13.0</b>
 							</div>
 							<div class="flex_grow2">
-								<p>3:2</p><b>胜其他</b>
+								<p>胜其他</p><b>13.0</b>
 							</div>
 						</div>
 
 						<div class="bifen3 samebiaoge">
 							<div>
-								<p>1:0</p><b>8.5</b>
+								<p>0:0</p><b>8.5</b>
 							</div>
 							<div>
-								<p>2:0</p><b>10.0</b>
+								<p>1:1</p><b>10.0</b>
 							</div>
 							<div>
-								<p>2:1</p><b>9.5</b>
+								<p>2:2</p><b>9.5</b>
 							</div>
 							<div>
-								<p>3:0</p><b>11.0</b>
+								<p>3:3</p><b>11.0</b>
 							</div>
 							<div class="flex_grow3">
-								<p>3:2</p><b>平其他</b>
+								<p>平其他</p><b>250.0</b>
 							</div>
 						</div>
 						<div class="bifen4 samebiaoge">
 							<div>
-								<p>1:0</p><b>8.5</b>
+								<p>0:1</p><b>8.5</b>
 							</div>
 							<div>
-								<p>2:0</p><b>10.0</b>
+								<p>0:2</p><b>10.0</b>
 							</div>
 							<div>
-								<p>2:1</p><b>9.5</b>
+								<p>1:2</p><b>9.5</b>
 							</div>
 							<div>
-								<p>3:0</p><b>11.0</b>
+								<p>0:3</p><b>11.0</b>
 							</div>
 							<div>
-								<p>3:1</p><b>13.0</b>
+								<p>1:3</p><b>13.0</b>
 							</div>
 							<div>
-								<p>3:2</p><b>18.0</b>
+								<p>2:3</p><b>18.0</b>
 							</div>
 							<div>
-								<p>4:0</p><b>17.0</b>
+								<p>0:4</p><b>17.0</b>
 							</div>
 						</div>
 						<div class="bifen5 samebiaoge">
 							<div>
-								<p>1:0</p><b>8.5</b>
+								<p>1:4</p><b>8.5</b>
 							</div>
 							<div>
-								<p>2:0</p><b>10.0</b>
+								<p>2:4</p><b>10.0</b>
 							</div>
 							<div>
-								<p>2:1</p><b>9.5</b>
+								<p>0:5</p><b>9.5</b>
 							</div>
 							<div>
-								<p>3:0</p><b>11.0</b>
+								<p>1:5</p><b>11.0</b>
 							</div>
 							<div>
-								<p>4:0</p><b>17.0</b>
+								<p>2:5</p><b>17.0</b>
 							</div>
 							<div class="flex_grow3">
-								<p>3:2</p><b>负其他</b>
+								<p>负其他</p><b>100.0</b>
 							</div>
 						</div>
 					</div>
