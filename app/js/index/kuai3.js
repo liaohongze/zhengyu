@@ -1,4 +1,6 @@
-require(['jquery', 'layer'], function(jquery, layer) {
+require(['jquery', 'until', 'layer'], function(jquery, until, layer) {
+  until.tc2();
+
   $('.bottom .firstnav > button').on('click', function() {
     // 玩法
 
@@ -126,5 +128,4 @@ require(['jquery', 'layer'], function(jquery, layer) {
       }
     }
   });
-
 })

@@ -27,10 +27,10 @@ require.config({
       'deps': ['jquery', 'layer']
     },
     '11xuan5': {
-      'deps': ['jquery', 'layer']
+      'deps': ['jquery', 'layer', 'until']
     },
     'kuai3': {
-      'deps': ['jquery', 'layer']
+      'deps': ['jquery', 'layer', 'until']
     },
     'touzhudan': {
       'deps': ['jquery', 'layer']

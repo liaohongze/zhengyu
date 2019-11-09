@@ -2138,10 +2138,10 @@ body {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        width: 14vw;
-        height: 14vw;
+        width: 24vw;
+        height: 24vw;
         margin: 1vw 0.5vw;
-        line-height: 14vw;
+        line-height: 24vw;
         text-align: center;
         border: 1px solid #e3e3e3;
         border-radius: 50%; }
@@ -5654,13 +5654,15 @@ body {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        width: 14vw;
-        height: 14vw;
-        line-height: 14vw;
+        width: 24vw;
+        height: 24vw;
+        line-height: 23vw;
         text-align: center;
         border-radius: 50%;
         border: 1px solid #e3e3e3;
-        margin: 1vw .5vw; }
+        margin: 1vw 6vw 1vw 0.5vw; }
+        .container .choosenumber .number div:nth-of-type(3n) {
+          margin-right: 0; }
         .container .choosenumber .number div span {
           color: #e43015;
           font-size: 3.5vw; }
@@ -6367,13 +6369,15 @@ body {
 
 .butonghao .container {
   width: 100%; }
-  .butonghao .container .container_title p {
-    font-size: 3.5vw;
-    padding-left: 2vw;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    color: #666666; }
+  .butonghao .container .container_title {
+    margin: 3vw 0; }
+    .butonghao .container .container_title p {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 2vw;
+      font-size: 3.5vw;
+      color: #666666; }
   .butonghao .container .choosenumber {
     display: -webkit-box;
     display: -moz-box;
@@ -6408,13 +6412,15 @@ body {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        width: 14vw;
-        height: 6vw;
-        line-height: 5vw;
+        width: 24vw;
+        height: 10vw;
+        line-height: 9vw;
         text-align: center;
         border: 1px solid #e3e3e3;
-        margin: 1vw .5vw;
+        margin: 1vw 7vw 1vw 0.5vw;
         border-radius: 0; }
+        .butonghao .container .choosenumber .number div:nth-of-type(3n) {
+          margin-right: 0; }
         .butonghao .container .choosenumber .number div span {
           color: #e43015;
           font-size: 3.5vw; }

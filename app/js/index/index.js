@@ -429,7 +429,6 @@ require(['until', 'swiper'], function (until, Swiper) {
     }
   })
   $(document).on('click', '.hunhetanchuang', function () {
-    console.log(222222)
     $('#morestc3').removeClass('hidden');
     $('body').css('position', 'fixed');
   })
