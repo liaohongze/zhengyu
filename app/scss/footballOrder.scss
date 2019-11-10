@@ -14,6 +14,7 @@
   }
 
   .order_list {
+    margin-bottom: 14vw;
     background-color: #fff;
 
     li {
@@ -69,6 +70,7 @@
   }
 
   .other_order_list {
+    margin-bottom: 14vw;
     background-color: #fff;
 
     li {
@@ -109,6 +111,64 @@
       img[alt="close"] {
         width: 6.2vw;
         height: 6.2vw;
+      }
+    }
+  }
+
+  .football_footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+
+    .left_part {
+      display: flex;
+      padding: 3vw;
+      font-size: 14px;
+
+      button {
+        padding: 2px 4px;
+        margin-left: 2vw;
+        font-size: 12px;
+        color: #e43017;
+        background-color: #fff;
+        border: 1px solid #e43017;
+        border-radius: 10px;
+      }
+    }
+
+    .right_part {
+      display: flex;
+      justify-content: flex-end;
+      height: 13vw;
+
+      .info {
+        padding-right: 3vw;
+
+        p {
+          color: #e43017;
+          text-align: right;
+
+          &:first-of-type {
+            margin: 1vw 0;
+          }
+
+          &:last-of-type {
+            font-size: 12px;
+            color: #999;
+          }
+        }
+      }
+
+      button {
+        width: 29vw;
+        height: 100%;
+        color: #fff;
+        background: #e43017;
       }
     }
   }

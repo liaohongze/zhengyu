@@ -4,8 +4,19 @@ require(['jquery', 'until', 'layer'], function(jquery, until, layer) {
   $('.bottom .firstnav > button').on('click', function() {
     // 玩法
 
+    // 判断选择的数量
+    var atLeast = parseInt($('.diyizhongwanfa .container_title .at_least_num').text()) || 0;
+    if ($('.number div.selected').length < atLeast) {
+      layer.open({
+        content: '至少选择' + atLeast + '个号码',
+        skin: 'msg',
+        time: 2
+      });
+
+      return;
+    }
+
     var detailplay = $('.xialachoose p').text();
-    console.log(detailplay)
     var changeData = { ischangeName: detailplay, totalNum: totalNum,singleOrDouble: singleOrDouble,zhushu:zhushu,amount:amount,isSelectedData: [
         [],
         [],

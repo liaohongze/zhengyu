@@ -107,6 +107,23 @@ require(['until', 'swiper'], function (until, Swiper) {
     else if (morenselecttop == 5) { //猜豹子
       $('.playnumberdiv').eq(4).removeClass('isnone').siblings().addClass('isnone');
     }
+
+    // 设定至少选择几个号码
+    var atLeast = 0;
+    if (poptitle === '任选二') atLeast = 2;
+    if (poptitle === '任选三') atLeast = 3;
+    if (poptitle === '任选四') atLeast = 4;
+    if (poptitle === '任选五') atLeast = 5;
+    if (poptitle === '任选六') atLeast = 6;
+    if (poptitle === '任选七') atLeast = 7;
+    if (poptitle === '任选八') atLeast = 8;
+    
+    if (atLeast) {
+      $('.diyizhongwanfa .at_least_num').text(atLeast);
+    } else {
+      $('.diyizhongwanfa .at_least_num').text('1');
+    }
+
     dantuoindex = 999;
     layer.closeAll();
   })

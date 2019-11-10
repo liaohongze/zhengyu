@@ -1,6 +1,4 @@
 require(['jquery', 'layer'], function (jquery, layer) {
-  console.log(JSON.parse(window.localStorage.getItem('sureData')))
-
   var listData = JSON.parse(window.localStorage.getItem('sureData'));
   var isSelectNumbersrc = [];
   var htmlList = '';
