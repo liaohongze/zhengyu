@@ -1,48 +1,52 @@
-require(['jquery', 'until', 'layer'], function(jquery, until, layer) {
+require(['jquery', 'until', 'layer'], function (jquery, until, layer) {
   until.tc2();
 
-  $('.bottom .firstnav > button').on('click', function() {
+  $('.bottom .firstnav > button').on('click', function () {
     // 玩法
 
     var detailplay = $('.kuai3xialachoose p').text();
-    var changeData = { ischangeName: detailplay, totalNum: totalNum,singleOrDouble: singleOrDouble,zhushu:zhushu,amount:amount,isSelectedData: [
+    var changeData = {
+      ischangeName: detailplay, totalNum: totalNum, singleOrDouble: singleOrDouble, zhushu: zhushu, amount: amount, isSelectedData: [
         [],
         []
-      ] };
-    var changeData2 = { ischangeName: detailplay, totalNum: totalNum,singleOrDouble: singleOrDouble,zhushu:zhushu,amount:amount,isSelectedData: [
+      ]
+    };
+    var changeData2 = {
+      ischangeName: detailplay, totalNum: totalNum, singleOrDouble: singleOrDouble, zhushu: zhushu, amount: amount, isSelectedData: [
         [],
         []
-      ] };
+      ]
+    };
 
     if ($('.number div.selected').parent().hasClass('two_zhudan')) {
       changeData.ischangeName = detailplay + $('.number div.selected').parent('.two_zhudan_group_1').data('title');
       changeData2.ischangeName = detailplay + $('.number div.selected').parent('.two_zhudan_group_2').data('title');
     }
 
-    $('.number div.selected').each(function(key, value) {
+    $('.number div.selected').each(function (key, value) {
       if ($(this).parent().hasClass('two_zhudan')) {
         if ($(this).parent().hasClass('two_zhudan_group_1')) {
-          changeData.isSelectedData[0].push($(this).find('span').text())
+          changeData.isSelectedData[0].push($(this).find('span').text());
         }
         if ($(this).parent().hasClass('two_zhudan_group_2')) {
-          changeData2.isSelectedData[0].push($(this).find('span').text())
+          changeData2.isSelectedData[0].push($(this).find('span').text());
         }
       } else {
-        if ($(this).parent().hasClass('group1_1')) changeData.isSelectedData[0].push($(this).find('span').text())
+        if ($(this).parent().hasClass('group1_1')) changeData.isSelectedData[0].push($(this).find('span').text());
 
-        if ($(this).parent().hasClass('group2_1')) changeData.isSelectedData[0].push($(this).find('span').text())
+        if ($(this).parent().hasClass('group2_1')) changeData.isSelectedData[0].push($(this).find('span').text());
 
-        if ($(this).parent().hasClass('group3_1')) changeData.isSelectedData[0].push($(this).find('span').text())
+        if ($(this).parent().hasClass('group3_1')) changeData.isSelectedData[0].push($(this).find('span').text());
 
-        if ($(this).parent().hasClass('group4_1')) changeData.isSelectedData[0].push($(this).find('span').text())
+        if ($(this).parent().hasClass('group4_1')) changeData.isSelectedData[0].push($(this).find('span').text());
 
-        if ($(this).parent().hasClass('group2_2')) changeData.isSelectedData[1].push($(this).find('span').text())
+        if ($(this).parent().hasClass('group2_2')) changeData.isSelectedData[1].push($(this).find('span').text());
 
-        if ($(this).parent().hasClass('group3_2')) changeData.isSelectedData[1].push($(this).find('span').text())
+        if ($(this).parent().hasClass('group3_2')) changeData.isSelectedData[1].push($(this).find('span').text());
 
-        if ($(this).parent().hasClass('group4_2')) changeData.isSelectedData[1].push($(this).find('span').text())
+        if ($(this).parent().hasClass('group4_2')) changeData.isSelectedData[1].push($(this).find('span').text());
       }
-    })
+    });
 
 
     //========================计算玩法获得注数和金额start========================
@@ -94,7 +98,7 @@ require(['jquery', 'until', 'layer'], function(jquery, until, layer) {
     changeData.zhushu = zhushu;
     changeData.amount = amount;
 
-    changeData2.totalNum = totalNum
+    changeData2.totalNum = changeData2.isSelectedData[0].length + changeData2.isSelectedData[1].length;
     changeData2.singleOrDouble = singleOrDouble;
     changeData2.zhushu = zhushu;
     changeData2.amount = amount;
@@ -105,7 +109,7 @@ require(['jquery', 'until', 'layer'], function(jquery, until, layer) {
       newarr.push(item);
       return newarr;
     }
-    if (changeData.isSelectedData[0] == '' && changeData.isSelectedData[1]) {
+    if (!changeData.isSelectedData[0].length && !changeData2.isSelectedData[0].length) {
       //当选择为空时
       layer.open({
         content: '选择不能为空',
@@ -115,16 +119,32 @@ require(['jquery', 'until', 'layer'], function(jquery, until, layer) {
     } else { //选择不为空时弹出提示
       var localStorageData = JSON.parse(window.localStorage.getItem('sureData'));
       if (localStorageData != null) {
-        window.localStorage.setItem("sureData", JSON.stringify(addSrc(localStorageData, changeData)));
-        $('.number div.selected').parent().hasClass('two_zhudan') && window.localStorage.setItem("sureData", JSON.stringify(addSrc(JSON.parse(window.localStorage.getItem('sureData')), changeData2)));
-        // lotteryClick('order','1')
-        location.href= "../../pages/touzhudan.html"
+        if (changeData.isSelectedData[0].length !== 0 || changeData.isSelectedData[1].length !== 0) {
+          window.localStorage.setItem("sureData", JSON.stringify(addSrc(localStorageData, changeData)));
+        }
+
+        if (changeData2.isSelectedData[0].length !== 0 || changeData2.isSelectedData[1].length !== 0) {
+          if ($('.number div.selected').parent().hasClass('two_zhudan')) {
+            window.localStorage.setItem("sureData", JSON.stringify(addSrc(JSON.parse(window.localStorage.getItem('sureData')), changeData2)));
+          }
+        }
+
+        lotteryClick('order','1');
+        location.href = "../../pages/touzhudan.html";
       } else {
-        window.localStorage.setItem("sureData", JSON.stringify([]))
-        window.localStorage.setItem("sureData", JSON.stringify([changeData]));
-        $('.number div.selected').parent().hasClass('two_zhudan') && window.localStorage.setItem("sureData", JSON.stringify(addSrc(JSON.parse(window.localStorage.getItem('sureData')), changeData2)));
-        // lotteryClick('order','1')
-        location.href= "../../pages/touzhudan.html"
+        if (changeData.isSelectedData[0].length !== 0 || changeData.isSelectedData[1].length !== 0) {
+          window.localStorage.setItem('sureData', JSON.stringify([]));
+          window.localStorage.setItem('sureData', JSON.stringify([changeData]));
+        }
+
+        if (changeData2.isSelectedData[0].length !== 0 || changeData2.isSelectedData[1].length !== 0) {
+          if ($('.number div.selected').parent().hasClass('two_zhudan')) {
+            window.localStorage.setItem('sureData', JSON.stringify(addSrc(JSON.parse(window.localStorage.getItem('sureData')), changeData2)));
+          }
+        }
+
+        lotteryClick('order','1');
+        // location.href = "../../pages/touzhudan.html";
       }
     }
   });

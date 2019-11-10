@@ -96,6 +96,33 @@ require(['jquery', 'layer'], function (jquery, layer) {
 		return (false);
 	}
 
+	// 过关方式
+	$(document).on('click', '.guoguan_layer .select_wrap li', function() {
+		if ($(this).hasClass('selected')) {
+			$(this).removeClass('selected');
+		} else {
+			$(this).addClass('selected');
+		}
+	});
+
+	var selectedArr = []; // 已选择的过关方式
+	$(document).on('click', '.footballorder_guoguan_sure_btn', function() {
+		var domArr = $('.guoguan_layer .select_wrap .selected').toArray();
+		selectedArr.length = 0;
+
+		domArr.forEach(function(item) {
+			selectedArr.push($(item).text());
+		});
+
+		if (selectedArr.length > 1) {
+			$('.show_guoguan_layer_btn').text(selectedArr.length + '个过关方式');
+		} else {
+			$('.show_guoguan_layer_btn').text('更多过关');
+		}
+
+		$('.guoguan_layer').hide();
+	});
+
 	$(document).on('click', '.football_order_page img[alt="close"]', function() {
 		var index = $(this).attr('index');
 		var types1 = ['shengpingfu', 'rangfenshengfu', 'zongjinqiu'];

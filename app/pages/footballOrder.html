@@ -36,6 +36,7 @@
 		<!-- 比分、半全场的列表 -->
 		<ul class="other_order_list"></ul>
 
+		<!-- 底部 -->
 		<footer class="football_footer">
 			<div class="left_part">
 				<p>
@@ -44,7 +45,7 @@
 					<i>1</i>
 				</p>
 
-				<button>更多过关</button>
+				<button class="show_guoguan_layer_btn" onclick="$('.guoguan_layer').show();">更多过关</button>
 			</div>
 
 			<div class="right_part">
@@ -58,6 +59,40 @@
 				<button>确定</button>
 			</div>
 		</footer>
+	</div>
+
+	<!-- 更多过关弹窗 -->
+	<div class="guoguan_layer">
+		<p class="bg" onclick="$('.guoguan_layer').hide();"></p>
+		<div class="guoguan_content">
+			<h3><i>5</i>场比赛过关方式</h3>
+			<ul class="select_wrap top_line">
+				<!-- 默认选择的那个加上下面的selected类名 -->
+				<li class="selected">2串1</li>
+				<li>3串1</li>
+				<li>4串1</li>
+				<li>5串1</li>
+			</ul>
+			<ul class="select_wrap bottom_line">
+				<li>3串3</li>
+				<li>3串4</li>
+				<li>4串4</li>
+				<li>4串5</li>
+				<li>4串6</li>
+				<li>4串11</li>
+				<li>5串5</li>
+				<li>5串6</li>
+				<li>5串10</li>
+				<li>5串16</li>
+				<li>5串20</li>
+				<li>5串26</li>
+			</ul>
+
+			<p class="btns_wrap">
+				<button onclick="$('.guoguan_layer').hide();">取消</button>
+				<button class="footballorder_guoguan_sure_btn">确定</button>
+			</p>
+		</div>
 	</div>
 
 	<script src="../js/libs/require.js" data-main="../js/index/index.js"></script>

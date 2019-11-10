@@ -398,7 +398,7 @@ require(['until', 'swiper'], function (until, Swiper) {
     var sureData = JSON.parse(window.localStorage.getItem('sureData'))
     var totalZhushu = 0, totalAmount = 0;
 
-    sureData.forEach(item => {
+    sureData.forEach(function(item) {
       totalZhushu += item.zhushu
       totalAmount += item.amount
     });
