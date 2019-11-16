@@ -32,7 +32,7 @@
 			<button class="">搜索</button>
 		</form>
 
-		<ul>
+		<ul class="team_list">
 			<li>
 				<div class="info">
 					<h3>层级：tt1500</h3>
@@ -80,8 +80,13 @@
 			</li>
 		</ul>
 
-		<p class="no_more_data">没有更多数据了</p>
+		<button class="add_more_btn">点击加载更多</button>
+		<p class="no_more_data" style="display: none;">没有更多数据了</p>
 	</div>
+
+	<script src="../js/libs/require.js" data-main="../js/index/index.js"></script>
+	<script src="../js/index/addMore.js"></script>
+	<script src="../js/libs/require.config.js"></script>
 </body>
 
 </html>
