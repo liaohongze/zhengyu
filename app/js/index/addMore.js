@@ -4,8 +4,9 @@ require(['jquery', 'layer'], function (jquery, layer) {
 	morelist(pageNum, pageSize);
 
 	function morelist(pageNum, pageSize) {
-		var instance = layer.load(1, {
-			shade: [0.5,'#000'] //0.1透明度的白色背景
+		layer.open({
+			type: 2,
+			content: '加载中'
 		});
 		$.ajax({
 			url: '/index/ajax_more_designer',
@@ -15,6 +16,9 @@ require(['jquery', 'layer'], function (jquery, layer) {
 			},
 			type: 'POST',
 			success: function (res) {
+				// 成功之后关闭loading
+				layer.closeAll();
+
 				if (res.code !== 200) {
 					console.log('数据异常');
 					return;
@@ -57,7 +61,7 @@ require(['jquery', 'layer'], function (jquery, layer) {
 					$('#add_more_btn').hide();
 					$('.no_more_data').show();
 				}
-			}
+			},
 		});
 	}
 	$('#btn').on('click', function (e) {
