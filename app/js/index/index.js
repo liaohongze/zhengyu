@@ -148,9 +148,16 @@ require(['until', 'swiper'], function (until, Swiper) {
     $('.caibaozi .number div').removeClass('selected');
     if (popValue === '1') { //11选5 显示数据
       $('.diyizhongwanfa').removeClass('isnone');
+      if (!$('.diyizhongwanfa').hasClass('big_ball')) {
+        $('.diyizhongwanfa').addClass('big_ball');
+      }
       $('.dierzhongwanfa').addClass('isnone');
       $('.disanzhongwanfa').addClass('isnone');
       $('.disizhongwanfa').addClass('isnone');
+    } else {
+      if ($('.diyizhongwanfa').hasClass('big_ball')) {
+        $('.diyizhongwanfa').removeClass('big_ball');
+      }
     }
     if (popValue === '2') {
       $('.diyizhongwanfa').addClass('isnone');

@@ -76,15 +76,20 @@
   }
 
   .bottom {
-    height: 43vw;
+    height: auto;
 
     .qingkong {
-      border-right: 1px solid #e3e3e3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       width: 28vw;
+      height: 100%;
+      line-height: 1;
+      border-right: 1px solid #e3e3e3;
     }
 
     .firstnav {
-      height: 30%;
+      height: 12.5vw;
       border-top: 1px solid #e3e3e3;
 
       div {
@@ -108,8 +113,8 @@
     }
 
     .xuanzheqishu {
-      padding: 0 2.5vw;
       box-sizing: border-box;
+      padding: 0 2.5vw;
 
       .xuanzheqishutop {
         border-bottom: 1px solid #e3e3e3;
@@ -129,18 +134,27 @@
 
           &:nth-of-type(2) {
             width: 5vw;
-            text-align: center;
             color: #e43017;
+            text-align: center;
           }
         }
       }
 
       .xuanzheqishubottom {
-        height: 18vw;
+        > div {
+          display: flex;
+          align-items: center;
+        }
+
+        input {
+          box-sizing: border-box;
+          width: 9vw;
+          height: 8vw;
+          margin: 0 1vw;
+        }
 
         #text_box1,
         #text_box2 {
-          width: 9vw;
           text-align: center;
         }
       }

@@ -5779,31 +5779,29 @@ body {
       color: #666666;
       padding-top: 5vw; }
     .container .choosenumber .number {
-      width: 90%;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
       -webkit-box-pack: start;
       -moz-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      width: 90%;
       margin-left: 1vw; }
       .container .choosenumber .number div {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        width: 18vw;
-        height: 18vw;
-        line-height: 18vw;
+        width: 14vw;
+        height: 14vw;
+        margin: 1vw 0.5vw;
+        line-height: 14vw;
         text-align: center;
-        border-radius: 50%;
         border: 1px solid #e3e3e3;
-        margin: 1vw 12vw 1vw 0.5vw; }
-        .container .choosenumber .number div:nth-of-type(3n) {
-          margin-right: 0; }
+        border-radius: 50%; }
         .container .choosenumber .number div span {
           color: #e43015;
           font-size: 3.5vw; }
@@ -5811,6 +5809,14 @@ body {
           background: #e43015; }
           .container .choosenumber .number div.selected span {
             color: #fff; }
+
+.big_ball .container .choosenumber .number div {
+  width: 18vw;
+  height: 18vw;
+  margin: 1vw 12vw 1vw 0.5vw;
+  line-height: 18vw; }
+  .big_ball .container .choosenumber .number div:nth-of-type(3n) {
+    margin-right: 0; }
 
 .bottom {
   position: fixed;
@@ -6923,12 +6929,28 @@ body {
           text-overflow: ellipsis;
           white-space: nowrap; }
   #touzhudan .bottom {
-    height: 43vw; }
+    height: auto; }
     #touzhudan .bottom .qingkong {
-      border-right: 1px solid #e3e3e3;
-      width: 28vw; }
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -moz-box-orient: vertical;
+      -moz-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 28vw;
+      height: 100%;
+      line-height: 1;
+      border-right: 1px solid #e3e3e3; }
     #touzhudan .bottom .firstnav {
-      height: 30%;
+      height: 12.5vw;
       border-top: 1px solid #e3e3e3; }
       #touzhudan .bottom .firstnav div {
         width: 28vw;
@@ -6952,10 +6974,10 @@ body {
             color: #e43017;
             font-weight: 400; }
     #touzhudan .bottom .xuanzheqishu {
-      padding: 0 2.5vw;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      padding: 0 2.5vw; }
       #touzhudan .bottom .xuanzheqishu .xuanzheqishutop {
         border-bottom: 1px solid #e3e3e3; }
         #touzhudan .bottom .xuanzheqishu .xuanzheqishutop span {
@@ -6968,14 +6990,27 @@ body {
           height: 4.5vw; }
         #touzhudan .bottom .xuanzheqishu .xuanzheqishutop input:nth-of-type(2) {
           width: 5vw;
-          text-align: center;
-          color: #e43017; }
-      #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom {
-        height: 18vw; }
-        #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom #text_box1,
-        #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom #text_box2 {
-          width: 9vw;
+          color: #e43017;
           text-align: center; }
+      #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom > div {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom input {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 9vw;
+        height: 8vw;
+        margin: 0 1vw; }
+      #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom #text_box1,
+      #touzhudan .bottom .xuanzheqishu .xuanzheqishubottom #text_box2 {
+        text-align: center; }
   #touzhudan #morestc1 {
     width: 100%;
     margin: 0 auto; }
