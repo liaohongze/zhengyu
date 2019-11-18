@@ -12,7 +12,8 @@ require.config({
     'touzhudan': '../index/touzhudan',
     'football': '../index/football',
     'footballOrder': '../index/footballOrder',
-    'addMore': '../index/addMore'
+    'addMore': '../index/addMore',
+    'typeEdit': '../index/typeEdit'
   },
   shim: {
     'jquery': {
@@ -44,6 +45,9 @@ require.config({
     },
     'addMore': {
       'deps': ['jquery', 'layer']
+    },
+    'typeEdit': {
+      'deps': ['jquery']
     }
   }
 });

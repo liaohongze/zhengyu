@@ -7396,6 +7396,62 @@ body {
               .tuiduitouzhujilu_page .zijinmingxi .zijinmingxi_container ul li .contaniner_data .mid_type .baixian {
                 margin-top: 3.5vw; }
 
+.type_edit_page header {
+  overflow: hidden; }
+  .type_edit_page header span {
+    float: right;
+    margin-top: -11.5vw;
+    font-size: 4vw;
+    color: #fff; }
+
+.type_edit_page .tab_title {
+  width: 100%;
+  padding: 2vw 0;
+  color: #333;
+  text-align: center;
+  background-color: #f8f8f8; }
+
+.type_edit_page .list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-top: 2.7vw;
+  padding-left: 2.7vw; }
+  .type_edit_page .list li {
+    position: relative;
+    width: 21.5vw;
+    margin-right: 2.7vw;
+    margin-bottom: 2.7vw;
+    background-color: #f8f8f8; }
+    .type_edit_page .list li img {
+      display: block;
+      width: 60%;
+      margin: 2vw auto 1vw; }
+    .type_edit_page .list li p {
+      font-size: 3.5vw;
+      color: #333;
+      text-align: center; }
+    .type_edit_page .list li span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4vw;
+      height: 4vw;
+      color: #fff;
+      text-align: center;
+      border-radius: 50%; }
+
+.type_edit_page .list_show li span {
+  line-height: 3.5vw;
+  background-color: royalblue; }
+
+.type_edit_page .list_hide li span {
+  line-height: 4vw;
+  background-color: #e43017; }
+
 .user_page header a img {
   display: block;
   width: 6vw; }
