@@ -2499,10 +2499,14 @@ body {
       align-items: center;
       padding-bottom: 3vw;
       border-bottom: 1px solid #333; }
-      .charge_pay_page .panel h3 img {
+      .charge_pay_page .panel h3 img:first-of-type {
         width: 10vw;
         height: 10vw;
         margin-right: 3vw; }
+      .charge_pay_page .panel h3 .qrcode {
+        width: 30vw;
+        height: 30vw;
+        margin-left: 4vw; }
     .charge_pay_page .panel .ffp {
       display: block;
       width: 26.6vw;

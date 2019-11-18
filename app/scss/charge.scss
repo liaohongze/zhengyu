@@ -60,10 +60,16 @@
       padding-bottom: 3vw;
       border-bottom: 1px solid #333;
 
-      img {
+      img:first-of-type {
         width: 10vw;
         height: 10vw;
         margin-right: 3vw;
+      }
+
+      .qrcode {
+        width: 30vw;
+        height: 30vw;
+        margin-left: 4vw;
       }
     }
 
