@@ -66,6 +66,7 @@ require(['until', 'swiper'], function (until, Swiper) {
     var poptitle = $(this).find('span').text();
     $('.xialachoose p').text('普通' + poptitle); //11选5标题
     $('.kuai3xialachoose p').text('普通' + poptitle); //快3标题
+    $('.xialachoose p').attr('data-value', popValue); //11选5玩法属性
     if (popValue === '1') { //11选5 显示数据
 
       $('.diyizhongwanfa').removeClass('isnone');
@@ -108,7 +109,7 @@ require(['until', 'swiper'], function (until, Swiper) {
       $('.playnumberdiv').eq(4).removeClass('isnone').siblings().addClass('isnone');
     }
 
-    // 设定至少选择几个号码
+    // 设定至少选择几个号码 11选5
     var atLeast = 0;
     if (poptitle === '任选二') atLeast = 2;
     if (poptitle === '任选三') atLeast = 3;
@@ -117,13 +118,34 @@ require(['until', 'swiper'], function (until, Swiper) {
     if (poptitle === '任选六') atLeast = 6;
     if (poptitle === '任选七') atLeast = 7;
     if (poptitle === '任选八') atLeast = 8;
-    
+    if (poptitle === '任选八') atLeast = 8;
+    if (poptitle === '前一直选') atLeast = 1;
+    if (poptitle === '前二直选') atLeast = 1;//每位一个号码
+    if (poptitle === '前二组选') atLeast = 2;
+    if (poptitle === '前三直选') atLeast = 1;//每位一个号码
+    if (poptitle === '前三组选') atLeast = 3;
+    if (poptitle === '前四组选') atLeast = 4;
+    if (poptitle === '乐选三') atLeast = 3;
+    if (poptitle === '乐选四') atLeast = 4;
+    if (poptitle === '乐选五') atLeast = 5;
     if (atLeast) {
       $('.diyizhongwanfa .at_least_num').text(atLeast);
     } else {
       $('.diyizhongwanfa .at_least_num').text('1');
     }
-
+    // 设定至少选择几个号码 快3
+    if (poptitle === '三不同号') {
+    	atLeast = 3;
+    	  $('.sanbutonghao .at_least_num').text(atLeast);
+    }
+    if (poptitle === '二不同号') {
+    	atLeast = 2;
+    	 $('.sanbutonghao .at_least_num').text(atLeast);
+    }
+    if (poptitle === '和值') {
+    	atLeast = 1;
+    	 $('.hezhi .at_least_num').text(atLeast);
+    }
     dantuoindex = 999;
     layer.closeAll();
   })
@@ -181,6 +203,41 @@ require(['until', 'swiper'], function (until, Swiper) {
       $('.playnumberdiv').eq(5).find('.container_title').eq(0).find('p').text('胆码(选一个)');
       $('.playnumberdiv').eq(5).find('.container_title').eq(1).find('p').text('拖码(胆+拖≥2个)');
     }
+    
+    // 设定至少选择几个号码
+    var danma = 0;
+    if (poptitle === '任选二') danma = 1;
+    if (poptitle === '任选三') danma = 2;
+    if (poptitle === '任选四') danma = 3;
+    if (poptitle === '任选五') danma = 4;
+    if (poptitle === '任选六') danma = 5;
+    if (poptitle === '任选七') danma = 6;
+    if (poptitle === '任选八') danma = 7;
+    if (poptitle === '前二组选') danma = 1;
+    if (poptitle === '前三组选') danma = 2;
+    if (danma) {
+    	if(danma>1){
+    		$('.dierzhongwanfa .one .at_least_num').text('1-'+danma);
+    	}else{
+    		$('.dierzhongwanfa .one .at_least_num').text(danma);
+    	}
+      $('.dierzhongwanfa .two .at_least_num').text(danma+1);
+    } else {
+      $('.dierzhongwanfa .at_least_num').text('1');
+    }
+    // 设定至少选择几个号码 快3
+    if (poptitle === '三不同号') {
+    	danma = 2;
+    	  $('.butonghao .container_title .dantuo .at_least_num').text('1-'+danma);
+    	  $('.butonghao .container_title .danma .at_least_num').text(danma+1);
+    }
+    if (poptitle === '二不同号') {
+    	danma = 1;
+    	 $('.butonghao .container_title .dantuo .at_least_num').text(danma);
+   	     $('.butonghao .container_title .danma .at_least_num').text(danma+1);
+    }
+    
+    
     morenselecttop = 999;
     layer.closeAll();
   })
@@ -194,6 +251,63 @@ require(['until', 'swiper'], function (until, Swiper) {
       $(this).addClass('selected');
       if ($(this).hasClass('sibling')) $(this).siblings().addClass('selected');
     }
+    //获取玩法  如普通任选二
+    // var gameType = $('.xialachoose p').text();
+    // console.log('玩法：', gameType);
+
+    var firstArr = [], firstValues = [];
+    var secondArr = [], secondValues = [];
+    var thirdArr = [], thirdValues = [];
+    // 判断第几种玩法
+    var popValue = $('.xialachoose p').attr('data-value');
+
+    if (popValue === '1') {
+      // 只有一排
+      firstArr = $('.diyizhongwanfa').find('.selected').toArray();
+      firstArr.forEach(function(item) {
+        firstValues.push($(item).find('span').text())
+      });
+      console.log('第一排选择的值：', firstValues);
+    }
+
+    if (popValue === '2') {
+      firstArr = $('.disizhongwanfa .group4_1').find('.selected').toArray();
+      firstArr.forEach(function(item) {
+        firstValues.push($(item).find('span').text())
+      });
+      console.log('第一排选择的值：', firstValues);
+
+      secondArr = $('.disizhongwanfa .group4_2').find('.selected').toArray();
+      secondArr.forEach(function(item) {
+        secondValues.push($(item).find('span').text())
+      });
+      console.log('第二排选择的值：', secondValues);
+    }
+
+    if (popValue === '3') {
+      firstArr = $('.disanzhongwanfa .group3_1').find('.selected').toArray();
+      firstArr.forEach(function(item) {
+        firstValues.push($(item).find('span').text())
+      });
+      console.log('第一排选择的值：', firstValues);
+
+      secondArr = $('.disanzhongwanfa .group3_2').find('.selected').toArray();
+      secondArr.forEach(function(item) {
+        secondValues.push($(item).find('span').text())
+      });
+      console.log('第二排选择的值：', secondValues);
+
+      thirdArr = $('.disanzhongwanfa .group3_3').find('.selected').toArray();
+      thirdArr.forEach(function(item) {
+        thirdValues.push($(item).find('span').text())
+      });
+      console.log('第三排选择的值：', thirdValues);
+    }
+   
+    //业务逻辑处理。。。。。
+    
+    //底部插入 1注2元
+    $('.zhuqi_xinxi').html('3注6元');
   });
 
   //点击机选
