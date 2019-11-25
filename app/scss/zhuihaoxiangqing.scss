@@ -1,0 +1,27 @@
+.zhuihao_xiangqing_page {
+  .zhuihao_wrap {
+    padding-top: 3vw;
+    padding-left: 8vw;
+    border-bottom: 1px solid #eee;
+
+    .zhuihao_item {
+      margin-bottom: 4vw;
+      font-size: 3.8vw;
+    }
+  }
+
+  .zhuihao_list {
+    li {
+      display: flex;
+      padding: 3vw 8vw;
+      font-size: 3.5vw;
+      color: #555;
+      border-bottom: 1px dashed #eee;
+
+      span {
+        width: 33.33%;
+        text-align: center;
+      }
+    }
+  }
+}

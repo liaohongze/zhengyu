@@ -6586,7 +6586,7 @@ body {
     height: 100%; }
     .bottom .firstnav span {
       color: #e43015;
-      font-size: 3.8vw;
+      font-size: 3.4vw;
       width: 33vw;
       text-align: center;
       display: inline-block; }
@@ -6973,6 +6973,9 @@ body {
           #touzhudan .bottom .firstnav div span b {
             color: #e43017;
             font-weight: 400; }
+      #touzhudan .bottom .firstnav span i {
+        display: block;
+        margin-top: 1vw; }
     #touzhudan .bottom .xuanzheqishu {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -7744,6 +7747,27 @@ body {
         padding-left: 3vw;
         border: 1px solid #c6c6c8;
         border-radius: 1.2vw; }
+
+.zhuihao_xiangqing_page .zhuihao_wrap {
+  padding-top: 3vw;
+  padding-left: 8vw;
+  border-bottom: 1px solid #eee; }
+  .zhuihao_xiangqing_page .zhuihao_wrap .zhuihao_item {
+    margin-bottom: 4vw;
+    font-size: 3.8vw; }
+
+.zhuihao_xiangqing_page .zhuihao_list li {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3vw 8vw;
+  font-size: 3.5vw;
+  color: #555;
+  border-bottom: 1px dashed #eee; }
+  .zhuihao_xiangqing_page .zhuihao_list li span {
+    width: 33.33%;
+    text-align: center; }
 
 .zijinmingxi_page {
   width: 100%; }

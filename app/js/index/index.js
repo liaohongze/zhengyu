@@ -252,6 +252,7 @@ require(['until', 'swiper'], function (until, Swiper) {
       if ($(this).hasClass('sibling')) $(this).siblings().addClass('selected');
     }
     //获取玩法  如普通任选二
+    var gameType2 = $('.kuai3xialachoose p').text();
     // var gameType = $('.xialachoose p').text();
     // console.log('玩法：', gameType);
 
@@ -260,6 +261,8 @@ require(['until', 'swiper'], function (until, Swiper) {
     var thirdArr = [], thirdValues = [];
     // 判断第几种玩法
     var popValue = $('.xialachoose p').attr('data-value');
+
+    console.log('popValue', popValue);
 
     if (popValue === '1') {
       // 只有一排
