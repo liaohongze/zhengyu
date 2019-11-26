@@ -61,9 +61,11 @@ require(['jquery', 'layer'], function (jquery, layer) {
       for (var j = 0; j < listData[i].isSelectedData[0].length; j++) {
         var srcnew1 = listData[i].isSelectedData[0].join(' ');
       }
+     if(listData[i].isSelectedData[1] != null){
       for (var v = 0; v < listData[i].isSelectedData[1].length; v++) {
         var srcnew2 = listData[i].isSelectedData[1].join(' ');
       }
+     }
       if (listData[i].isSelectedData[2] != null) {
         for (var k = 0; k < listData[i].isSelectedData[2].length; k++) {
           var srcnew3 = listData[i].isSelectedData[2].join(' ');
@@ -108,13 +110,17 @@ require(['jquery', 'layer'], function (jquery, layer) {
       else if (srcnew1 == "" && srcnew2 == "" && srcnew3 != "") {
         ball = srcnew3;
       }
-      tijiaoObj.winType = listData[i].ischangeName;
+      tijiaoObj.winType = listData[i].d;
       tijiaoObj.ball = ball;
       tijiaoObj.betNum = listData[i].zhushu;
       tijiaoObj.balance = listData[i].amount;
       tijiaoObj.betMul = parseInt($('#text_box2').val());
       tijiaoObj.betType = listData[i].singleOrDouble;
       adr.push(tijiaoObj);
+      tijiaoObj = {};
+      srcnew1 = '';
+      srcnew2 = '';
+      srcnew3 = '';
     }
     var betData = adr;
     var lotteryType = $("#lotteryType").html();
